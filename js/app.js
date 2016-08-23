@@ -60,6 +60,7 @@ new Vue({
       if (Modernizr.touch) {
         this.prompt = this.prompt.toLowerCase().trim()
       }
+
       switch(this.lang) {
         case 'social':
           this.social()
@@ -72,27 +73,30 @@ new Vue({
       }
     },
 
+    clear: function() {
+      if (Modernizr.touch) {
+        this.log = []
+        window.scrollTo(0, 0)
+      }
+    },
+
     exec: function() {
-      switch(this.prompt) {
+        switch(this.prompt) {
         case 'cls':
         case 'clear':
           this.log = []
-          if (Modernizr.touch) {
-            window.scrollTo(0, 0)
-          }
         break
         case 'help':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           this.log.push(...this.info.help)
         break
         case 'reboot':
           this.import()
-          if (Modernizr.touch) {
-            window.scrollTo(0, 0)
-          }
         break
         case 'social':
         case 'contact':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           this.lang = 'social'
         break
@@ -113,6 +117,7 @@ new Vue({
         case 'hello':
         case 'hi':
         case 'how are you?':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           this.lang = 'hello'
         break
@@ -121,10 +126,12 @@ new Vue({
         case 'what\'s my name?':
         case 'what is my name':
         case 'what is my name?':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           this.log.push({ message: 'Your name is ' + this.prefs.name })
         break
         case 'mute':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           if (this.prefs.mute == 'off') {
             this.prefs.mute = 'on'
@@ -135,6 +142,7 @@ new Vue({
         break
         case 'theme':
         case 'themes':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           this.log.push(...this.info.themes)
         break
@@ -147,10 +155,14 @@ new Vue({
         case 'dark':
         case 'c-64':
         case 'trs-80':
+          this.clear()
           this.log.push({ message: this.prompt, class: 'echo' })
           this.prefs.theme = this.prompt
         break
         default:
+          if (this.log.length > 3) {
+            this.clear()
+          }
           this.log.push({ message: this.prompt, class: 'echo' })
       }
       this.prompt = ''
