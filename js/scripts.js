@@ -11476,7 +11476,7 @@ new Vue({
     lang: '',
     prefs: {
       name: 'dave',
-      theme: 'dark',
+      theme: 'homebrew',
       mute: 'off'
     }
   },
