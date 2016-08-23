@@ -75,7 +75,7 @@ new Vue({
 
     clear: function() {
       if (Modernizr.touch) {
-        this.log = []
+        this.log.splice(0, 1)
         window.scrollTo(0, 0)
       }
     },
@@ -160,7 +160,7 @@ new Vue({
           this.prefs.theme = this.prompt
         break
         default:
-          if (this.log.length > 3) {
+          if (this.log.length > 2) {
             this.clear()
           }
           this.log.push({ message: this.prompt, class: 'echo' })
