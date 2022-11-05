@@ -530,5 +530,5 @@ body {
   color: grey; }
 
 .hidden {
-  visibility: hidden;
+  opacity: 0;
 }
