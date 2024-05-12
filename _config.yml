@@ -22,8 +22,9 @@ title: harrypujols
 email: mail@harrypujols.com
 description: >- # this means to ignore newlines until "baseurl:"
   The personal Web site of Harry Pujols, a tech developer and artist.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://harrypujols.com" # the base hostname & protocol for your site, e.g. http://example.com
+destination: docs/
 github_username: harrypujols
 
 permalink: none
