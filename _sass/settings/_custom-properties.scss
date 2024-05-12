@@ -1,0 +1,72 @@
+:root {
+  // colors
+  --base-font: "VT323", monospace;
+  --base-font-size: 2rem;
+  --base-font-weight: 400;
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(360, 100%, 100%);
+  --color-beige: hsl(23, 100%, 95%);
+  --color-navy: hsl(224, 48%, 22%);
+  --color-blue: hsl(203, 100%, 58%);
+  --color-green: hsl(156, 100%, 26%);
+  --color-lime: hsl(134, 100%, 45%);
+  --color-gray: hsl(30, 9%, 34%);
+  --color-cloud: hsl(228, 4%, 77%);
+  --color-neutral: hsl(261, 16%, 54%);
+  --color-purple: hsl(329, 55%, 32%);
+  --color-red: hsl(342, 100%, 50%);
+  --color-orange: hsl(38, 100%, 50%);
+  --color-yellow: hsl(55, 100%, 58%);
+  --color-flesh: hsl(24, 100%, 83%);
+  --color-pink: hsl(338, 100%, 73%);
+  --color-brown: hsl(14, 52%, 44%);
+
+  // color globals
+  --body-background: var(--color-white);
+  --body-color: var(var(--color-black));
+
+  // card globals
+  --card-avatar-size: 6rem;
+  --card-avatar-radius: 50%;
+
+  // layout
+  --sidebar-width: 4.688rem;
+
+  // syntax highliting (PICO-8 theme)
+  --highlight-font: var(--base-font);
+  --highlight-font-size: var(--base-font-size);
+  --highlight-color-base: var(--color-cloud);
+  --highlight-background-base: var(--color-gray);
+  --highlight-background-hhl: var(--color-black);
+  --highlight-color-err: var(--color-orange);
+  --highlight-background-err: var(--color-gray);
+  --highlight-color-k: var(--color-pink);
+  --highlight-color-p: var(--color-beige);
+  --highlight-color-cs: var(--color-red);
+  --highlight-color-cd: var(--color-red);
+  --highlight-color-ge: var(--color-beige);
+  --highlight-color-gr: var(--color-red);
+  --highlight-color-go: var(--color-neutral);
+  --highlight-color-gs: var(--color-beige);
+  --highlight-color-gu: var(--color-purple);
+  --highlight-color-gt: var(--color-blue);
+  --highlight-color-kc: var(--color-pink);
+  --highlight-color-kd: var(--color-pink);
+  --highlight-color-kn: var(--color-flesh);
+  --highlight-color-kp: var(--color-yellow);
+  --highlight-color-kr: var(--color-yellow);
+  --highlight-color-ni: var(--color-pink);
+  --highlight-color-ne: var(--color-cloud);
+  --highlight-color-nn: var(--color-cloud);
+  --highlight-color-vi: var(--color-flesh);
+  --highlight-color-c: var(--color-neutral);
+  --highlight-color-l: var(--color-cloud);
+  --highlight-color-pz: var(--color-beige);
+  --highlight-color-o: var(--color-beige);
+  --highlight-color-gh: var(--color-beige);
+  --highlight-color-gi: var(--color-lime);
+  --highlight-color-ld: var(--color-blue);
+  --highlight-color-m: var(--color-blue);
+  --highlight-color-na: var(--color-pink);
+  --highlight-color-nb: var(--color-cloud);
+}

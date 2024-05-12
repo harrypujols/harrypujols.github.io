@@ -1,20 +1,40 @@
 {
-  "name": "site",
-  "version": "1.0.0",
-  "description": "new site",
-  "main": "gulpfile.js",
+  "name": "blog-site",
+  "version": "0.1.0",
+  "description": "A project by Harry Pujols",
+  "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "npm-run-all --parallel server js watch:*",
+    "server": "docker restart blog-site && docker exec -it blog-site bundle exec jekyll serve --host 0.0.0.0 --livereload",
+    "js": "webpack --config webpack.config.js",
+    "watch:js": "onchange './_scripts/**/**' -- npm run js",
+    "server:build": "docker build -t harrypujols/jekyll:blog-site .",
+    "server:boot": "docker run -d -p 4000:4000 -p 35729:35729 -it --volume=\"$PWD:/usr/src/app\" --name blog-site harrypujols/jekyll:blog-site /bin/bash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrypujols/blog-site.git"
   },
   "keywords": [
-    "site"
+    "jekyll",
+    "javascript",
+    "liquid",
+    "html",
+    "sass"
   ],
   "author": "Harry Pujols",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrypujols/blog-site/issues"
+  },
+  "homepage": "https://github.com/harrypujols/blog-site#readme",
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.2"
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
   }
 }
