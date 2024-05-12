@@ -7,7 +7,6 @@ body {
   color: var(--body-color);
   font-size: var(--base-font-size);
   font-family: var(--base-font);
-  line-height: 2.5ex;
 
   .system & {
     @media (prefers-color-scheme: dark) {
