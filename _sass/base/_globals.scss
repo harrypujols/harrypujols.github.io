@@ -1,0 +1,91 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-background);
+  color: var(--body-color);
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
+  line-height: 2.5ex;
+
+  .system & {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-navy);
+      color: var(--color-beige);
+    }
+  }
+
+  .dark & {
+    background-color: var(--color-navy);
+    color: var(--color-beige);
+  }
+
+  &:before {
+    display: none;
+    @each $breakpoint in map-keys($breakpoints) {
+      @include breakpoint($breakpoint) {
+        content: $breakpoint;
+      }
+    }
+  }
+
+  @media print {
+    background-color: var(--color-white);
+    font-family: sans-serif;
+
+    &,
+    :is(.system, .dark, .light) &,
+    :is(.system, .dark, .light) & * {
+      color: var(--color-black);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-block: 1ex;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-top: unset;
+  margin-bottom: 1ex;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--color-blue);
+
+  &:hover,
+  &:focus,
+  &:visited {
+    color: var(--color-purple);
+  }
+
+  .system &:visited {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-pink);
+    }
+  }
+
+  .dark &:visited {
+    color: var(--color-pink);
+  }
+}
+
+fieldset {
+  padding: unset;
+}

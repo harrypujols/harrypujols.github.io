@@ -1,0 +1,21 @@
+---
+- username: harrypujols
+  name: Harry Pujols
+  avatar: harrypujols.png
+  verified: true
+  
+- username: deadlizard
+  name: Dead Lizard Graphics
+  avatar: deadlizard.png
+
+- username: holgagram
+  name: Holgagram
+  avatar: camera.png
+
+- username: playlistify
+  name: Playlistify
+  avatar: ipod.png
+
+- username: review
+  name: Roasted Potatoes
+  avatar: reviews.png

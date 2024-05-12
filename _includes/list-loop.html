@@ -1,0 +1,21 @@
+<ol class="post-list">
+  {% for item in page.table %}
+    <li class="post-list-item">
+      <h3 class="post-item-name">
+        {{ item.name }}
+        {% if item.year %}
+          <span class="post-item-year">({{ item.year }})</span>
+        {% endif %}
+      </h3>
+      {% if item.rating %}
+        <img
+          src="/assets/img/review/{{ item.rating }}-star.png"
+          alt="rating {{ item.rating }}"
+          class="rating-img" />
+      {% endif %}
+      {% if item.comment %}
+        <p class="item-comment">{{ item.comment }}</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ol>

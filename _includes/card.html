@@ -1,0 +1,37 @@
+<article class="card">
+  {% for account in site.data.accounts %} {% if post.account == account.username %} 
+    <img
+    src="/assets/img/identity/{{ account.avatar }}"
+    alt="portrait"
+    class="card-avatar"
+  />
+  <h3 class="card-username">
+    {{ account.name }} {% if account.verified %}
+    <div class="card-badge" role="img" aria-label="Verified">
+      {% include icons/badge.svg %}
+    </div>
+    {% endif %}
+    <span class="card-account">{{ post.date | date: "%b %d %Y" }}</span>
+  </h3>
+  {% endif %} {% endfor %}
+  <div class="card-content">
+    {% if post.title != "blank" %} 
+      {{ post.title }} 
+      {% else %} 
+      {{ post.excerpt }}
+    {% endif %} 
+    {% if post.image %}
+    <figure class="card-picture">
+      <img src="{{ post.image }}" alt="{{ post.caption }}" />
+    </figure>
+    {% endif %}
+  </div>
+  <footer class="card-footer">
+    <a href="{{ post.url }}" class="card-footer-link">
+      <div class="card-icon icon" role="img" aria-label="Permalink">
+        {% include icons/link.svg %}
+      </div>
+      Permanlink
+    </a>
+  </footer>
+</article>
