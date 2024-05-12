@@ -6,38 +6,37 @@
     <meta name="description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-      rel="stylesheet"
-    />
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="/assets/img/favicon.ico"
-    />
+      href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/site.css" />
     <title>{{ page.title }}</title>
   </head>
-  <body {% if page.theme %} class="{{ page.theme }}" {% endif %}>
+  <body
+    {% if page.theme %}
+    class="{{ page.theme }}"
+    {% endif %}>
     <main class="main post-page page-grid">
       <section class="post-content">
         <header class="post-header">
-          {% for account in site.data.accounts %} 
-            {% if page.account == account.username %} 
+          {% for account in site.data.accounts %}
+            {% if page.account == account.username %}
               <img
-              src="/assets/img/identity/{{ account.avatar }}"
-              alt="portrait"
-              class="post-avatar"
-            />
-            <h2 class="post-account">{{ account.name }}</h2>
-            {% endif %} 
-        {% endfor %}
+                src="/assets/img/identity/{{ account.avatar }}"
+                alt="portrait"
+                class="post-avatar" />
+              <h2 class="post-account">{{ account.name }}</h2>
+            {% endif %}
+          {% endfor %}
         </header>
         {% if page.title != "blank" %}
-        <h1 class="post-title">
-          {{ page.title }}
-          </h1>
+          <h1 class="post-title">{{ page.title }}</h1>
         {% endif %}
         <p class="post-date">
           {{ page.date | date_to_string: "ordinal", "US" }}
@@ -45,12 +44,11 @@
         {% if page.rating %}
           <figure class="rating rating-{{ page.rating }}">
             <img
-          src="/assets/img/review/{{ page.rating }}-star.png"
-          alt="rating {{ page.rating }}"
-          class="rating-img"
-        />
+              src="/assets/img/review/{{ page.rating }}-star.png"
+              alt="rating {{ page.rating }}"
+              class="rating-img" />
           </figure>
-        {% endif %} 
+        {% endif %}
         <article class="post">
           {{ content }}
         </article>
