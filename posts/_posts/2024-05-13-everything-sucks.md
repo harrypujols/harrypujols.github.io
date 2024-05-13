@@ -51,6 +51,18 @@ I decided to go old-school and start a blog again, because social media failed a
 
 **After:** We still suck, we purchased Instagram and WhatsApp because too many old people are using our site now. While we were dismantling democracy and social discourse worldwide because toxicity increases engagement, we wasted years trying to do a VR world no one wants to visit.
 
+## Google
+
+**Before:** We’re Google, what else can you say? We hire tech geniuses and they get amazing perks.
+
+**After:** We're basically Bing now. The geniuses lost most of their perks, including job stability.
+
+## Amazon
+
+**Before:** We’re going to wipe out small retail, probably big retail too.
+
+**After:** We did it. Our employees are sub-human bags of meat and they have no retail jobs left to go to.
+
 ## Reddit
 
 **Before:** We're the true forum of the Internet, community owned and community moderated.
