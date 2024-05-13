@@ -57,6 +57,12 @@ I decided to go old-school and start a blog again, because social media failed a
 
 **After:** We're basically Bing now. The geniuses lost most of their perks, including job stability.
 
+## Amazon
+
+**Before:** We’re going to wipe out small retail, probably big retail too.
+
+**After:** We did it. Our employees are sub-human bags of meat and they have no retail jobs left to go to.
+
 ## Reddit
 
 **Before:** We're the true forum of the Internet, community owned and community moderated.
