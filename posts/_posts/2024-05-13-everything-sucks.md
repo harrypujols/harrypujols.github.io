@@ -19,7 +19,7 @@ I decided to go old-school and start a blog again, because social media failed a
 
 **Before:** We have filled the void MTV left when they stopped playing music videos. We’re full of short-form entertainment coming from anyone under the sun, at the price of, maybe, a skippable ad at the start.
 
-**After** We’re basically making it unwatchable, interrupting videos every three seconds with unskippable commercials, to goad you to subscribe to YouTube Premium. Like and subscribe to the three accounts that exploit our algorithm the best.
+**After:** To goad you to subscribe to YouTube premium, we're making free YouTube unwatchable, interrupting videos every three seconds with unskippable commercials. Like and subscribe to the three accounts that exploit our algorithm the best.
 
 ## Twitter
 
