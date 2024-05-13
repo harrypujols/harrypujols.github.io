@@ -53,7 +53,7 @@ I decided to go old-school and start a blog again, because social media failed a
 
 ## Google
 
-**Before:** We’re Google, what else can you say? We hire tech geniuses.
+**Before:** We’re Google, what else can you say? We hire tech geniuses and they get amazing perks.
 
 **After:** We're basically Bing now. The geniuses lost most of their perks, including job stability.
 
