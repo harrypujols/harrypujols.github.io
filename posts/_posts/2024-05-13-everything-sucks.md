@@ -75,4 +75,6 @@ I decided to go old-school and start a blog again, because social media failed a
 
 **After:** Actually, capitalism hasn’t ruined us yet because we’re a nonprofit and our revenue model is based on donations, like your local library.
 
+### Conclusion
+
 At the time of this writing, I do not have a comments section on this site. I am still deciding how or if I am going to work on it. But your opinion matters, feel free to contact me where you can find me, or start your own blog too.
