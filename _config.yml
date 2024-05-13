@@ -32,7 +32,6 @@ paginate: 10
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-spaceship
 
 # Output style
