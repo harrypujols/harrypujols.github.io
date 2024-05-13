@@ -51,6 +51,12 @@ I decided to go old-school and start a blog again, because social media failed a
 
 **After:** We still suck, we purchased Instagram and WhatsApp because too many old people are using our site now. While we were dismantling democracy and social discourse worldwide because toxicity increases engagement, we wasted years trying to do a VR world no one wants to visit.
 
+## Reddit
+
+**Before:** We're the true forum of the Internet, community owned and community moderated.
+
+**After:** Community owned? LOL, sorry, we meant corporate owned. Your delicious data will now be sold to train AI.
+
 ## Wikipedia
 
 **Before:** Find information on every topic imaginable, our page doesn’t look like a Christmas tree packed with popups and advertisements. No paywalls nor geofencing.
