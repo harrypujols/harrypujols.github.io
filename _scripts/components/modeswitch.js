@@ -8,10 +8,6 @@ export default class {
 
   switch() {
     this.element.addEventListener("click", (event) => {
-      console.log(this.prefs);
-      console.log(this.prefs.theme);
-      console.log(event.target.value);
-
       this.inputs.forEach((input) => {
         if (input !== event.target) {
           input.checked = false;
@@ -23,6 +19,8 @@ export default class {
       } else {
         this.prefs.theme = "system";
       }
+
+      console.log(this.prefs.theme);
 
       this.page.className = "";
       this.page.classList.add(this.prefs.theme);
@@ -47,6 +45,7 @@ export default class {
       });
     }
 
+    console.log(this.prefs.theme);
     this.page.className = "";
     this.page.classList.add(this.prefs.theme);
   }
