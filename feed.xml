@@ -10,21 +10,21 @@
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
 		<sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
 		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
-		<link>{{ site.absolute_path | absolute }}</link>
-		<atom:link href="{{ site.absolute_path | absolute }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<link>{{ site.url | absolute }}</link>
+		<atom:link href="{{ site.url | absolute }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{% for post in site.posts limit:1 %}{% unless post.link %}{{ post.date | date_to_rfc822 }}{% endunless %}{% endfor %}</lastBuildDate>
 		{% for post in site.posts %}
 			{% unless post.link %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
-				{% if post.excerpt %}
+				{% if post.content %}
 					<description>{{ post.excerpt | xml_escape }}</description>
 				{% else %}
 					<description>{{ post.content | xml_escape }}</description>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{{ site.absolute_path | absolute }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.absolute_path | absolute }}{{ post.url }}</guid>
+				<link>{{ site.url | absolute }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ site.url | absolute }}{{ post.url }}</guid>
 			</item>
 			{% endunless %}
 		{% endfor %}
