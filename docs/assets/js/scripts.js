@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
     this.element = element;
     this.page = document.documentElement;
     this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = { theme: "system" };
+    this.prefs = {};
   }
 
   switch() {
@@ -173,8 +173,6 @@ __webpack_require__.r(__webpack_exports__);
         this.prefs.theme = "system";
       }
 
-      console.log(this.prefs.theme);
-
       this.page.className = "";
       this.page.classList.add(this.prefs.theme);
       localStorage.setItem("prefs", JSON.stringify(this.prefs.theme));
@@ -183,6 +181,10 @@ __webpack_require__.r(__webpack_exports__);
 
   store() {
     var retrieve = localStorage.getItem("prefs");
+
+    if (this.prefs.theme == null) {
+      this.prefs.theme = "system";
+    }
 
     if (retrieve == null || retrieve == "undefined") {
       localStorage.setItem("prefs", JSON.stringify(this.prefs));
@@ -198,7 +200,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
 
-    console.log(this.prefs.theme);
+    console.log(this.prefs);
     this.page.className = "";
     this.page.classList.add(this.prefs.theme);
   }
