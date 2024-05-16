@@ -8,6 +8,10 @@ export default class {
 
   switch() {
     this.element.addEventListener("click", (event) => {
+      console.log(this.prefs);
+      console.log(this.prefs.theme);
+      console.log(event.target.value);
+
       this.inputs.forEach((input) => {
         if (input !== event.target) {
           input.checked = false;
@@ -33,7 +37,6 @@ export default class {
       localStorage.setItem("prefs", JSON.stringify(this.prefs));
     } else {
       this.prefs = JSON.parse(retrieve);
-      console.log(this.prefs);
     }
 
     if (this.inputs.length > 0) {
