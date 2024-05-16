@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel server js watch:*",
     "server": "docker restart blog-site && docker exec -it blog-site bundle exec jekyll serve --host 0.0.0.0 --livereload",
-    "deploy": "docker restart blog-site && docker exec -it blog-site bundle exec jekyll build JEKYLL_ENV=production",
+    "deploy": "docker exec -it blog-site bundle exec jekyll build JEKYLL_ENV=production",
     "js": "webpack --config webpack.config.js",
     "watch:js": "onchange './_scripts/**/**' -- npm run js",
     "server:build": "docker build -t harrypujols/jekyll:blog-site .",
