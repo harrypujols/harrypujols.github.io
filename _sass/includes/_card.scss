@@ -1,6 +1,6 @@
 .card {
   display: grid;
-  grid-template-columns: var(--card-avatar-size, 5rem) auto;
+  grid-template-columns: var(--card-avatar-size, 3rem) auto;
   grid-template-rows: auto 1fr;
   column-gap: 2rem;
   padding: 1rem;
@@ -28,6 +28,10 @@
     border: 0;
   }
 
+  @include breakpoint(phone-landscape) {
+    grid-template-columns: var(--card-avatar-size, 5rem) auto;
+  }
+
   @media print {
     page-break-inside: avoid;
   }
@@ -39,9 +43,13 @@
 }
 
 .card-avatar {
-  grid-row: 1 / span 2;
+  grid-row: 1;
   border: 1px solid var(--card-avatar-border, transparent);
-  border-radius: var(--card-avatar-radius, 0);
+  border-radius: var(--card-avatar-radius);
+
+  @include breakpoint(phone-landscape) {
+    grid-row: 1 / span 2;
+  }
 }
 
 .card-username {
@@ -57,9 +65,13 @@
 }
 
 .card-content {
+  grid-column: 1 / span 2;
   margin: 0;
   color: var(--content-color, inherit);
-  grid-column: 2;
+
+  @include breakpoint(phone-landscape) {
+    grid-column: 2;
+  }
 }
 
 .card-picture {
@@ -83,7 +95,9 @@
 }
 
 .card-footer {
-  grid-column: 2;
+  @include breakpoint(phone-landscape) {
+    grid-column: 2;
+  }
 }
 
 .card-footer-link {

@@ -21,7 +21,6 @@
   --color-brown: hsl(14, 52%, 44%);
   --body-background: var(--color-white);
   --body-color: var(var(--color-black));
-  --card-avatar-size: 6rem;
   --card-avatar-radius: 50%;
   --sidebar-width: 4.688rem;
   --highlight-font: var(--base-font);
@@ -861,7 +860,7 @@ fieldset {
 
 .card {
   display: grid;
-  grid-template-columns: var(--card-avatar-size, 5rem) auto;
+  grid-template-columns: var(--card-avatar-size, 3rem) auto;
   grid-template-rows: auto 1fr;
   column-gap: 2rem;
   padding: 1rem;
@@ -886,6 +885,11 @@ fieldset {
 .card:last-of-type {
   border: 0;
 }
+@media (min-width: 35.5rem) {
+  .card {
+    grid-template-columns: var(--card-avatar-size, 5rem) auto;
+  }
+}
 @media print {
   .card {
     page-break-inside: avoid;
@@ -898,9 +902,14 @@ fieldset {
 }
 
 .card-avatar {
-  grid-row: 1 / span 2;
+  grid-row: 1;
   border: 1px solid var(--card-avatar-border, transparent);
-  border-radius: var(--card-avatar-radius, 0);
+  border-radius: var(--card-avatar-radius);
+}
+@media (min-width: 35.5rem) {
+  .card-avatar {
+    grid-row: 1 / span 2;
+  }
 }
 
 .card-username {
@@ -916,9 +925,14 @@ fieldset {
 }
 
 .card-content {
+  grid-column: 1 / span 2;
   margin: 0;
   color: var(--content-color, inherit);
-  grid-column: 2;
+}
+@media (min-width: 35.5rem) {
+  .card-content {
+    grid-column: 2;
+  }
 }
 
 .card-picture {
@@ -940,8 +954,10 @@ fieldset {
   width: 2.375rem;
 }
 
-.card-footer {
-  grid-column: 2;
+@media (min-width: 35.5rem) {
+  .card-footer {
+    grid-column: 2;
+  }
 }
 
 .card-footer-link {
