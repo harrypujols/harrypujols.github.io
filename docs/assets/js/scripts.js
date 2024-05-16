@@ -197,6 +197,7 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     this.page.className = "";
+    console.log(this.prefs);
     this.page.classList.add(this.prefs);
   }
 
