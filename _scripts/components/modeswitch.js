@@ -3,7 +3,7 @@ export default class {
     this.element = element;
     this.page = document.documentElement;
     this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = { theme: "system" };
+    this.prefs = {};
   }
 
   switch() {
@@ -20,8 +20,6 @@ export default class {
         this.prefs.theme = "system";
       }
 
-      console.log(this.prefs.theme);
-
       this.page.className = "";
       this.page.classList.add(this.prefs.theme);
       localStorage.setItem("prefs", JSON.stringify(this.prefs.theme));
@@ -30,6 +28,10 @@ export default class {
 
   store() {
     var retrieve = localStorage.getItem("prefs");
+
+    if (this.prefs.theme == null) {
+      this.prefs.theme = "system";
+    }
 
     if (retrieve == null || retrieve == "undefined") {
       localStorage.setItem("prefs", JSON.stringify(this.prefs));
@@ -45,7 +47,7 @@ export default class {
       });
     }
 
-    console.log(this.prefs.theme);
+    console.log(this.prefs);
     this.page.className = "";
     this.page.classList.add(this.prefs.theme);
   }
