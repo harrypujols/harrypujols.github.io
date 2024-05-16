@@ -15,6 +15,11 @@ a project yet to be defined
 - run `npm start`
 - site will run in http://localhost:4000
 
+## Deployment
+
+- run `npm run deploy`
+- site will deploy to docs directory
+
 ## Posts
 
 Check [Jekyll's documentation][jekyll-posts]
