@@ -3,7 +3,7 @@ export default class {
     this.element = element;
     this.page = document.documentElement;
     this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = "system";
+    this.prefs = { theme: "system" };
   }
 
   switch() {
@@ -15,14 +15,14 @@ export default class {
       });
 
       if (event.target.checked === true) {
-        this.prefs = event.target.value;
+        this.prefs.theme = event.target.value;
       } else {
-        this.prefs = "system";
+        this.prefs.theme = "system";
       }
 
       this.page.className = "";
-      this.page.classList.add(this.prefs);
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
+      this.page.classList.add(this.prefs.theme);
+      localStorage.setItem("prefs", JSON.stringify(this.prefs.theme));
     });
   }
 
@@ -37,15 +37,14 @@ export default class {
 
     if (this.inputs.length > 0) {
       this.inputs.forEach((input) => {
-        if (input.value === this.prefs) {
+        if (input.value === this.prefs.theme) {
           input.checked = true;
         }
       });
     }
 
     this.page.className = "";
-    console.log(this.prefs);
-    this.page.classList.add(this.prefs);
+    this.page.classList.add(this.prefs.theme);
   }
 
   init() {
