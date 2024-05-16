@@ -157,6 +157,7 @@ __webpack_require__.r(__webpack_exports__);
     this.page = document.documentElement;
     this.inputs = document.getElementsByName("mode-switch");
     this.prefs = {};
+    this.prefs.theme = "system";
   }
 
   switch() {
@@ -175,21 +176,22 @@ __webpack_require__.r(__webpack_exports__);
 
       this.page.className = "";
       this.page.classList.add(this.prefs.theme);
-      localStorage.setItem("prefs", JSON.stringify(this.prefs.theme));
+      localStorage.setItem("prefs", JSON.stringify(this.prefs));
     });
   }
 
   store() {
     var retrieve = localStorage.getItem("prefs");
 
-    if (this.prefs.theme == null) {
-      this.prefs.theme = "system";
-    }
-
     if (retrieve == null || retrieve == "undefined") {
       localStorage.setItem("prefs", JSON.stringify(this.prefs));
     } else {
-      this.prefs = JSON.parse(retrieve);
+      if (JSON.parse(retrieve)["theme"] == null) {
+        localStorage.clear();
+        localStorage.setItem("prefs", JSON.stringify(this.prefs));
+      } else {
+        this.prefs = JSON.parse(retrieve);
+      }
     }
 
     if (this.inputs.length > 0) {
@@ -200,7 +202,6 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
 
-    console.log(this.prefs);
     this.page.className = "";
     this.page.classList.add(this.prefs.theme);
   }
