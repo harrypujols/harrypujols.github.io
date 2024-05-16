@@ -33,6 +33,7 @@ export default class {
       localStorage.setItem("prefs", JSON.stringify(this.prefs));
     } else {
       this.prefs = JSON.parse(retrieve);
+      console.log(this.prefs);
     }
 
     if (this.inputs.length > 0) {
