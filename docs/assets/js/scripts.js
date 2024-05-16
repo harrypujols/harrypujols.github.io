@@ -161,10 +161,6 @@ __webpack_require__.r(__webpack_exports__);
 
   switch() {
     this.element.addEventListener("click", (event) => {
-      console.log(this.prefs);
-      console.log(this.prefs.theme);
-      console.log(event.target.value);
-
       this.inputs.forEach((input) => {
         if (input !== event.target) {
           input.checked = false;
@@ -176,6 +172,8 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.prefs.theme = "system";
       }
+
+      console.log(this.prefs.theme);
 
       this.page.className = "";
       this.page.classList.add(this.prefs.theme);
@@ -200,6 +198,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
 
+    console.log(this.prefs.theme);
     this.page.className = "";
     this.page.classList.add(this.prefs.theme);
   }
