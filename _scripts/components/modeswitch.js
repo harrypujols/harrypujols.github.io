@@ -44,6 +44,7 @@ export default class {
     }
 
     this.page.className = "";
+    console.log(this.prefs);
     this.page.classList.add(this.prefs);
   }
 
