@@ -6,7 +6,7 @@
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 >
 	<channel>
-		<title>{{ site.name | xml_escape }}</title>
+		<title>{{ site.title | xml_escape }}</title>
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
 		<sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
 		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
@@ -17,6 +17,17 @@
 			{% unless post.link %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
+				{% for account in site.data.accounts %}
+					{% if post.account && post.account == account.username %}
+						<author>
+						{{ account.name }}
+						</author>	
+						{% else %}
+						<author>
+						{{ site.author }}
+						</author>	
+					{% endif %}
+				{% endfor %}
 				{% if post.image %}
 				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url | absolute }}/{{ post.image }}"/>
 					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.url | absolute }}/{{ post.image }}"/>
