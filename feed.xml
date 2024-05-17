@@ -18,7 +18,7 @@
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				{% for account in site.data.accounts %}
-					{% if post.account && post.account == account.username %}
+					{% if post.account and post.account == account.username %}
 						<author>
 						{{ account.name }}
 						</author>	
