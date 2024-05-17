@@ -10,42 +10,62 @@
 		<sy:updateFrequency>1</sy:updateFrequency>
 		<link>https://harrypujols.com</link>
 		<atom:link href="https://harrypujols.com/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate>
+		
+			
+			<item>
+				<title>post</title>
+				<author>
+					
+				  
+					
+				  
+					
+						Dead Lizard Graphics	
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com//assets/img/posts/interested-girl.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com//assets/img/posts/interested-girl.png"/>
+			  
+				
+					<description>&lt;p&gt;Dead Lizard Graphics has joined the group.&lt;/p&gt;
+</description>
+				
+				<pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/post.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/post.html</guid>
+			</item>
+			
 		
 			
 			<item>
 				<title>Everything sucks. Late-stage capitalism ruined the Internet.</title>
-				
+				<author>
 					
-						<author>
-						Harry Pujols
-						</author>	
-						
-				
+				  
 					
-						<author>
-						Harry Pujols
-						</author>	
+						Harry Pujols	
 					
-				
+				  
 					
-						<author>
-						Harry Pujols
-						</author>	
+				  
 					
-				
+				  
 					
-						<author>
-						Harry Pujols
-						</author>	
+				  
 					
-				
-					
-						<author>
-						Harry Pujols
-						</author>	
-					
-				
+				  
+				 
+				</author>	
 				
 				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com//assets/img/posts/everything-sucks.png"/>
 					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com//assets/img/posts/everything-sucks.png"/>
@@ -64,37 +84,23 @@
 			
 			<item>
 				<title>post</title>
-				
+				<author>
 					
-						<author>
-						Harry Pujols
-						</author>	
-						
-				
+				  
 					
-						<author>
-						Harry Pujols
-						</author>	
+						Harry Pujols	
 					
-				
+				  
 					
-						<author>
-						Harry Pujols
-						</author>	
+				  
 					
-				
+				  
 					
-						<author>
-						Harry Pujols
-						</author>	
+				  
 					
-				
-					
-						<author>
-						Harry Pujols
-						</author>	
-					
-				
+				  
+				 
+				</author>	
 				
 				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com//assets/img/posts/interested-girl.png"/>
 				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com//assets/img/posts/interested-girl.png"/>
