@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://harrypujols.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: harrypujols
+backup_thumbnail: /assets/img/posts/interested-girl.png
 
 permalink: none
 paginate: 10
