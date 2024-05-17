@@ -8,8 +8,6 @@
 	<channel>
 		<title>{{ site.title | xml_escape }}</title>
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-		<sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
-		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
 		<link>{{ site.url | absolute }}</link>
 		<atom:link href="{{ site.url | absolute }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{% for post in site.posts limit:1 %}{% unless post.link %}{{ post.date | date_to_rfc822 }}{% endunless %}{% endfor %}</lastBuildDate>
@@ -17,17 +15,17 @@
 			{% unless post.link %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
-				{% for account in site.data.accounts %}
-					{% if post.account and post.account == account.username %}
-						<author>
-						{{ account.name }}
-						</author>	
-						{% else %}
-						<author>
-						{{ site.author }}
-						</author>	
+				<author>
+					{% if post.account %}
+				  {% for account in site.data.accounts %}
+					{% if post.account == account.username %}
+						{{ account.name }}	
 					{% endif %}
-				{% endfor %}
+				  {% endfor %}
+				 {% else %}
+				 {{ site.author }}
+			 {% endif %}
+				</author>	
 				{% if post.image %}
 				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url | absolute }}/{{ post.image }}"/>
 					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.url | absolute }}/{{ post.image }}"/>
