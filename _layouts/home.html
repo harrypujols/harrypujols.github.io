@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="{{ site.url }}/feed.xml"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,8 +26,7 @@
   </head>
   <body {% if page.theme %} class="{{ page.theme }}" {% endif %}>
     <main id="top" class="main hero-grid">
-      {{ content }} 
-      {% include sidebar.html %}
+      {{ content }} {% include sidebar.html %}
     </main>
     <script src="/assets/js/scripts.js"></script>
   </body>
