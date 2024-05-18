@@ -922,6 +922,12 @@ fieldset {
 .card-account {
   color: var(--account-color, var(--color-gray));
   font-size: 2rem;
+  display: block;
+}
+@media (min-width: 35.5rem) {
+  .card-account {
+    display: inline;
+  }
 }
 
 .card-content {

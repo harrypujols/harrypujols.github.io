@@ -6,19 +6,26 @@
   <link
     rel="alternate"
     type="application/rss+xml"
-    href="{{ site.url }}/feed.xml"
-  />
+    href="{{ site.url }}/feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-    rel="stylesheet"
-  />
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
   <link
     rel="shortcut icon"
     type="image/x-icon"
-    href="/assets/img/favicon.ico"
-  />
+    href="/assets/img/favicon.ico" />
   <link rel="stylesheet" href="/assets/css/site.css" />
-  <title>{{ site.title }}</title>
+  <title>
+    {% if page.title %}
+      {{ page.title }}
+      {% if page.title == "post" %}
+        &nbsp;{{ page.date | date_to_string: "ordinal", "US" }}
+      {% endif %}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
 </head>
