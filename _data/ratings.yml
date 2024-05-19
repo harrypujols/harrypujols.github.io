@@ -1,0 +1,15 @@
+---
+- level: 1
+  rank: D
+
+- level: 2
+  rank: C
+
+- level: 3
+  rank: B
+
+- level: 4
+  rank: A
+
+- level: 5
+  rank: S
