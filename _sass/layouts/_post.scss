@@ -9,6 +9,15 @@
       margin-bottom: 1em;
     }
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--title-font);
+  }
 }
 
 .post-account {
@@ -16,7 +25,6 @@
 }
 
 .post-title {
-  font-size: var(--base-font-size);
   margin: 1rem 0 0;
 
   + .post-date {
@@ -28,6 +36,7 @@
   font-size: 1.4rem;
   color: var(--color-gray);
   margin-top: 1rem;
+  margin-bottom: 1em;
 }
 
 .post-content {
