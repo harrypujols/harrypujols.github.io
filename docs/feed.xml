@@ -8,7 +8,81 @@
 		<description>The personal Web site of Harry Pujols, a tech developer and artist.</description>
 		<link>https://harrypujols.com</link>
 		<atom:link href="https://harrypujols.com/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate>
+		
+			
+			<item>
+				<title>Project- Alchemy Sign Calculator</title>
+				<author>
+					
+				  
+					
+						Harry Pujols	
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com//assets/img/posts/alchemy-screenshot.png"/>
+					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com//assets/img/posts/alchemy-screenshot.png"/>
+				
+				
+					<description>&lt;p&gt;&lt;img src=&quot;/assets/img/posts/alchemy-screenshot.png&quot; alt=&quot;Alchemy Page Screenshot&quot; /&gt;&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/projects/alchemy-sign.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/projects/alchemy-sign.html</guid>
+			</item>
+			
+		
+			
+			<item>
+				<title>Alchemy and the Zodiac- A Mystical Connection</title>
+				<author>
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+						A.I. Generated	
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com//assets/img/posts/i-like-ai.png"/>
+					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com//assets/img/posts/i-like-ai.png"/>
+				
+				
+					<description>&lt;p&gt;Alchemy and astrology, ancient disciplines intertwined with mysticism and science, have long fascinated those seeking to understand the universe’s deeper meanings. Both traditions explore the relationships between the macrocosm (the universe) and the microcosm (human existence). This article delves into the intriguing connections between alchemical principles and the zodiac signs, revealing a rich tapestry of symbolism and insight.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/alchemy.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/alchemy.html</guid>
+			</item>
+			
 		
 			
 			<item>
@@ -20,6 +94,8 @@
 				  
 					
 						Dead Lizard Graphics	
+					
+				  
 					
 				  
 					
@@ -62,6 +138,8 @@
 				  
 					
 				  
+					
+				  
 				 
 				</author>	
 				
@@ -87,6 +165,8 @@
 				  
 					
 						Harry Pujols	
+					
+				  
 					
 				  
 					
