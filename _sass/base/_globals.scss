@@ -85,6 +85,16 @@ a {
   }
 }
 
+[target="blank"],
+[target="\\_blank"] {
+  &::after {
+    padding-left: 1ch;
+    vertical-align: super;
+    font-size: 80%;
+    content: "\2197";
+  }
+}
+
 fieldset {
   padding: unset;
 }
