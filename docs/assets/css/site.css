@@ -1,6 +1,9 @@
 :root {
   --base-font: "VT323", monospace;
-  --base-font-size: 2rem;
+  --title-font: "Silkscreen", sans-serif;
+  --quirky-font: "Micro 5", sans-serif;
+  --gothic-font: "Jacquard 12", system-ui;
+  --base-font-size: 1.6rem;
   --base-font-weight: 400;
   --color-black: hsl(0, 0%, 0%);
   --color-white: hsl(360, 100%, 100%);
@@ -409,7 +412,7 @@ template {
 .highlight code,
 .highlight pre,
 .highlight {
-  font-family: var(--highlight-font);
+  font-family: var(--quirky-font);
   font-size: var(--highlight-font-size);
   color: var(--highlight-color-base);
   background-color: var(--highlight-background-base);
@@ -691,13 +694,16 @@ a:hover .icon {
     margin-bottom: 1em;
   }
 }
-
-.post-account {
-  font-size: var(--base-font-size);
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  font-family: var(--title-font);
 }
 
 .post-title {
-  font-size: var(--base-font-size);
   margin: 1rem 0 0;
 }
 .post-title + .post-date {
@@ -708,6 +714,7 @@ a:hover .icon {
   font-size: 1.4rem;
   color: var(--color-gray);
   margin-top: 1rem;
+  margin-bottom: 1em;
 }
 
 .post-content {
@@ -750,6 +757,11 @@ a:hover .icon {
 
 .pagination {
   padding: 1rem;
+}
+
+.rating {
+  display: flex;
+  gap: 2ch;
 }
 
 html {
@@ -821,7 +833,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  font-weight: 400;
   margin-block: 1ex;
 }
 
@@ -856,6 +868,10 @@ a:hover, a:focus, a:visited {
 
 fieldset {
   padding: unset;
+}
+
+blockquote {
+  font-family: var(--gothic-font);
 }
 
 .card {
@@ -914,7 +930,7 @@ fieldset {
 
 .card-username {
   color: var(--username-color, inherit);
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: var(--base-font-weight);
   margin: 0;
 }
