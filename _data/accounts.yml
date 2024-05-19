@@ -19,3 +19,7 @@
 - username: review
   name: Roasted Potatoes
   avatar: reviews.png
+
+- username: ai-generated
+  name: A.I. Generated
+  avatar: ai-like.png
