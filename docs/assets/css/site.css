@@ -874,7 +874,7 @@ a:hover, a:focus, a:visited {
 [target="\\_blank"]::after {
   padding-left: 1ch;
   vertical-align: super;
-  font-size: 80%;
+  font-size: 0.8em;
   content: "\2197";
 }
 
