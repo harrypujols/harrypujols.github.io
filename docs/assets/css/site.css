@@ -764,6 +764,10 @@ a:hover .icon {
   gap: 2ch;
 }
 
+.footnotes {
+  font-size: 1rem;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -864,6 +868,14 @@ a:hover, a:focus, a:visited {
 }
 .dark a:visited {
   color: var(--color-pink);
+}
+
+[target="blank"]::after,
+[target="\\_blank"]::after {
+  padding-left: 1ch;
+  vertical-align: super;
+  font-size: 80%;
+  content: "\2197";
 }
 
 fieldset {
