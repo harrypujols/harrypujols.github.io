@@ -841,6 +841,10 @@ h6 {
   margin-block: 1ex;
 }
 
+h1 {
+  text-wrap: pretty;
+}
+
 img {
   max-width: 100%;
 }
