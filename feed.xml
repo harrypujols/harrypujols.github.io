@@ -27,11 +27,11 @@
 			 {% endif %}
 				</author>	
 				{% if post.image %}
-				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url | absolute }}/{{ post.image }}"/>
-					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.url | absolute }}/{{ post.image }}"/>
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url | absolute }}{{ post.image }}"/>
+					<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.url | absolute }}{{ post.image }}"/>
 				{% else %}
-				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url | absolute }}/{{ site.backup_thumbnail }}"/>
-				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.url | absolute }}/{{ site.backup_thumbnail }}"/>
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ site.url | absolute }}{{ site.backup_thumbnail }}"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ site.url | absolute }}{{ site.backup_thumbnail }}"/>
 			  {% endif %}
 				{% if post.content %}
 					<description>{{ post.excerpt | xml_escape }}</description>
