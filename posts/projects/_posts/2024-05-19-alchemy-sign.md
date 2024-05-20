@@ -3,6 +3,7 @@ account: harrypujols
 title: Project- Alchemy Sign Calculator
 image: /assets/img/posts/alchemy-screenshot.png
 caption: screenshot of alchemy calculator page
+tags: project
 ---
 
 ![Alchemy Page Screenshot](/assets/img/posts/alchemy-screenshot.png)

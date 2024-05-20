@@ -8,7 +8,44 @@
 		<description>The personal Web site of Harry Pujols, a tech developer and artist.</description>
 		<link>https://harrypujols.com</link>
 		<atom:link href="https://harrypujols.com/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+		
+			
+			<item>
+				<title>Roasted Potatoes has joined the site</title>
+				<author>
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+						Roasted Potatoes	
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com//assets/img/posts/interested-girl.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com//assets/img/posts/interested-girl.png"/>
+			  
+				
+					<description>&lt;p&gt;Introducing Roasted Potatoes, the review system that accurately displays every review according by Harry. The reviews are on forms of entertainment, such as, but not limited to:&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/reviews/review-system.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/review-system.html</guid>
+			</item>
+			
 		
 			
 			<item>
