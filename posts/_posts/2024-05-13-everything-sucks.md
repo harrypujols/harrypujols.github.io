@@ -3,6 +3,7 @@ account: harrypujols
 title: Everything sucks. Late-stage capitalism ruined the Internet.
 image: /assets/img/posts/everything-sucks.png
 caption: Elon, Putin, the GOP
+tags: rant
 ---
 
 I sound like an old man complaining that everything was better before. While not entirely true, the Internet sucks now, and its decline can be traced back to corporate greed, the need to project eternal growth to keep shareholders from sinking your company’s stock value. Everything now is under a subscription plan, from the music you hear, to the storage where you keep your files, the software in your laptop, and playing video games with friends online.
