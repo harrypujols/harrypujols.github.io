@@ -19,11 +19,11 @@ Introducing Roasted Potatoes, the review system that accurately displays every r
 
 The rank system is based on the best rank system created: Warren Goodrich's [Little Man][little-man-external-link]{:target="\_blank"}, which is self explanatory.
 
-![Five Stars](/assets/img/posts/five-star.png)
-![Four Stars](/assets/img/posts/four-star.png)
-![Three Stars](/assets/img/posts/three-star.png)
-![Two Stars](/assets/img/posts/two-star.png)
 ![One Star](/assets/img/posts/one-star.png)
+![Two Stars](/assets/img/posts/two-star.png)
+![Three Stars](/assets/img/posts/three-star.png)
+![Four Stars](/assets/img/posts/four-star.png)
+![Five Stars](/assets/img/posts/five-star.png)
 
 Harry is not a critic, by the way, just an average media consumer that has opinons on things.
 
