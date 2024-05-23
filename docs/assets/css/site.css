@@ -897,8 +897,6 @@ blockquote {
   column-gap: 2rem;
   padding: 1rem;
   border-bottom: 1px solid var(--card-divider-color, var(--color-cloud));
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
   max-width: 75ch;
   margin-inline: auto;
 }
@@ -920,6 +918,8 @@ blockquote {
 @media (min-width: 35.5rem) {
   .card {
     grid-template-columns: var(--card-avatar-size, 5rem) auto;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 }
 @media print {
@@ -945,15 +945,20 @@ blockquote {
 }
 
 .card-username {
+  font-size: 1.4rem;
   color: var(--username-color, inherit);
-  font-size: 2rem;
   font-weight: var(--base-font-weight);
   margin: 0;
+}
+@media (min-width: 35.5rem) {
+  .card-username {
+    font-size: 2rem;
+  }
 }
 
 .card-account {
   color: var(--account-color, var(--color-gray));
-  font-size: 2rem;
+  font-size: inherit;
   display: block;
 }
 @media (min-width: 35.5rem) {
@@ -963,13 +968,14 @@ blockquote {
 }
 
 .card-content {
+  margin-block: 1rem;
   grid-column: 1 / span 2;
-  margin: 0;
   color: var(--content-color, inherit);
 }
 @media (min-width: 35.5rem) {
   .card-content {
     grid-column: 2;
+    margin: 0;
   }
 }
 
@@ -982,9 +988,14 @@ blockquote {
 
 .card-badge {
   display: inline-block;
-  width: 1.6rem;
+  width: 1.2rem;
   vertical-align: middle;
-  margin-left: -0.5rem;
+}
+@media (min-width: 35.5rem) {
+  .card-badge {
+    width: 1.6rem;
+    margin-left: -0.5rem;
+  }
 }
 
 .card-icon {
