@@ -1,8 +1,6 @@
 ---
-account: harrypujols
-title: Project- Alchemy Sign Calculator
-image: /assets/img/posts/alchemy-screenshot.png
-caption: screenshot of alchemy calculator page
+account: projects
+title: Alchemy Sign Calculator
 tags: project
 ---
 
