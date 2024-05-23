@@ -23,3 +23,7 @@
 - username: ai-generated
   name: A.I. Generated
   avatar: ai-like.png
+
+- username: projects
+  name: Project
+  avatar: flask.png
