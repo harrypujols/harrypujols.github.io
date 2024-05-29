@@ -716,6 +716,14 @@ a:hover .icon {
   margin-top: 1rem;
   margin-bottom: 1em;
 }
+@media (prefers-color-scheme: dark) {
+  .system .post-date {
+    color: var(--color-cloud);
+  }
+}
+.dark .post-date {
+  color: var(--color-cloud);
+}
 
 .post-content {
   --padding-inline: 2rem;
