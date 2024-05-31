@@ -8,7 +8,46 @@
 		<description>The personal Web site of Harry Pujols, a tech developer and artist.</description>
 		<link>https://harrypujols.com</link>
 		<atom:link href="https://harrypujols.com/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Wed, 29 May 2024 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 31 May 2024 00:00:00 +0000</lastBuildDate>
+		
+			
+			<item>
+				<title>My Losing Battle With Enshittification</title>
+				<author>
+					
+				  
+					
+						Harry Pujols	
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com/assets/img/world-map.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com/assets/img/world-map.png"/>
+			  
+				
+					<description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Enshittification&quot;&gt;Enshittification&lt;/a&gt;. It’s everywhere. It’s the current reality of the Internet. From Web pages that look like Christmas trees with popups, auto-playing videos and reloading ads with flashy graphics, to the mind-control rectangle you may be using to read this page.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Fri, 31 May 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/enshittification.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/enshittification.html</guid>
+			</item>
+			
 		
 			
 			<item>
