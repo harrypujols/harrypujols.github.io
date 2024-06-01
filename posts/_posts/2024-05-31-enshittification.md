@@ -50,13 +50,6 @@ But can you fight back? Believe me, I’ve tried. It’s the reason this blog ha
 - **Alternative:** this app became terminally enshittified when it changed its name from iTunes. The option is Spotify, but I travel and they geo-fence my account and I am not always listening to music while online.
 - **W/L:** L
 
-### Every Commercial Software
-
-- **App Status:** installed?
-- **Use:** I am happy to pay for a reasonable one-time purchase. If they offer nothing but a subscription, they aren’t getting a single penny from me.
-- **Alternative:** open-source alternatives or avast, sail-ho ye mateys.
-- **W/L:** W
-
 ### Google
 
 - **App Status:** installed.
@@ -71,6 +64,20 @@ But can you fight back? Believe me, I’ve tried. It’s the reason this blog ha
 - **Alternative:** no shortage of apps that do the same, but it's scary the amount of small business that decide the best way to contact them is through WhatsApp.
 - **W/L:** L
 
+### Reddit
+
+- **App Status:** installed.
+- **Use:** it's gathering dust in my mind-control rectangle.
+- **Alternative:** everything has gone to hell.
+- **W/L:** L
+
+### Every Commercial Software
+
+- **App Status:** installed?
+- **Use:** I am happy to pay for a reasonable one-time purchase. If they offer nothing but a subscription, they aren’t getting a single penny from me.
+- **Alternative:** open-source alternatives or avast, sail-ho ye mateys.
+- **W/L:** W
+
 ## What isn’t enshittified in 2024?
 
 #### [Wikipedia](https://www.wikipedia.org)
@@ -80,6 +87,8 @@ The undisputed best page in the Web. All the information you’re looking for wi
 #### [Steam](https://store.steampowered.com)
 
 What do you mean I don’t have to pay a subscription to play with my friends online? A service that slaps, with robust Linux, controller support, community forums, cheap products, and [the best gaming device in 2024](https://store.steampowered.com/steamdeck)? What’s the catch? Their business doesn’t have to report to shareholders, thus, enshittifying their product is entirely optional.
+
+## So...
 
 It’s not difficult to guess. The expectation of corporations to report infinite growth to shareholders comes at the expense of destroying the quality of their products, services and the job stability of their employees. Remove that expectation, and go from there.
 
