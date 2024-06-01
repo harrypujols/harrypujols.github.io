@@ -106,3 +106,8 @@ fieldset {
 blockquote {
   font-family: var(--gothic-font);
 }
+
+hr {
+  border: 0;
+  border-bottom: 1px dashed var(--color-cloud);
+}

@@ -898,6 +898,11 @@ blockquote {
   font-family: var(--gothic-font);
 }
 
+hr {
+  border: 0;
+  border-bottom: 1px dashed var(--color-cloud);
+}
+
 .card {
   display: grid;
   grid-template-columns: var(--card-avatar-size, 3rem) auto;
