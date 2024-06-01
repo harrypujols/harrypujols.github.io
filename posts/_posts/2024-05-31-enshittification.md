@@ -88,7 +88,7 @@ The undisputed best page in the Web. All the information you’re looking for wi
 
 What do you mean I don’t have to pay a subscription to play with my friends online? A service that slaps, with robust Linux, controller support, community forums, cheap products, and [the best gaming device in 2024](https://store.steampowered.com/steamdeck)? What’s the catch? Their business doesn’t have to report to shareholders, thus, enshittifying their product is entirely optional.
 
-## So...
+---
 
 It’s not difficult to guess. The expectation of corporations to report infinite growth to shareholders comes at the expense of destroying the quality of their products, services and the job stability of their employees. Remove that expectation, and go from there.
 
