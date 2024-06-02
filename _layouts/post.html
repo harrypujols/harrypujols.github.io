@@ -34,6 +34,16 @@
 
         {% endif %}
         <article class="post">{{ content }}</article>
+        <div class="comments">
+          <script
+            src="https://utteranc.es/client.js"
+            repo="harrypujols/harrypujols.github.io"
+            issue-term="title"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async
+          ></script>
+        </div>
       </section>
       {% include sidebar.html %}
     </main>
