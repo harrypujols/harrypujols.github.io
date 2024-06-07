@@ -84,6 +84,10 @@ But can you fight back? Believe me, I’ve tried. It’s the reason this blog ha
 
 The undisputed best page in the Web. All the information you’re looking for with no popups, ads, auto-playing videos, paywalls, share-raising gimmicks like crypto nor AI-generated content. Why? Their business model is similar to your local library’s[^1].
 
+#### [RSS](https://es.wikipedia.org/wiki/RSS)
+
+I needed a feed that isn't tracking my every move, isn't curating information based on a manipulative algorithm. Turns out, we had it all along. Many Web sites still support good ol’ RSS, and there are a few apps out there that help you customize your experience. My RSS app has replaced almost every social media app out there. Do I miss the comments? What do you think? Would you?
+
 #### [Steam](https://store.steampowered.com)
 
 What do you mean I don’t have to pay a subscription to play with my friends online? A service that slaps, with robust Linux, controller support, community forums, cheap products, and [the best gaming device in 2024](https://store.steampowered.com/steamdeck)? What’s the catch? Their business doesn’t have to report to shareholders, thus, enshittifying their product is entirely optional.
