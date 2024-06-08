@@ -1,21 +1,28 @@
 <ol class="post-list">
   {% for item in page.table %}
-    <li class="post-list-item">
+  <li class="post-list-item">
+  {% for loop in item %}
+
+    {% if loop[0] == "name" %}
       <h3 class="post-item-name">
-        {{ item.name }}
-        {% if item.year %}
-          <span class="post-item-year">({{ item.year }})</span>
-        {% endif %}
+        {{ loop[1] }} 
       </h3>
-      {% if item.rating %}
+ 
+
+      {% elsif loop[0] == "rating" %}
         <img
-          src="/assets/img/review/{{ item.rating }}-star.png"
-          alt="rating {{ item.rating }}"
-          class="rating-img" />
+          src="/assets/img/review/{{ loop[1] }}-star.png"
+          alt="rating {{ loop[1] }}"
+          class="rating-img"
+        />
+      {% else %}
+        <p class="item-{{loop[0]}}">
+          <b>{{loop[0]}} </b>
+          {{ loop[1] }}
+        </p>
       {% endif %}
-      {% if item.comment %}
-        <p class="item-comment">{{ item.comment }}</p>
-      {% endif %}
-    </li>
+
+    {% endfor %}
+  </li>
   {% endfor %}
 </ol>
