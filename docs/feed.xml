@@ -8,7 +8,47 @@
 		<description>The personal Web site of Harry Pujols, a tech developer and artist.</description>
 		<link>https://harrypujols.com</link>
 		<atom:link href="https://harrypujols.com/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Fri, 07 Jun 2024 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 16 Jun 2024 00:00:00 +0000</lastBuildDate>
+		
+			
+			<item>
+				<title>Urinal Checkmate</title>
+				<author>
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+						Project	
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com/assets/img/world-map.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com/assets/img/world-map.png"/>
+			  
+				
+					<description>&lt;p&gt;Year of release: 2014
+URL: http://harrypujols.com/urinal-checkmate&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/projects/urinal-checkmate.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/projects/urinal-checkmate.html</guid>
+			</item>
+			
 		
 			
 			<item>
@@ -232,7 +272,8 @@
 				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com/assets/img/world-map.png"/>
 			  
 				
-					<description>&lt;p&gt;&lt;img src=&quot;/assets/img/posts/alchemy-screenshot.png&quot; alt=&quot;Alchemy Page Screenshot&quot; /&gt;&lt;/p&gt;
+					<description>&lt;p&gt;Year of release: 2022
+URL: https://harrypujols.com/alchemy-sign&lt;/p&gt;
 
 </description>
 				
