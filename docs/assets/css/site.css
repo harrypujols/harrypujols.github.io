@@ -896,6 +896,7 @@ fieldset {
 
 blockquote {
   font-family: var(--gothic-font);
+  font-size: 2rem;
 }
 
 hr {
