@@ -3,8 +3,11 @@ account: projects
 title: Urinal Checkmate
 tags: project
 ---
-Year of release: 2014
-URL: http://harrypujols.com/urinal-checkmate
+**Year of release:** 2014
+
+**URL:** http://harrypujols.com/urinal-checkmate
+
+---
 
 ![Urinal Checkmate page Screenshot](/assets/img/posts/urinal-checkmate-screenshot.png)
 

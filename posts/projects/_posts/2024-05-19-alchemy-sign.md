@@ -4,8 +4,11 @@ title: Alchemy Sign Calculator
 tags: project
 ---
 
-Year of release: 2022
-URL: https://harrypujols.com/alchemy-sign
+**Year of release:** 2022
+
+**URL:** https://harrypujols.com/alchemy-sign
+
+---
 
 ![Alchemy Page Screenshot](/assets/img/posts/alchemy-screenshot.png)
 
