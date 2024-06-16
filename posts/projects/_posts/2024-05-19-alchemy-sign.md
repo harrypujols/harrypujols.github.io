@@ -4,6 +4,9 @@ title: Alchemy Sign Calculator
 tags: project
 ---
 
+Year of release: 2022
+URL: https://harrypujols.com/alchemy-sign
+
 ![Alchemy Page Screenshot](/assets/img/posts/alchemy-screenshot.png)
 
 A few years ago I was in a class when we discussed different types of zodiac signs, and turns out we also had an archemical zodiac sign. We read an [article][external-number-link]{:target="\_blank"} that had a formula[^1] of how to find your archemical zodiac sign according to [birth date][another-external-link]{:target="\_blank"}. I looked up on Google if there was a free calculator, and turns out, there wasn't.
