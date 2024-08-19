@@ -7,7 +7,7 @@ table:
     rating: 2
     sub: 2024
     comment: >-
-      More emotions but less emotions from me. I can't point my finger at why I was not as engaged with this movie as with the first one.
+      The more emotions this movie introduces, the less emotions they make me feel.
 
   - name: Deadpool and Wolverine
     rating: 2
