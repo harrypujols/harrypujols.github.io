@@ -91,5 +91,5 @@ table:
     rating: 3
     sub: 2024
     comment: >-
-      Super weird and Donnie Darko-ish with the mandatory A24 look.
+      If A24 can be used as an adjective, this is the A24est movie I've ever seen.
 ---
