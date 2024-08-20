@@ -91,5 +91,5 @@ table:
     rating: 3
     sub: 2024
     comment: >-
-      If A24 can be used as an adjective, this is the A24est movie I've ever seen.
+      If you asked some advanced AI to make you an A24 movie, it will likely be something like this one.
 ---
