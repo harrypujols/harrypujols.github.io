@@ -52,7 +52,7 @@ table:
       Inglourious Basterds but dumber, but also more fun.
 
   - name: Kingdom of the Planet of the Apes
-    rating: 5
+    rating: 4
     sub: 2024
     comment: >-
       This series keeps releasing one banger after the other. A criminally underrated sci-fi masterpiece.
