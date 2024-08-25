@@ -91,5 +91,17 @@ table:
     rating: 3
     sub: 2024
     comment: >-
-      If you asked some advanced AI to make you an A24 movie, it will likely be something like this one.
+      If you asked some advanced AI to make you the quintessential A24 movie, it will come up with something like this.
+
+  - name: Longlegs
+    rating: 3
+    sub: 2024
+    comment: >-
+      A rudimentary serial killer, supernatural horror, saved by Nicolas Cage in drag.
+
+  - name: Thelma
+    rating: 4
+    sub: 2024
+    comment: >-
+      This film reminds you that grannies are precious, and how can you argue with that.
 ---
