@@ -103,5 +103,11 @@ table:
     rating: 4
     sub: 2024
     comment: >-
-      This film reminds you that grannies are precious, and how can you argue with that.
+      This film reminds you that grannies are precious, and how can you argue with that?
+
+  - name: The First Omen
+    rating: 2
+    sub: 2024
+    comment: >-
+      A prequel that manages to be above average, but I completely forgot about it after a watch.
 ---
