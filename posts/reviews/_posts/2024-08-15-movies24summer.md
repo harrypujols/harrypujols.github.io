@@ -58,7 +58,7 @@ table:
       This series keeps releasing one banger after the other. A criminally underrated sci-fi masterpiece.
 
   - name: MaXXXine
-    rating: 4
+    rating: 5
     sub: 2024
     comment: >-
       Another banger from the X saga. The movie feels and looks old, but the lack of gratuituous boobs breaks the immersion.
