@@ -224,6 +224,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.text = this.element.textContent;
+    this.index = 0;
+    this.typing = false;
+  }
+
+  init() {
+    this.element.textContent = "";
+    this.type();
+  }
+
+  type() {
+    if (this.index < this.text.length) {
+      this.typing = true;
+      this.element.textContent += this.text.charAt(this.index);
+      this.index++;
+      setTimeout(() => this.type(), 100);
+    } else {
+      this.typing = false;
+    }
+  }
+});
+
+
+/***/ }),
+/* 9 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
   document.addEventListener('DOMContentLoaded', () => {
     APP.methods.components( APP )
@@ -299,7 +333,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 const FRAMEWORK = {};
 
 
@@ -313,28 +348,29 @@ const FRAMEWORK = {};
 
 
 
-(( window, APP ) => {
 
+((window, APP) => {
   APP.methods = {
     components: _methods_components__WEBPACK_IMPORTED_MODULE_0__["default"],
     breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_1__["default"],
     resizestop: _methods_resizestop__WEBPACK_IMPORTED_MODULE_2__["default"],
     scrolldirection: _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_3__["default"],
-    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }
+    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"],
+  };
 
   APP.components = {
     size: _components_size__WEBPACK_IMPORTED_MODULE_5__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_6__["default"],
+    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_7__["default"],
+  };
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }
+    run: _app_run__WEBPACK_IMPORTED_MODULE_8__["default"],
+  };
 
-  APP.start.run( APP );
+  APP.start.run(APP);
+})(window, FRAMEWORK, undefined);
 
-})( window, FRAMEWORK, undefined );
 })();
 
 /******/ })()

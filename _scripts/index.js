@@ -1,35 +1,35 @@
 const FRAMEWORK = {};
 
-import components from './methods/components';
-import breakpoint from './methods/breakpoint';
-import resizestop from './methods/resizestop';
-import scrolldirection from './methods/scrolldirection';
-import scrollstop from './methods/scrollstop';
+import components from "./methods/components";
+import breakpoint from "./methods/breakpoint";
+import resizestop from "./methods/resizestop";
+import scrolldirection from "./methods/scrolldirection";
+import scrollstop from "./methods/scrollstop";
 
-import size from './components/size';
-import modeswitch from './components/modeswitch';
+import size from "./components/size";
+import modeswitch from "./components/modeswitch";
+import typewriter from "./components/typewriter";
 
-import run from './app/run';
+import run from "./app/run";
 
-(( window, APP ) => {
-
+((window, APP) => {
   APP.methods = {
     components,
     breakpoint,
     resizestop,
     scrolldirection,
-    scrollstop
-  }
+    scrollstop,
+  };
 
   APP.components = {
     size,
-    modeswitch
-  }
+    modeswitch,
+    typewriter,
+  };
 
   APP.start = {
-    run
-  }
+    run,
+  };
 
-  APP.start.run( APP );
-
-})( window, FRAMEWORK, undefined );
+  APP.start.run(APP);
+})(window, FRAMEWORK, undefined);
