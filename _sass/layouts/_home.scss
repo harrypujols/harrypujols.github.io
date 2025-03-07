@@ -15,3 +15,20 @@
     font-size: 0.8rem;
   }
 }
+
+[for="darkmode"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+[name="darkmode"] {
+  width: 100%;
+}
+
+.light-icon {
+  font-size: 2rem;
+}
+
+.dark-icon {
+  font-size: 1.6rem;
+}

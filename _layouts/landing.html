@@ -22,8 +22,9 @@
     <link rel="stylesheet" href="/assets/css/site.css" />
   </head>
   <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
-    <main class="landing-grid">
-      <pre class="ascii-art face">
+    <main>
+      <div class="landing-grid">
+        <pre class="ascii-art face" role="presentation" aria-hidden="true">
                             @@@@@@@@                      
                         @@@@++++++++@@@                   
                        @++        +++++@@                 
@@ -60,10 +61,24 @@
     |_| |_|\__,_|_|  |_|   \__, | .__/ \__,_|/ |\___/|_|___/
                            |___/|_|        |__/                                          
     </pre
-      >
-      <h1 class="headline" data-js="typewriter">
-        HI, I'M HARRYPUJOLS.COM I'M NOT A CHATBOT, I'M JUST A WEB SITE.
-      </h1>
+        >
+        <h1 class="headline" data-js="typewriter">
+          HI, I'M HARRYPUJOLS.COM I'M NOT A CHATBOT, I'M JUST A WEB SITE.
+        </h1>
+      </div>
+
+      <label for="darkmode" role="presentation" aria-label="Toggle Dark Mode">
+        <span class="light-icon">&#9788;</span>
+        <span class="dark-icon">&#9790;</span>
+      </label>
+      <input
+        type="range"
+        name="darkmode"
+        id="darmode"
+        min="1"
+        max="3"
+        step="1"
+      />
     </main>
     <script src="/assets/js/scripts.js"></script>
   </body>
