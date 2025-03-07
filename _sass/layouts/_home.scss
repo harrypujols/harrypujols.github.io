@@ -19,16 +19,17 @@
 [for="darkmode"] {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 [name="darkmode"] {
   width: 100%;
 }
 
-.light-icon {
+.sun {
   font-size: 2rem;
 }
 
-.dark-icon {
-  font-size: 1.6rem;
+.moon {
+  font-size: 1.4rem;
 }
