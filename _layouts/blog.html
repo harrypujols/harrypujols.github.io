@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body {% if page.theme %} class="{{ page.theme }}" {% endif %}>
-    <main id="top" class="main hero-grid">
+  <body class="blog {% if page.theme %}{{ page.theme }}{% endif %}">
+    <main id="top" class="blog-main hero-grid">
       {{ content }} {% include sidebar.html %}
     </main>
     <script src="/assets/js/scripts.js"></script>
