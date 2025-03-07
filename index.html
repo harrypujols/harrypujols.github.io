@@ -1,13 +1,8 @@
 ---
-layout: home
+layout: blog
 ---
 
 <section class="timeline">
-  {% for post in paginator.posts %} 
-    {% include card.html %} 
-  {% endfor %} 
-  
-  {% if paginator.total_pages > 1 %} 
-    {%include pagination.html %} 
-  {% endif %}
+  {% for post in paginator.posts %} {% include card.html %} {% endfor %} {% if
+  paginator.total_pages > 1 %} {%include pagination.html %} {% endif %}
 </section>
