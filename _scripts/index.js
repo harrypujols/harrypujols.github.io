@@ -7,6 +7,7 @@ import scrolldirection from "./methods/scrolldirection";
 import scrollstop from "./methods/scrollstop";
 import retrieve from "./methods/retrieve";
 import store from "./methods/store";
+import settings from "./methods/settings";
 
 import size from "./components/size";
 import modeswitch from "./components/modeswitch";
@@ -17,8 +18,6 @@ import data from "./data/data.json";
 import run from "./app/run";
 
 ((window, APP) => {
-  console.log("Initializing APP...");
-
   APP.methods = {
     components,
     breakpoint,
@@ -27,6 +26,7 @@ import run from "./app/run";
     scrollstop,
     retrieve,
     store,
+    settings,
   };
 
   APP.components = {
@@ -41,11 +41,5 @@ import run from "./app/run";
     run,
   };
 
-  // Retrieve settings on initialization
-  console.log("Calling retrieve method...");
-  APP.data.settings = APP.methods.retrieve(APP, APP.data.settings);
-  console.log("Settings retrieved:", APP.data.settings);
-
   APP.start.run(APP);
-  console.log("APP started.");
 })(window, FRAMEWORK, undefined);

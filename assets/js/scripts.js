@@ -129,17 +129,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP, settings) => {
-  console.log("Is this on?");
-
-  if (localStorage.getItem("settings")) {
-    let preferences = JSON.parse(localStorage.getItem("settings"));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP, data) => {
+  if (localStorage.getItem("data")) {
+    let preferences = JSON.parse(localStorage.getItem("data"));
     console.log("Preferences found:", preferences);
     return preferences;
   } else {
-    APP.methods.store(settings);
-    console.log("No settings found. Using default settings.");
-    return settings;
+    APP.methods.store(data);
+    console.log("No data found. Using default data.");
+    return data;
   }
 });
 
@@ -165,6 +163,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
+  APP.methods.retrieve(APP, APP.data.settings);
+});
+
+
+/***/ }),
+/* 9 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
     constructor ( element, APP ) {
       this.element = element
@@ -180,7 +191,7 @@ __webpack_require__.r(__webpack_exports__);
   });
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -253,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -287,13 +298,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -303,6 +314,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
   document.addEventListener("DOMContentLoaded", () => {
     APP.methods.components(APP);
+    APP.methods.settings(APP);
   });
 });
 
@@ -375,11 +387,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _methods_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _methods_settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
 const FRAMEWORK = {};
 
 
@@ -398,9 +411,8 @@ const FRAMEWORK = {};
 
 
 
-((window, APP) => {
-  console.log("Initializing APP...");
 
+((window, APP) => {
   APP.methods = {
     components: _methods_components__WEBPACK_IMPORTED_MODULE_0__["default"],
     breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -409,27 +421,22 @@ const FRAMEWORK = {};
     scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"],
     retrieve: _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__["default"],
     store: _methods_store__WEBPACK_IMPORTED_MODULE_6__["default"],
+    settings: _methods_settings__WEBPACK_IMPORTED_MODULE_7__["default"],
   };
 
   APP.components = {
-    size: _components_size__WEBPACK_IMPORTED_MODULE_7__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_8__["default"],
-    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
+    size: _components_size__WEBPACK_IMPORTED_MODULE_8__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_9__["default"],
+    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_10__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_10__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_11__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_11__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_12__["default"],
   };
 
-  // Retrieve settings on initialization
-  console.log("Calling retrieve method...");
-  APP.data.settings = APP.methods.retrieve(APP, APP.data.settings);
-  console.log("Settings retrieved:", APP.data.settings);
-
   APP.start.run(APP);
-  console.log("APP started.");
 })(window, FRAMEWORK, undefined);
 
 })();
