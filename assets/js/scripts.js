@@ -164,7 +164,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
-  APP.methods.retrieve(APP, APP.data.settings);
+  const defaults = APP.methods.retrieve(APP, APP.data.settings);
+  let page = document.querySelector("html");
+  page.classList.add(defaults.theme);
+  page.classList.add(defaults.mode);
+  // page.style.setProperty("--font-size", defaults.fontSize);
 });
 
 
