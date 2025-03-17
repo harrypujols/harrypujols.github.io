@@ -1,6 +1,8 @@
 .landing-grid {
   padding: 0 1rem;
   border-block: 1px dashed var(--color-gray);
+  // max-width: 48rem;
+  // margin-inline: auto;
 
   @media (min-width: 40rem) {
     display: grid;
@@ -16,13 +18,13 @@
   }
 }
 
-[for="darkmode"] {
+[for="modeswitch"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-[name="darkmode"] {
+[name="modeswitch"] {
   width: 100%;
 }
 
