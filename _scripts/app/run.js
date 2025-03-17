@@ -1,5 +1,5 @@
-export default ( APP ) => {
-  document.addEventListener('DOMContentLoaded', () => {
-    APP.methods.components( APP )
-  })
-}
+export default (APP) => {
+  document.addEventListener("DOMContentLoaded", () => {
+    APP.methods.components(APP);
+  });
+};
