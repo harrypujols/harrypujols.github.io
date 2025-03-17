@@ -24,6 +24,24 @@
   <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
     <main>
       <div class="landing-grid">
+        <fieldset class="settings">
+          <label
+            for="modeswitch"
+            role="presentation"
+            aria-label="Toggle Dark Mode"
+          >
+            <span class="sun">&#9788;</span>
+            <span class="moon">&#9790;</span>
+          </label>
+          <input
+            type="range"
+            name="modeswitch"
+            id="modeswitch"
+            min="1"
+            max="3"
+            step="1"
+          />
+        </fieldset>
         <pre class="ascii-art face" role="presentation" aria-hidden="true">
                             @@@@@@@@                      
                         @@@@++++++++@@@                   
@@ -63,22 +81,9 @@
     </pre
         >
         <h1 class="headline" data-js="typewriter">
-          HI, I'M HARRYPUJOLS.COM I'M NOT A CHATBOT, I'M JUST A WEB SITE.
+          Welcome to harrypujols.com, a playground for web development projects.
         </h1>
       </div>
-
-      <label for="modeswitch" role="presentation" aria-label="Toggle Dark Mode">
-        <span class="sun">&#9788;</span>
-        <span class="moon">&#9790;</span>
-      </label>
-      <input
-        type="range"
-        name="modeswitch"
-        id="modeswitch"
-        min="1"
-        max="3"
-        step="1"
-      />
     </main>
     <script src="/assets/js/scripts.js"></script>
   </body>
