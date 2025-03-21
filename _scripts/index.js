@@ -10,8 +10,8 @@ import store from "./methods/store";
 import settings from "./methods/settings";
 
 import size from "./components/size";
-import modeswitch from "./components/modeswitch";
 import typewriter from "./components/typewriter";
+import modeswitch from "./components/modeswitch";
 
 import data from "./data/data.json";
 
@@ -33,6 +33,7 @@ import run from "./app/run";
     size,
     modeswitch,
     typewriter,
+    modeswitch,
   };
 
   APP.data = data;

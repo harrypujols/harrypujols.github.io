@@ -205,79 +205,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
-    this.page = document.documentElement;
-    this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = {};
-    this.prefs.theme = "system";
-  }
-
-  switch() {
-    this.element.addEventListener("click", (event) => {
-      this.inputs.forEach((input) => {
-        if (input !== event.target) {
-          input.checked = false;
-        }
-      });
-
-      if (event.target.checked === true) {
-        this.prefs.theme = event.target.value;
-      } else {
-        this.prefs.theme = "system";
-      }
-
-      this.page.className = "";
-      this.page.classList.add(this.prefs.theme);
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
-    });
-  }
-
-  store() {
-    var retrieve = localStorage.getItem("prefs");
-
-    if (retrieve == null || retrieve == "undefined") {
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
-    } else {
-      if (JSON.parse(retrieve)["theme"] == null) {
-        localStorage.clear();
-        localStorage.setItem("prefs", JSON.stringify(this.prefs));
-      } else {
-        this.prefs = JSON.parse(retrieve);
-      }
-    }
-
-    if (this.inputs.length > 0) {
-      this.inputs.forEach((input) => {
-        if (input.value === this.prefs.theme) {
-          input.checked = true;
-        }
-      });
-    }
-
-    this.page.className = "";
-    this.page.classList.add(this.prefs.theme);
-  }
-
-  init() {
-    this.store();
-
-    if (this.inputs.length > 0) {
-      this.switch();
-    }
-  }
-});
-
-
-/***/ }),
-/* 11 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor(element, APP) {
-    this.element = element;
     this.text = this.element.textContent;
     this.index = 0;
     this.typing = false;
@@ -297,6 +224,58 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       this.typing = false;
     }
+  }
+});
+
+
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.page = document.documentElement;
+    this.inputs = document.getElementsByName("mode-switch");
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
+  }
+
+  init() {
+    // Set initial mode based on preferences
+    this.page.classList.add(this.prefs.mode);
+
+    // Add event listener to the range input field
+    this.element.addEventListener("input", (event) => {
+      let mode;
+      switch (event.target.value) {
+        case "1":
+          mode = "light";
+          break;
+        case "2":
+          mode = "system";
+          break;
+        case "3":
+          mode = "dark";
+          break;
+        default:
+          mode = "system";
+      }
+
+      // Update the settings object
+      this.prefs.mode = mode;
+
+      // Save the updated settings using the store method
+      this.APP.methods.store(this.prefs);
+
+      // Update the page class
+      this.page.classList.remove("light", "system", "dark");
+      this.page.classList.add(mode);
+    });
   }
 });
 
@@ -393,8 +372,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _methods_settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
-/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
 /* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
 /* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
 const FRAMEWORK = {};
@@ -430,8 +409,9 @@ const FRAMEWORK = {};
 
   APP.components = {
     size: _components_size__WEBPACK_IMPORTED_MODULE_8__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_9__["default"],
-    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_10__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
+    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
   };
 
   APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_11__;

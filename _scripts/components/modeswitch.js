@@ -3,61 +3,40 @@ export default class {
     this.element = element;
     this.page = document.documentElement;
     this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = {};
-    this.prefs.theme = "system";
-  }
-
-  switch() {
-    this.element.addEventListener("click", (event) => {
-      this.inputs.forEach((input) => {
-        if (input !== event.target) {
-          input.checked = false;
-        }
-      });
-
-      if (event.target.checked === true) {
-        this.prefs.theme = event.target.value;
-      } else {
-        this.prefs.theme = "system";
-      }
-
-      this.page.className = "";
-      this.page.classList.add(this.prefs.theme);
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
-    });
-  }
-
-  store() {
-    var retrieve = localStorage.getItem("prefs");
-
-    if (retrieve == null || retrieve == "undefined") {
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
-    } else {
-      if (JSON.parse(retrieve)["theme"] == null) {
-        localStorage.clear();
-        localStorage.setItem("prefs", JSON.stringify(this.prefs));
-      } else {
-        this.prefs = JSON.parse(retrieve);
-      }
-    }
-
-    if (this.inputs.length > 0) {
-      this.inputs.forEach((input) => {
-        if (input.value === this.prefs.theme) {
-          input.checked = true;
-        }
-      });
-    }
-
-    this.page.className = "";
-    this.page.classList.add(this.prefs.theme);
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
   }
 
   init() {
-    this.store();
+    // Set initial mode based on preferences
+    this.page.classList.add(this.prefs.mode);
 
-    if (this.inputs.length > 0) {
-      this.switch();
-    }
+    // Add event listener to the range input field
+    this.element.addEventListener("input", (event) => {
+      let mode;
+      switch (event.target.value) {
+        case "1":
+          mode = "light";
+          break;
+        case "2":
+          mode = "system";
+          break;
+        case "3":
+          mode = "dark";
+          break;
+        default:
+          mode = "system";
+      }
+
+      // Update the settings object
+      this.prefs.mode = mode;
+
+      // Save the updated settings using the store method
+      this.APP.methods.store(this.prefs);
+
+      // Update the page class
+      this.page.classList.remove("light", "system", "dark");
+      this.page.classList.add(mode);
+    });
   }
 }
