@@ -11,6 +11,21 @@ export default class {
     // Set initial mode based on preferences
     this.page.classList.add(this.prefs.mode);
 
+    // Set the range input value based on the stored preferences
+    switch (this.prefs.mode) {
+      case "light":
+        this.element.value = "1";
+        break;
+      case "system":
+        this.element.value = "2";
+        break;
+      case "dark":
+        this.element.value = "3";
+        break;
+      default:
+        this.element.value = "1";
+    }
+
     // Add event listener to the range input field
     this.element.addEventListener("input", (event) => {
       let mode;
@@ -25,7 +40,7 @@ export default class {
           mode = "dark";
           break;
         default:
-          mode = "system";
+          mode = "light";
       }
 
       // Update the settings object

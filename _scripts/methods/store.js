@@ -1,3 +1,3 @@
-export default (data) => {
-  localStorage.setItem("settings", JSON.stringify(data));
+export default (settings) => {
+  localStorage.setItem("settings", JSON.stringify(settings));
 };

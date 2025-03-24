@@ -1,11 +1,11 @@
 export default (APP, data) => {
-  if (localStorage.getItem("data")) {
-    let preferences = JSON.parse(localStorage.getItem("data"));
+  if (localStorage.getItem("settings")) {
+    let preferences = JSON.parse(localStorage.getItem("settings"));
     console.log("Preferences found:", preferences);
     return preferences;
   } else {
     APP.methods.store(data);
-    console.log("No data found. Using default data.");
+    console.log("No settings found. Using default settings.");
     return data;
   }
 };

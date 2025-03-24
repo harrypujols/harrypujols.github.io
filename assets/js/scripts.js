@@ -130,13 +130,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP, data) => {
-  if (localStorage.getItem("data")) {
-    let preferences = JSON.parse(localStorage.getItem("data"));
+  if (localStorage.getItem("settings")) {
+    let preferences = JSON.parse(localStorage.getItem("settings"));
     console.log("Preferences found:", preferences);
     return preferences;
   } else {
     APP.methods.store(data);
-    console.log("No data found. Using default data.");
+    console.log("No settings found. Using default settings.");
     return data;
   }
 });
@@ -150,8 +150,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((data) => {
-  localStorage.setItem("settings", JSON.stringify(data));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((settings) => {
+  localStorage.setItem("settings", JSON.stringify(settings));
 });
 
 
@@ -249,6 +249,21 @@ __webpack_require__.r(__webpack_exports__);
     // Set initial mode based on preferences
     this.page.classList.add(this.prefs.mode);
 
+    // Set the range input value based on the stored preferences
+    switch (this.prefs.mode) {
+      case "light":
+        this.element.value = "1";
+        break;
+      case "system":
+        this.element.value = "2";
+        break;
+      case "dark":
+        this.element.value = "3";
+        break;
+      default:
+        this.element.value = "1";
+    }
+
     // Add event listener to the range input field
     this.element.addEventListener("input", (event) => {
       let mode;
@@ -263,7 +278,7 @@ __webpack_require__.r(__webpack_exports__);
           mode = "dark";
           break;
         default:
-          mode = "system";
+          mode = "light";
       }
 
       // Update the settings object
