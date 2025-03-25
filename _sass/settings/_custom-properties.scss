@@ -22,6 +22,9 @@
   --font-family-mono: "VT323", monospace;
   --base-font: var(--font-family-mono);
   --base-font-weight: 400;
+  --base-font-size: clamp(1rem, 2vw, 1.6rem);
+  --color-dark: #000;
+  --color-light: #fff;
 
   // PICO-8 colors
   --color-black: hsl(0, 0%, 0%);
