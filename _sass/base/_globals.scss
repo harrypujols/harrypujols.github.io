@@ -10,14 +10,14 @@ body {
 
   .system & {
     @media (prefers-color-scheme: dark) {
-      background-color: var(--background-color, var(--color-light));
-      color: var(--foreground-color, var(--color-dark));
+      --background-color: var(--color-light);
+      --foreground-color: var(--color-dark);
     }
   }
 
   .dark & {
-    background-color: var(--background-color, var(--color-dark));
-    color: var(--foreground-color, var(--color-light));
+    --background-color: var(--color-dark);
+    --foreground-color: var(--color-light);
   }
 
   &:before {
