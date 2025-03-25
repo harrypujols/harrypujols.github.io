@@ -49,10 +49,36 @@ h5,
 h6 {
   font-weight: 400;
   margin-block: 1ex;
+  font-size: inherit;
+  text-wrap: balance;
+
+  &:before {
+    padding-right: 0.5ch;
+  }
 }
 
 h1 {
-  text-wrap: balance;
+  &:before {
+    content: "#";
+  }
+}
+
+h2 {
+  &:before {
+    content: "##";
+  }
+}
+
+h3 {
+  &:before {
+    content: "###";
+  }
+}
+
+h4 {
+  &:before {
+    content: "####";
+  }
 }
 
 img {
@@ -91,12 +117,12 @@ a {
 
 [target="blank"],
 [target="\\_blank"] {
-  // &::after {
-  //   padding-left: 1ch;
-  //   vertical-align: super;
-  //   font-size: 0.8em;
-  //   content: "\2197";
-  // }
+  &::after {
+    padding-left: 1ch;
+    vertical-align: super;
+    font-size: 0.8em;
+    content: "\2197";
+  }
 }
 
 fieldset {
@@ -106,4 +132,10 @@ fieldset {
 hr {
   border: 0;
   border-bottom: 1px dashed currentColor;
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  font-size: inherit;
+  color: inherit;
 }

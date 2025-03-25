@@ -1,7 +1,7 @@
 @property --base-font-size {
   syntax: "<length>";
   inherits: true;
-  initial: 1rem;
+  initial: clamp(1rem, 2vw, 1.6rem);
 }
 
 @property --color-dark {

@@ -3,14 +3,10 @@
   border-block: 1px dashed var(--color-gray);
 }
 
-.face {
-  font-size: 2.5vw;
+.ascii-art {
   max-width: 100vw;
   overflow-x: hidden;
-
-  @media (min-width: 40rem) {
-    font-size: 0.8rem;
-  }
+  line-height: 0.8rem;
 }
 
 .settings {
