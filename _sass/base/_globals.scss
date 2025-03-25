@@ -96,22 +96,22 @@ figure {
 }
 
 a {
-  color: var(--color-blue);
+  color: var(--link-color, var(--color-blue));
 
   &:hover,
   &:focus,
   &:visited {
-    color: var(--color-purple);
+    color: var(--link-color-state, var(--color-purple));
   }
 
   .system &:visited {
     @media (prefers-color-scheme: dark) {
-      color: var(--color-pink);
+      --link-color-state: var(--color-pink);
     }
   }
 
   .dark &:visited {
-    color: var(--color-pink);
+    --link-color-state: var(--color-pink);
   }
 }
 
