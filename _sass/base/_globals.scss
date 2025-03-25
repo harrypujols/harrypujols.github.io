@@ -98,19 +98,17 @@ figure {
 a {
   color: var(--link-color, var(--color-blue));
 
-  &:hover,
-  &:focus,
   &:visited {
     color: var(--link-color-state, var(--color-purple));
   }
 
-  .system &:visited {
+  .system & {
     @media (prefers-color-scheme: dark) {
       --link-color-state: var(--color-pink);
     }
   }
 
-  .dark &:visited {
+  .dark & {
     --link-color-state: var(--color-pink);
   }
 }
