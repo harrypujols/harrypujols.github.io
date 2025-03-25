@@ -7,13 +7,13 @@
 @property --color-dark {
   syntax: "<color>";
   inherits: true;
-  initial: red;
+  initial: #000;
 }
 
 @property --color-light {
   syntax: "<color>";
   inherits: true;
-  initial: yellow;
+  initial: #fff;
 }
 
 :root {

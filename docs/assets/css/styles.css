@@ -6,12 +6,12 @@
 @property --color-dark {
   syntax: "<color>";
   inherits: true;
-  initial: red;
+  initial: #000;
 }
 @property --color-light {
   syntax: "<color>";
   inherits: true;
-  initial: yellow;
+  initial: #fff;
 }
 :root {
   --font-family-sans: "Popins", sans-serif;
@@ -78,7 +78,8 @@
   margin-bottom: 1em;
 }
 .highlighter-rouge code,
-.highlighter-rouge pre, .highlighter-rouge,
+.highlighter-rouge pre,
+.highlighter-rouge,
 .highlight code,
 .highlight pre,
 .highlight {
@@ -379,7 +380,10 @@ a:hover .icon {
   --content-max-width: 70ch;
   padding-top: 2rem;
   display: grid;
-  grid-template-columns: [fullwidth-start] minmax(var(--padding-inline), 1fr) [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end] minmax(var(--padding-inline), 1fr) [fullwidth-end];
+  grid-template-columns: [fullwidth-start] minmax(var(--padding-inline), 1fr) [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    ) [content-end] minmax(var(--padding-inline), 1fr) [fullwidth-end];
   grid-auto-rows: min-content;
 }
 @media (min-width: 48rem) {
@@ -539,7 +543,9 @@ body:before {
     background-color: var(--color-white);
     font-family: sans-serif;
   }
-  body, :is(.system, .dark, .light) body, :is(.system, .dark, .light) body * {
+  body,
+  :is(.system, .dark, .light) body,
+  :is(.system, .dark, .light) body * {
     color: var(--color-black);
   }
 }
@@ -597,7 +603,9 @@ figure {
 a {
   color: var(--color-blue);
 }
-a:hover, a:focus, a:visited {
+a:hover,
+a:focus,
+a:visited {
   color: var(--color-purple);
 }
 @media (prefers-color-scheme: dark) {
