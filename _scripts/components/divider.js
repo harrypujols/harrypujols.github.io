@@ -2,25 +2,28 @@ export default class {
   constructor(element, APP) {
     this.element = element;
     this.width = this.element.offsetWidth;
-    this.height = this.element.offsetHeight;
     this.resize = APP.methods.resizestop;
     this.character = this.element.getAttribute("data-character") || "*";
+    this.characterAdjust = this.element.getAttribute("data-adjust") || 0;
   }
 
   updateCharacter() {
-    const characterCount = Math.floor(this.width / this.characterWidth());
+    const characterCount =
+      Math.floor(this.width / this.characterWidth()) - this.characterAdjust;
     const repeatedCharacters = this.character.repeat(characterCount);
     this.element.innerHTML = repeatedCharacters;
   }
 
   characterWidth() {
-    const span = document.createElement("span");
-    span.style.fontFamily = "monospace";
-    span.style.visibility = "hidden";
-    span.textContent = this.character;
-    document.body.appendChild(span);
-    const characterWidth = span.offsetWidth;
-    document.body.removeChild(span);
+    // Create a temporary element to measure the width in ch units
+    const tempElement = document.createElement("div");
+    tempElement.style.width = "1ch";
+    tempElement.style.position = "absolute";
+    tempElement.style.visibility = "hidden";
+    document.body.appendChild(tempElement);
+
+    const characterWidth = tempElement.offsetWidth;
+    document.body.removeChild(tempElement);
     return characterWidth;
   }
 
@@ -29,8 +32,7 @@ export default class {
 
     this.resize(() => {
       this.width = this.element.offsetWidth;
-      this.height = this.element.offsetHeight;
       this.updateCharacter();
-    }, 66);
+    }, 45);
   }
 }
