@@ -297,12 +297,58 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 12 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.width = this.element.offsetWidth;
+    this.height = this.element.offsetHeight;
+    this.resize = APP.methods.resizestop;
+    this.character = this.element.getAttribute("data-character") || "*";
+  }
+
+  updateCharacter() {
+    const characterCount = Math.floor(this.width / this.characterWidth());
+    const repeatedCharacters = this.character.repeat(characterCount);
+    this.element.innerHTML = repeatedCharacters;
+  }
+
+  characterWidth() {
+    const span = document.createElement("span");
+    span.style.fontFamily = "monospace";
+    span.style.visibility = "hidden";
+    span.textContent = this.character;
+    document.body.appendChild(span);
+    const characterWidth = span.offsetWidth;
+    document.body.removeChild(span);
+    return characterWidth;
+  }
+
+  init() {
+    this.updateCharacter();
+
+    this.resize(() => {
+      this.width = this.element.offsetWidth;
+      this.height = this.element.offsetHeight;
+      this.updateCharacter();
+    }, 66);
+  }
+});
+
+
+/***/ }),
+/* 13 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -389,9 +435,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 /* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 /* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
 const FRAMEWORK = {};
+
 
 
 
@@ -427,12 +475,13 @@ const FRAMEWORK = {};
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
     typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
+    divider: _components_divider__WEBPACK_IMPORTED_MODULE_11__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_11__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_12__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_12__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_13__["default"],
   };
 
   APP.start.run(APP);

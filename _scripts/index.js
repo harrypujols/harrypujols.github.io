@@ -12,6 +12,7 @@ import settings from "./methods/settings";
 import size from "./components/size";
 import typewriter from "./components/typewriter";
 import modeswitch from "./components/modeswitch";
+import divider from "./components/divider";
 
 import data from "./data/data.json";
 
@@ -34,6 +35,7 @@ import run from "./app/run";
     modeswitch,
     typewriter,
     modeswitch,
+    divider,
   };
 
   APP.data = data;
