@@ -4,74 +4,59 @@
   <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
     <main class="main-content">
       <div class="landing-grid">
-        <fieldset class="settings">
-          <label
-            for="modeswitch"
-            role="presentation"
-            aria-label="Toggle Dark Mode"
-          >
-            <span class="sun">&#9788;</span>
-            <span class="moon">&#9790;</span>
-          </label>
-          <input
-            type="range"
-            name="modeswitch"
-            id="modeswitch"
-            min="1"
-            max="3"
-            step="1"
-            data-js="modeswitch"
-          />
-        </fieldset>
-        <pre class="ascii-art face" role="presentation" aria-hidden="true">
-                            @@@@@@@@                      
-                        @@@@++++++++@@@                   
-                       @++        +++++@@                 
-                     @@+            +++++@@               
-                   @@++               +++++@#             
-                 #@++                  +++++@@            
-                 #@++                  +++++@@            
-                 #@++                  +++++@@            
-                 #@++                    +++@@            
-                 #@++                    +++@@            
-                 #@                      +++++@@          
-                @@+                      +++++@@          
-                @@+  @@@@@@@+     ++@@@@@@@+++@@          
-                @@+  ++@@@@@+++  +++@@@@@+++++@@          
-                #%@    .==.. ++  +    =..+++#@##          
-                 #@          ++   ++     +++@@            
-                 #@         +     ++     +++@@            
-                   @@       +     ++     ++@#             
-                   @@       @     @@   ++++@#             
-                   @@        @@@@@+++++++++@#             
-                   @@     @@+  ++ ++@@+++@@               
-                     @@     @#####@@+++++@@               
-                     ++@     @@@@@    +@@++@#             
-                   @@  @            +++@@++@@@@@          
-            @@@@@@@@@   ++@@++++++++@@+++  @@@@@@@@@@     
-         @@@@@@@@@@@@**   ++@@@@@@@@+++  **@@@@@@@@@@@@   
-      @@@@@@@@@@@@@@@@@*     +++++++   **@@@@@@@@@@@@@@@  
-    @@@@@@@@@@@@@@@@@@@@***************@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**@@@@@@@@@@@@@@@@@@@@@@
-     _                                        _       _     
-    | |__   __ _ _ __ _ __ _   _ _ __  _   _ (_) ___ | |___ 
-    | '_ \ / _` | '__| '__| | | | '_ \| | | || |/ _ \| / __|
-    | | | | (_| | |  | |  | |_| | |_) | |_| || | (_) | \__ \
-    |_| |_|\__,_|_|  |_|   \__, | .__/ \__,_|/ |\___/|_|___/
-                           |___/|_|        |__/                                          
-    </pre
-        >
-        <h1 class="headline" data-js="typewriter">
-          You landed at harrypujols.com for some reason. Let's figure out why.
-        </h1>
-        <p>
-          You're looking to <a href="#">hire him</a>, <a href="#">stalk him</a>,
-          <a href="#">say "hi"</a>, or you're just hanging out. Either way,
-          you're in the right place.
-        </p>
+        <section id="intro">
+          <h1 class="headline" data-js="typewriter">
+            You landed at harrypujols.com for some reason. Let's figure out why.
+          </h1>
+          <p>
+            You're looking to <a href="#projects">hire him</a>,
+            <a href="#">stalk him</a>, <a href="#contact">say "hi"</a>,
+            <a href="#settings">mess around a bit with the page</a> or you're
+            just hanging out. Either way, you're in the right place.
+          </p>
+          <p>
+            Because this page's code is handcrafted Harry decided to do
+            something AI would be insane to suggest to me. He can vibe code for
+            your projects, if you think that's cool, but he prefers to keep his
+            stuff old fashioned.
+          </p>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <ul class="project-list">
+            <li>
+              <a href="#">Project 1</a>
+            </li>
+            <li>
+              <a href="#">Project 2</a>
+            </li>
+            <li>
+              <a href="#">Project 3</a>
+            </li>
+            <li>
+              <a href="#">Project 4</a>
+            </li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            You can reach Harry at
+            <a
+              href="mailto:harrypujols+websiteref@gmail.com?subject=Hello from harrypujols.com"
+              >this address</a
+            >.
+          </p>
+        </section>
+
+        <section id="settings">
+          <h2>Settings</h2>
+          {% include modeswitch.html %}
+        </section>
+        {% include face.html %}
       </div>
     </main>
     <script src="/assets/js/scripts.js"></script>
   </body>
-  <!-- This site and the projects linked were handcoded by yours truly -->
+  <!-- Please, let me know if there's something in the code that's not up to standards, I'm always looking for feedback -->
 </html>
