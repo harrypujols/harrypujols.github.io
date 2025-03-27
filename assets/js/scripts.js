@@ -345,12 +345,49 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.scroll = APP.methods.scrollstop;
+  }
+
+  init() {
+    this.scroll(() => {
+      if (this.isInViewport()) {
+        this.element.classList.add("is-in-viewport");
+      } else {
+        this.element.classList.remove("is-in-viewport");
+      }
+    });
+  }
+
+  isInViewport() {
+    const rect = this.element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+});
+
+
+/***/ }),
+/* 14 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -438,9 +475,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 /* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
 /* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
 const FRAMEWORK = {};
+
 
 
 
@@ -478,12 +517,13 @@ const FRAMEWORK = {};
     typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
     divider: _components_divider__WEBPACK_IMPORTED_MODULE_11__["default"],
+    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_12__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_12__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_13__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_13__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_14__["default"],
   };
 
   APP.start.run(APP);

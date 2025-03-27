@@ -7,7 +7,7 @@
         <div data-js="divider" data-character="@" data-adjust="3"></div>
         <section id="intro">
           <h1 class="headline" data-js="typewriter">
-            You landed at harrypujols.com for some reason.
+            You landed at harrypujols.com, home of award-winning Harry Pujols.
           </h1>
           <p>
             You're looking to <a href="#projects">hire me</a>,
@@ -27,7 +27,7 @@
           <h2>Projects</h2>
           <p>
             I'm only adding here some fun personal projects. Professional work,
-            you know I am not allow to take that code with me, right?
+            you know I am not allowed to take that code with me, right?
           </p>
           <ul class="project-list">
             <li>
@@ -81,13 +81,21 @@
           <h2>Social</h2>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/harrypujols/">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/harrypujols/" target="_blank"
+                >LinkedIn</a
+              >
             </li>
             <li>
-              <a href="https://bsky.app/profile/harrypujols.com">Bluesky</a>
+              <a href="https://bsky.app/profile/harrypujols.com" target="_blank"
+                >Bluesky</a
+              >
             </li>
             <li>
-              <a href="https://mastodon.gamedev.place/@harrypujols">Mastodom</a>
+              <a
+                href="https://mastodon.gamedev.place/@harrypujols"
+                target="_blank"
+                >Mastodom</a
+              >
             </li>
           </ul>
         </section>
@@ -105,7 +113,27 @@
         <div data-js="divider" data-character="=" data-adjust="3"></div>
         <section id="settings">
           <h2>Settings</h2>
+          <h3>Mode</h3>
           {% include modeswitch.html %}
+          <h3>Theme</h3>
+          <fieldset class="settings">
+            <input
+              type="radio"
+              name="theme"
+              id="theme-default"
+              value="default"
+            />
+            <label for="theme-default">Default</label>
+            <input
+              type="radio"
+              name="theme"
+              id="theme-solarized"
+              value="solarized"
+            />
+            <label for="theme-solarized">Solarized</label>
+            <input type="radio" name="theme" id="theme-c64" value="c64" />
+            <label for="theme-c64">c64</label>
+          </fieldset>
         </section>
         {% include face.html %}
       </div>

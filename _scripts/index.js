@@ -13,6 +13,7 @@ import size from "./components/size";
 import typewriter from "./components/typewriter";
 import modeswitch from "./components/modeswitch";
 import divider from "./components/divider";
+import scrolltrigger from "./components/scrolltrigger";
 
 import data from "./data/data.json";
 
@@ -36,6 +37,7 @@ import run from "./app/run";
     typewriter,
     modeswitch,
     divider,
+    scrolltrigger,
   };
 
   APP.data = data;
