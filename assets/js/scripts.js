@@ -208,11 +208,34 @@ __webpack_require__.r(__webpack_exports__);
     this.text = this.element.textContent;
     this.index = 0;
     this.typing = false;
+
+    // Use the scrolltrigger class
+    this.scrolltrigger = new APP.components.scrolltrigger(element, APP);
   }
 
   init() {
     this.element.textContent = "";
-    this.type();
+
+    // Initialize the scrolltrigger
+    this.scrolltrigger.init();
+
+    // Check if the element is already in the viewport and start typing
+    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+      this.type();
+    }
+
+    // Observe when the element enters the viewport
+    const observer = new MutationObserver(() => {
+      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+        this.type();
+      }
+    });
+
+    // Start observing the element for class changes
+    observer.observe(this.element, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
   }
 
   type() {
@@ -357,16 +380,6 @@ __webpack_require__.r(__webpack_exports__);
     this.scroll = APP.methods.scrollstop;
   }
 
-  init() {
-    this.scroll(() => {
-      if (this.isInViewport()) {
-        this.element.classList.add("is-in-viewport");
-      } else {
-        this.element.classList.remove("is-in-viewport");
-      }
-    });
-  }
-
   isInViewport() {
     const rect = this.element.getBoundingClientRect();
     return (
@@ -376,6 +389,21 @@ __webpack_require__.r(__webpack_exports__);
         (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+  }
+
+  toggleClass() {
+    if (this.isInViewport()) {
+      this.element.classList.add("is-in-viewport");
+    } else {
+      this.element.classList.remove("is-in-viewport");
+    }
+  }
+
+  init() {
+    this.toggleClass();
+    this.scroll(() => {
+      this.toggleClass();
+    });
   }
 });
 

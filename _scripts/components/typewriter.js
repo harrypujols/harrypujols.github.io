@@ -4,11 +4,34 @@ export default class {
     this.text = this.element.textContent;
     this.index = 0;
     this.typing = false;
+
+    // Use the scrolltrigger class
+    this.scrolltrigger = new APP.components.scrolltrigger(element, APP);
   }
 
   init() {
     this.element.textContent = "";
-    this.type();
+
+    // Initialize the scrolltrigger
+    this.scrolltrigger.init();
+
+    // Check if the element is already in the viewport and start typing
+    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+      this.type();
+    }
+
+    // Observe when the element enters the viewport
+    const observer = new MutationObserver(() => {
+      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+        this.type();
+      }
+    });
+
+    // Start observing the element for class changes
+    observer.observe(this.element, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
   }
 
   type() {

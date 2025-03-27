@@ -4,16 +4,6 @@ export default class {
     this.scroll = APP.methods.scrollstop;
   }
 
-  init() {
-    this.scroll(() => {
-      if (this.isInViewport()) {
-        this.element.classList.add("is-in-viewport");
-      } else {
-        this.element.classList.remove("is-in-viewport");
-      }
-    });
-  }
-
   isInViewport() {
     const rect = this.element.getBoundingClientRect();
     return (
@@ -23,5 +13,20 @@ export default class {
         (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+  }
+
+  toggleClass() {
+    if (this.isInViewport()) {
+      this.element.classList.add("is-in-viewport");
+    } else {
+      this.element.classList.remove("is-in-viewport");
+    }
+  }
+
+  init() {
+    this.toggleClass();
+    this.scroll(() => {
+      this.toggleClass();
+    });
   }
 }
