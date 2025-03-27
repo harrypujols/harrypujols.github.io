@@ -208,15 +208,11 @@ __webpack_require__.r(__webpack_exports__);
     this.text = this.element.textContent;
     this.index = 0;
     this.typing = false;
-
-    // Use the scrolltrigger class
     this.scrolltrigger = new APP.components.scrolltrigger(element, APP);
   }
 
   init() {
     this.element.textContent = "";
-
-    // Initialize the scrolltrigger
     this.scrolltrigger.init();
 
     // Check if the element is already in the viewport and start typing
@@ -329,6 +325,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
+    this.page = document.documentElement;
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
+    this.radioButtons = this.element.querySelectorAll(
+      'input[type="radio"][name="theme"]'
+    );
+  }
+
+  init() {
+    console.log("Themeswitch initialized");
+
+    // Set the initial theme based on preferences
+    this.setTheme(this.prefs.theme);
+
+    // Check the radio button that matches the current theme
+    this.radioButtons.forEach((radio) => {
+      if (radio.value === this.prefs.theme) {
+        radio.checked = true;
+      }
+
+      // Add event listener to update theme on change
+      radio.addEventListener("change", (event) => {
+        const newTheme = event.target.value;
+        this.setTheme(newTheme);
+
+        // Save the new theme to settings
+        this.prefs.theme = newTheme;
+        this.APP.methods.store(this.prefs);
+      });
+    });
+  }
+
+  setTheme(theme) {
+    // Remove any existing theme classes
+    this.page.classList.remove("light", "dark", "system");
+
+    // Add the new theme class
+    this.page.classList.add(theme);
+  }
+});
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
     this.width = this.element.offsetWidth;
     this.resize = APP.methods.resizestop;
     this.character = this.element.getAttribute("data-character") || "*";
@@ -367,7 +416,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -409,13 +458,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -502,11 +551,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 /* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 /* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
-/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
+/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
 const FRAMEWORK = {};
+
 
 
 
@@ -544,14 +595,15 @@ const FRAMEWORK = {};
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
     typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
-    divider: _components_divider__WEBPACK_IMPORTED_MODULE_11__["default"],
-    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_12__["default"],
+    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    divider: _components_divider__WEBPACK_IMPORTED_MODULE_12__["default"],
+    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_13__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_14__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_14__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_15__["default"],
   };
 
   APP.start.run(APP);

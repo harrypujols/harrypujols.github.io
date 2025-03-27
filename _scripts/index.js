@@ -12,6 +12,7 @@ import settings from "./methods/settings";
 import size from "./components/size";
 import typewriter from "./components/typewriter";
 import modeswitch from "./components/modeswitch";
+import themeswitch from "./components/themeswitch";
 import divider from "./components/divider";
 import scrolltrigger from "./components/scrolltrigger";
 
@@ -36,6 +37,7 @@ import run from "./app/run";
     modeswitch,
     typewriter,
     modeswitch,
+    themeswitch,
     divider,
     scrolltrigger,
   };

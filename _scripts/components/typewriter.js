@@ -4,15 +4,11 @@ export default class {
     this.text = this.element.textContent;
     this.index = 0;
     this.typing = false;
-
-    // Use the scrolltrigger class
     this.scrolltrigger = new APP.components.scrolltrigger(element, APP);
   }
 
   init() {
     this.element.textContent = "";
-
-    // Initialize the scrolltrigger
     this.scrolltrigger.init();
 
     // Check if the element is already in the viewport and start typing
