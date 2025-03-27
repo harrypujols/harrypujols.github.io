@@ -3,22 +3,10 @@ html {
 }
 
 body {
-  background-color: var(--background-color, var(--color-light));
-  color: var(--foreground-color, var(--color-dark));
+  background-color: var(--background-color);
+  color: var(--foreground-color);
   font-size: var(--base-font-size);
   font-family: var(--base-font);
-
-  .system & {
-    @media (prefers-color-scheme: dark) {
-      --background-color: var(--color-light);
-      --foreground-color: var(--color-dark);
-    }
-  }
-
-  .dark & {
-    --background-color: var(--color-dark);
-    --foreground-color: var(--color-light);
-  }
 
   &:before {
     display: none;
@@ -30,12 +18,16 @@ body {
   }
 
   @media print {
+    --base-font-size: 12pt;
+
     background-color: var(--color-white);
+    color: var(--color-black);
     font-family: sans-serif;
 
     &,
     :is(.system, .dark, .light) &,
     :is(.system, .dark, .light) & * {
+      background-color: var(--color-white);
       color: var(--color-black);
     }
   }

@@ -1,0 +1,23 @@
+.theme-solarized {
+  &:where(.mode-system) {
+    @media (prefers-color-scheme: light) {
+      --background-color: var(--color-solarized-base3);
+      --foreground-color: var(--color-solarized-base00);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --background-color: var(--color-solarized-base03);
+      --foreground-color: var(--color-solarized-base1);
+    }
+  }
+
+  &:where(.mode-light) {
+    --background-color: var(--color-solarized-base3);
+    --foreground-color: var(--color-solarized-base00);
+  }
+
+  &:where(.mode-dark) {
+    --background-color: var(--color-solarized-base03);
+    --foreground-color: var(--color-solarized-base1);
+  }
+}
