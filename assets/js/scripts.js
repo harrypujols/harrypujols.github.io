@@ -266,7 +266,7 @@ __webpack_require__.r(__webpack_exports__);
 
   init() {
     // Set initial mode based on preferences
-    this.page.classList.add(this.prefs.mode);
+    this.page.classList.add(`mode-${this.prefs.mode}`);
 
     // Set the range input value based on the stored preferences
     switch (this.prefs.mode) {
@@ -307,8 +307,8 @@ __webpack_require__.r(__webpack_exports__);
       this.APP.methods.store(this.prefs);
 
       // Update the page class
-      this.page.classList.remove("light", "system", "dark");
-      this.page.classList.add(mode);
+      this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+      this.page.classList.add(`mode-${mode}`);
     });
   }
 });
@@ -334,8 +334,6 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
-    console.log("Themeswitch initialized");
-
     // Set the initial theme based on preferences
     this.setTheme(this.prefs.theme);
 
@@ -359,10 +357,10 @@ __webpack_require__.r(__webpack_exports__);
 
   setTheme(theme) {
     // Remove any existing theme classes
-    this.page.classList.remove("light", "dark", "system");
+    this.page.classList.remove("theme-light", "theme-dark", "theme-system");
 
     // Add the new theme class
-    this.page.classList.add(theme);
+    this.page.classList.add(`theme-${theme}`);
   }
 });
 

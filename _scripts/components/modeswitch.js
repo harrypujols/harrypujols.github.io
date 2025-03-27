@@ -9,7 +9,7 @@ export default class {
 
   init() {
     // Set initial mode based on preferences
-    this.page.classList.add(this.prefs.mode);
+    this.page.classList.add(`mode-${this.prefs.mode}`);
 
     // Set the range input value based on the stored preferences
     switch (this.prefs.mode) {
@@ -50,8 +50,8 @@ export default class {
       this.APP.methods.store(this.prefs);
 
       // Update the page class
-      this.page.classList.remove("light", "system", "dark");
-      this.page.classList.add(mode);
+      this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+      this.page.classList.add(`mode-${mode}`);
     });
   }
 }

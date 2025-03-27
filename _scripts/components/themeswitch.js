@@ -10,8 +10,6 @@ export default class {
   }
 
   init() {
-    console.log("Themeswitch initialized");
-
     // Set the initial theme based on preferences
     this.setTheme(this.prefs.theme);
 
@@ -35,9 +33,9 @@ export default class {
 
   setTheme(theme) {
     // Remove any existing theme classes
-    this.page.classList.remove("light", "dark", "system");
+    this.page.classList.remove("theme-light", "theme-dark", "theme-system");
 
     // Add the new theme class
-    this.page.classList.add(theme);
+    this.page.classList.add(`theme-${theme}`);
   }
 }
