@@ -32,8 +32,10 @@ export default class {
   }
 
   setTheme(theme) {
-    // Remove any existing theme classes
-    this.page.classList.remove("theme-light", "theme-dark", "theme-system");
+    // Remove any existing theme classes dynamically
+    this.radioButtons.forEach((radio) => {
+      this.page.classList.remove(`theme-${radio.value}`);
+    });
 
     // Add the new theme class
     this.page.classList.add(`theme-${theme}`);

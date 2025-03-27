@@ -166,8 +166,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
   const defaults = APP.methods.retrieve(APP, APP.data.settings);
   let page = document.querySelector("html");
-  page.classList.add(defaults.theme);
-  page.classList.add(defaults.mode);
+
+  page.classList.add(`theme-${defaults.theme}`);
+  page.classList.add(`mode-${defaults.mode}`);
+
+  // Uncomment if font size customization is needed
   // page.style.setProperty("--font-size", defaults.fontSize);
 });
 
@@ -356,8 +359,10 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   setTheme(theme) {
-    // Remove any existing theme classes
-    this.page.classList.remove("theme-light", "theme-dark", "theme-system");
+    // Remove any existing theme classes dynamically
+    this.radioButtons.forEach((radio) => {
+      this.page.classList.remove(`theme-${radio.value}`);
+    });
 
     // Add the new theme class
     this.page.classList.add(`theme-${theme}`);
