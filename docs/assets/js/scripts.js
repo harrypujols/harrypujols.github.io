@@ -166,8 +166,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
   const defaults = APP.methods.retrieve(APP, APP.data.settings);
   let page = document.querySelector("html");
-  page.classList.add(defaults.theme);
-  page.classList.add(defaults.mode);
+
+  page.classList.add(`theme-${defaults.theme}`);
+  page.classList.add(`mode-${defaults.mode}`);
+
+  // Uncomment if font size customization is needed
   // page.style.setProperty("--font-size", defaults.fontSize);
 });
 
@@ -208,11 +211,30 @@ __webpack_require__.r(__webpack_exports__);
     this.text = this.element.textContent;
     this.index = 0;
     this.typing = false;
+    this.scrolltrigger = new APP.components.scrolltrigger(element, APP);
   }
 
   init() {
     this.element.textContent = "";
-    this.type();
+    this.scrolltrigger.init();
+
+    // Check if the element is already in the viewport and start typing
+    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+      this.type();
+    }
+
+    // Observe when the element enters the viewport
+    const observer = new MutationObserver(() => {
+      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+        this.type();
+      }
+    });
+
+    // Start observing the element for class changes
+    observer.observe(this.element, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
   }
 
   type() {
@@ -247,7 +269,7 @@ __webpack_require__.r(__webpack_exports__);
 
   init() {
     // Set initial mode based on preferences
-    this.page.classList.add(this.prefs.mode);
+    this.page.classList.add(`mode-${this.prefs.mode}`);
 
     // Set the range input value based on the stored preferences
     switch (this.prefs.mode) {
@@ -288,8 +310,8 @@ __webpack_require__.r(__webpack_exports__);
       this.APP.methods.store(this.prefs);
 
       // Update the page class
-      this.page.classList.remove("light", "system", "dark");
-      this.page.classList.add(mode);
+      this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+      this.page.classList.add(`mode-${mode}`);
     });
   }
 });
@@ -297,12 +319,155 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 12 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.page = document.documentElement;
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
+    this.radioButtons = this.element.querySelectorAll(
+      'input[type="radio"][name="theme"]'
+    );
+  }
+
+  init() {
+    // Set the initial theme based on preferences
+    this.setTheme(this.prefs.theme);
+
+    // Check the radio button that matches the current theme
+    this.radioButtons.forEach((radio) => {
+      if (radio.value === this.prefs.theme) {
+        radio.checked = true;
+      }
+
+      // Add event listener to update theme on change
+      radio.addEventListener("change", (event) => {
+        const newTheme = event.target.value;
+        this.setTheme(newTheme);
+
+        // Save the new theme to settings
+        this.prefs.theme = newTheme;
+        this.APP.methods.store(this.prefs);
+      });
+    });
+  }
+
+  setTheme(theme) {
+    // Remove any existing theme classes dynamically
+    this.radioButtons.forEach((radio) => {
+      this.page.classList.remove(`theme-${radio.value}`);
+    });
+
+    // Add the new theme class
+    this.page.classList.add(`theme-${theme}`);
+  }
+});
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.width = this.element.offsetWidth;
+    this.resize = APP.methods.resizestop;
+    this.character = this.element.getAttribute("data-character") || "*";
+    this.characterAdjust = this.element.getAttribute("data-adjust") || 0;
+  }
+
+  updateCharacter() {
+    const characterCount =
+      Math.floor(this.width / this.characterWidth()) - this.characterAdjust;
+    const repeatedCharacters = this.character.repeat(characterCount);
+    this.element.innerHTML = repeatedCharacters;
+  }
+
+  characterWidth() {
+    // Create a temporary element to measure the width in ch units
+    const tempElement = document.createElement("div");
+    tempElement.style.width = "1ch";
+    tempElement.style.position = "absolute";
+    tempElement.style.visibility = "hidden";
+    document.body.appendChild(tempElement);
+
+    const characterWidth = tempElement.offsetWidth;
+    document.body.removeChild(tempElement);
+    return characterWidth;
+  }
+
+  init() {
+    this.updateCharacter();
+
+    this.resize(() => {
+      this.width = this.element.offsetWidth;
+      this.updateCharacter();
+    }, 45);
+  }
+});
+
+
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.scroll = APP.methods.scrollstop;
+  }
+
+  isInViewport() {
+    const rect = this.element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  toggleClass() {
+    if (this.isInViewport()) {
+      this.element.classList.add("is-in-viewport");
+    } else {
+      this.element.classList.remove("is-in-viewport");
+    }
+  }
+
+  init() {
+    this.toggleClass();
+    this.scroll(() => {
+      this.toggleClass();
+    });
+  }
+});
+
+
+/***/ }),
+/* 15 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -389,9 +554,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 /* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 /* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
 const FRAMEWORK = {};
+
+
+
 
 
 
@@ -427,12 +598,15 @@ const FRAMEWORK = {};
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
     typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
+    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    divider: _components_divider__WEBPACK_IMPORTED_MODULE_12__["default"],
+    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_11__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_14__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_12__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_15__["default"],
   };
 
   APP.start.run(APP);
