@@ -1,40 +1,31 @@
 :root {
-  // colors
-  --base-font: "VT323", monospace;
-  --title-font: "Silkscreen", sans-serif;
-  --quirky-font: "Micro 5", sans-serif;
-  --gothic-font: "Jacquard 12", system-ui;
-  --base-font-size: 1.6rem;
+  // globals
+  --font-family-sans: "Popins", sans-serif;
+  --font-family-mono: "VT323", monospace;
+  --base-font: var(--font-family-mono);
   --base-font-weight: 400;
-  --color-black: hsl(0, 0%, 0%);
-  --color-white: hsl(360, 100%, 100%);
-  --color-beige: hsl(23, 100%, 95%);
-  --color-navy: hsl(224, 48%, 22%);
-  --color-blue: hsl(203, 100%, 58%);
-  --color-green: hsl(156, 100%, 26%);
-  --color-lime: hsl(134, 100%, 45%);
-  --color-gray: hsl(30, 9%, 34%);
-  --color-cloud: hsl(228, 4%, 77%);
-  --color-neutral: hsl(261, 16%, 54%);
-  --color-purple: hsl(329, 55%, 32%);
-  --color-red: hsl(342, 100%, 50%);
-  --color-orange: hsl(38, 100%, 50%);
-  --color-yellow: hsl(55, 100%, 58%);
-  --color-flesh: hsl(24, 100%, 83%);
-  --color-pink: hsl(338, 100%, 73%);
-  --color-brown: hsl(14, 52%, 44%);
+  --base-font-size: clamp(1.25rem, 2vw, 1.75rem);
 
-  // color globals
-  --body-background: var(--color-white);
-  --body-color: var(var(--color-black));
+  // PICO-8 colors
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-beige: #fef4e7;
+  --color-navy: #1c3a59;
+  --color-blue: #0099ff;
+  --color-green: #009933;
+  --color-lime: #33cc66;
+  --color-gray: #57534e;
+  --color-cloud: #c4c4c4;
+  --color-neutral: #8a7b8a;
+  --color-purple: #8a2c5a;
+  --color-red: #ff0033;
+  --color-orange: #ffaa00;
+  --color-yellow: #ffcc00;
+  --color-flesh: #fcd9b2;
+  --color-pink: #ffb3cc;
+  --color-brown: #8c5a38;
 
-  // card globals
-  --card-avatar-radius: 50%;
-
-  // layout
-  --sidebar-width: 4.688rem;
-
-  // syntax highliting (PICO-8 theme)
+  // syntax highlighting (PICO-8 theme)
   --highlight-font: var(--base-font);
   --highlight-font-size: var(--base-font-size);
   --highlight-color-base: var(--color-cloud);

@@ -1,0 +1,39 @@
+.theme-github {
+  // GitHub colors
+  --color-github-light: #f6f8fa;
+  --color-github-dark: #0d1117;
+  --color-github-blue: #2f80ed;
+  --color-github-green: #2ea44f;
+  --color-github-yellow: #f6c94c;
+  --color-github-orange: #f9826c;
+  --color-github-red: #d73a49;
+  --color-github-purple: #6f42c1;
+  --color-github-pink: #d5006d;
+  --color-github-gray: #24292f;
+
+  --color-light: var(--color-github-light);
+  --color-dark: var(--color-github-dark);
+  --color-accent: var(--color-github-blue);
+
+  &:where(.mode-system) {
+    @media (prefers-color-scheme: light) {
+      --background-color: var(--color-light);
+      --foreground-color: var(--color-dark);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --background-color: var(--color-dark);
+      --foreground-color: var(--color-light);
+    }
+  }
+
+  &:where(.mode-light) {
+    --background-color: var(--color-light);
+    --foreground-color: var(--color-dark);
+  }
+
+  &:where(.mode-dark) {
+    --background-color: var(--color-dark);
+    --foreground-color: var(--color-light);
+  }
+}

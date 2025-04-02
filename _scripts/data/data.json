@@ -1,0 +1,11 @@
+{
+  "site": {
+    "name": "harrypujols.com"
+  },
+  "settings": {
+    "version": "1.0.0",
+    "mode": "system",
+    "language": "en",
+    "theme": "default"
+  }
+}

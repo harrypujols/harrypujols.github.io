@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body {% if page.theme %} class="{{ page.theme }}" {% endif %}>
-    <main class="main post-page page-grid">
+  <body class="post {% if page.theme %}{{ page.theme }}{% endif %}">
+    <main class="blog-main post-page page-grid">
       <section class="post-content">
         <header class="post-header">
           {% for account in site.data.accounts %} {% if page.account ==

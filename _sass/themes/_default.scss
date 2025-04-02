@@ -1,0 +1,32 @@
+.theme-default {
+  --color-dark: #222323;
+  --color-light: #f0f6f0;
+  --color-violet: #ea7af4;
+  --color-indigo: #3b0086;
+
+  --color-accent: var(--color-indigo);
+
+  &:where(.mode-system) {
+    @media (prefers-color-scheme: light) {
+      --background-color: var(--color-light);
+      --foreground-color: var(--color-dark);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --background-color: var(--color-dark);
+      --foreground-color: var(--color-light);
+      --color-accent: var(--color-violet);
+    }
+  }
+
+  &:where(.mode-light) {
+    --background-color: var(--color-light);
+    --foreground-color: var(--color-dark);
+  }
+
+  &:where(.mode-dark) {
+    --background-color: var(--color-dark);
+    --foreground-color: var(--color-light);
+    --color-accent: var(--color-violet);
+  }
+}
