@@ -115,12 +115,23 @@
           {% include modeswitch.html %}
           <h3>Theme</h3>
           <fieldset class="settings" data-js="themeswitch">
-            <input type="radio" name="theme" id="default" value="default" />
-            <label for="theme-default">Default</label>
-            <input type="radio" name="theme" id="solarized" value="solarized" />
-            <label for="theme-solarized">Solarized</label>
-            <input type="radio" name="theme" id="theme-c64" value="c64" />
-            <label for="c64">c64</label>
+            <div>
+              <input type="radio" name="theme" id="default" value="default" />
+              <label for="theme-default">Default</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="theme"
+                id="solarized"
+                value="solarized"
+              />
+              <label for="theme-solarized">Solarized</label>
+            </div>
+            <div>
+              <input type="radio" name="theme" id="github" value="github" />
+              <label for="c64">Github</label>
+            </div>
           </fieldset>
         </section>
         {% include face.html %}

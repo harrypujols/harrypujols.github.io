@@ -88,20 +88,10 @@ figure {
 }
 
 a {
-  color: var(--link-color, var(--color-blue));
+  color: var(--link-color, var(--color-accent));
 
-  &:visited {
-    color: var(--link-color-state, var(--color-purple));
-  }
-
-  .system & {
-    @media (prefers-color-scheme: dark) {
-      --link-color-state: var(--color-pink);
-    }
-  }
-
-  .dark & {
-    --link-color-state: var(--color-pink);
+  &:hover {
+    color: inherit;
   }
 }
 
