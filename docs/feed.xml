@@ -8,7 +8,83 @@
 		<description>The personal Web site of Harry Pujols, a tech developer and artist.</description>
 		<link>https://harrypujols.com</link>
 		<atom:link href="https://harrypujols.com/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Sun, 16 Jun 2024 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 07 Nov 2024 00:00:00 +0000</lastBuildDate>
+		
+			
+			<item>
+				<title>Movies watched, Fall 2024</title>
+				<author>
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+						Roasted Potatoes	
+					
+				  
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com/assets/img/world-map.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com/assets/img/world-map.png"/>
+			  
+				
+					<description>
+</description>
+				
+				<pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/reviews/movies24fall.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/movies24fall.html</guid>
+			</item>
+			
+		
+			
+			<item>
+				<title>Movies watched, Summer 2024 edition</title>
+				<author>
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+						Roasted Potatoes	
+					
+				  
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com/assets/img/world-map.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com/assets/img/world-map.png"/>
+			  
+				
+					<description>
+</description>
+				
+				<pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/reviews/movies24summer.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/movies24summer.html</guid>
+			</item>
+			
 		
 			
 			<item>
@@ -121,8 +197,46 @@
 </description>
 				
 				<pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
-				<link>https://harrypujols.com/posts/reviews/shows.html</link>
-				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/shows.html</guid>
+				<link>https://harrypujols.com/posts/reviews/shows24sofar.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/shows24sofar.html</guid>
+			</item>
+			
+		
+			
+			<item>
+				<title>More Shows watched, 2024</title>
+				<author>
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+				  
+					
+						Roasted Potatoes	
+					
+				  
+					
+				  
+					
+				  
+				 
+				</author>	
+				
+				  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://harrypujols.com/assets/img/world-map.png"/>
+				  <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="https://harrypujols.com/assets/img/world-map.png"/>
+			  
+				
+					<description>
+</description>
+				
+				<pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
+				<link>https://harrypujols.com/posts/reviews/shows24more.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/shows24more.html</guid>
 			</item>
 			
 		
@@ -198,8 +312,8 @@
 </description>
 				
 				<pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
-				<link>https://harrypujols.com/posts/reviews/movies.html</link>
-				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/movies.html</guid>
+				<link>https://harrypujols.com/posts/reviews/movies24sofar.html</link>
+				<guid isPermaLink="true">https://harrypujols.com/posts/reviews/movies24sofar.html</guid>
 			</item>
 			
 		

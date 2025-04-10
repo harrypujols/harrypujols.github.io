@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
+    <main class="main-content">
+      <div class="landing-grid">
+        <div data-js="divider" data-character="@" data-adjust="3"></div>
+        <section id="intro">
+          <h1 class="headline">
+            You landed at harrypujols.com, home of award-winning Harry Pujols.
+          </h1>
+          <p>
+            You're looking to <a href="#projects">hire me</a>,
+            <a href="#social">stalk me</a>, <a href="#contact">say "hi"</a>,
+            <a href="#settings">mess around a bit with the page</a> or you're
+            just hanging out. Either way, you're in the right place.
+          </p>
+          <p>
+            harrypujols.com has been live since way back when Dreamweaver and
+            Frontpage was what kids describe today as "code vibing" (though this
+            site has always been handcrafted). It's always under destruction,
+            construction and deconstruction.
+          </p>
+        </section>
+        <div data-js="divider" data-character="=" data-adjust="3"></div>
+        <section id="projects">
+          <h2>Projects</h2>
+          <p>
+            I'm only adding here some fun personal projects. Professional work,
+            you know I am not allowed to take that code with me, right?
+          </p>
+          <ul class="project-list">
+            <li>
+              <a href="https://harrypujols.com/terminal/">Terminal</a> This was
+              harrypujols.com from 2014-2024, meant to be only a temporary
+              solution until I had time between projects to set up a different
+              site. It lasted 10 years (at least one CTO liked it enough to give
+              me the job).
+            </li>
+            <li>
+              <a href="https://harrypujols.com/desktop/">Desktop</a> This was
+              harrypujols.com from 2009-2014 (and the first repo I saved in
+              Github). It was originally hosted in some Mac service for static
+              sites, I think it was called iTools. My purpose was to make
+              something "future proof", and guess what? The Flash version of the
+              same idea has been lost in time.
+            </li>
+            <li>
+              <a href="https://harrypujols.com/alchemy-sign/"
+                >Alchemy Sign Calculator</a
+              >
+              There are some sites that give you the formula to find your
+              alchemy zodiac sign, but this is the only calculator in the Web
+              (at the time of this writing). Originally launched in 2018 and
+              relaunched in 2021.
+            </li>
+            <li>
+              <a href="https://harrypujols.com/urinal-checkmate/"
+                >Urinal Checkmate</a
+              >
+              The number one game about taking a number one. The rules of the
+              game can be found
+              <a
+                href="https://www.urbandictionary.com/define.php?term=Urinal%20Checkmate"
+                target="_blank"
+                >Here</a
+              >. Originally launched in 2014 using the first version of Vue.js.
+            </li>
+            <li>
+              <a href="https://harrypujols.com/jsless"
+                >The JSless pattern library</a
+              >
+              Originally created to work for a proprietary CMS where I couldn't
+              add any scripts to the templates. Funny that now HTML and CSS can
+              do most of these tricks without this library.
+            </li>
+
+            <li>
+              <a href="https://harrypujols.com/rock-paper-scissors/"
+                >Rock | Paper | Scissors</a
+              >
+              Everybody's videogame career has to start somewhere. Originally
+              launched in 2012, relaunched in 2014. The stack I used is so old,
+              I may not revisit this again.
+            </li>
+          </ul>
+        </section>
+        <div data-js="divider" data-character="=" data-adjust="3"></div>
+        <section id="social">
+          <h2>Social</h2>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/harrypujols/" target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/harrypujols" target="_blank"
+                >Github</a
+              >
+            </li>
+            <li>
+              <a href="https://bsky.app/profile/harrypujols.com" target="_blank"
+                >Bluesky</a
+              >
+            </li>
+          </ul>
+        </section>
+        <div data-js="divider" data-character="=" data-adjust="3"></div>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            You can reach Harry at
+            <a
+              href="mailto:harrypujols+websiteref@gmail.com?subject=Hello from harrypujols.com"
+              >this address</a
+            >.
+          </p>
+        </section>
+        <div data-js="divider" data-character="=" data-adjust="3"></div>
+        <section id="settings">
+          <h2>Settings</h2>
+          <h3>Mode</h3>
+          {% include modeswitch.html %}
+          <h3>Theme</h3>
+          <fieldset class="settings" data-js="themeswitch">
+            <div>
+              <input type="radio" name="theme" id="default" value="default" />
+              <label for="theme-default">Default</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="theme"
+                id="solarized"
+                value="solarized"
+              />
+              <label for="theme-solarized">Solarized</label>
+            </div>
+            <div>
+              <input type="radio" name="theme" id="github" value="github" />
+              <label for="c64">Github</label>
+            </div>
+          </fieldset>
+        </section>
+        {% include face.html %}
+      </div>
+      <div data-js="divider" data-character="@" data-adjust="3"></div>
+    </main>
+    <script src="/assets/js/scripts.js"></script>
+  </body>
+  <!-- Please, let me know if there's something in the code that's not up to standards, I'm always looking for feedback -->
+</html>

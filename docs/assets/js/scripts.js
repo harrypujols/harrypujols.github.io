@@ -129,6 +129,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP, data) => {
+  if (localStorage.getItem("settings")) {
+    let preferences = JSON.parse(localStorage.getItem("settings"));
+    console.log("Preferences found:", preferences);
+    return preferences;
+  } else {
+    APP.methods.store(data);
+    console.log("No settings found. Using default settings.");
+    return data;
+  }
+});
+
+
+/***/ }),
+/* 7 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((settings) => {
+  localStorage.setItem("settings", JSON.stringify(settings));
+});
+
+
+/***/ }),
+/* 8 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
+  const defaults = APP.methods.retrieve(APP, APP.data.settings);
+  let page = document.querySelector("html");
+
+  page.classList.add(`theme-${defaults.theme}`);
+  page.classList.add(`mode-${defaults.mode}`);
+
+  // Uncomment if font size customization is needed
+  // page.style.setProperty("--font-size", defaults.fontSize);
+});
+
+
+/***/ }),
+/* 9 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
     constructor ( element, APP ) {
       this.element = element
@@ -144,7 +198,60 @@ __webpack_require__.r(__webpack_exports__);
   });
 
 /***/ }),
-/* 7 */
+/* 10 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.text = this.element.textContent;
+    this.index = 0;
+    this.typing = false;
+    this.scrolltrigger = new APP.components.scrolltrigger(element, APP);
+  }
+
+  init() {
+    this.element.textContent = "";
+    this.scrolltrigger.init();
+
+    // Check if the element is already in the viewport and start typing
+    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+      this.type();
+    }
+
+    // Observe when the element enters the viewport
+    const observer = new MutationObserver(() => {
+      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+        this.type();
+      }
+    });
+
+    // Start observing the element for class changes
+    observer.observe(this.element, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+
+  type() {
+    if (this.index < this.text.length) {
+      this.typing = true;
+      this.element.textContent += this.text.charAt(this.index);
+      this.index++;
+      setTimeout(() => this.type(), 100);
+    } else {
+      this.typing = false;
+    }
+  }
+});
+
+
+/***/ }),
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -156,78 +263,222 @@ __webpack_require__.r(__webpack_exports__);
     this.element = element;
     this.page = document.documentElement;
     this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = {};
-    this.prefs.theme = "system";
-  }
-
-  switch() {
-    this.element.addEventListener("click", (event) => {
-      this.inputs.forEach((input) => {
-        if (input !== event.target) {
-          input.checked = false;
-        }
-      });
-
-      if (event.target.checked === true) {
-        this.prefs.theme = event.target.value;
-      } else {
-        this.prefs.theme = "system";
-      }
-
-      this.page.className = "";
-      this.page.classList.add(this.prefs.theme);
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
-    });
-  }
-
-  store() {
-    var retrieve = localStorage.getItem("prefs");
-
-    if (retrieve == null || retrieve == "undefined") {
-      localStorage.setItem("prefs", JSON.stringify(this.prefs));
-    } else {
-      if (JSON.parse(retrieve)["theme"] == null) {
-        localStorage.clear();
-        localStorage.setItem("prefs", JSON.stringify(this.prefs));
-      } else {
-        this.prefs = JSON.parse(retrieve);
-      }
-    }
-
-    if (this.inputs.length > 0) {
-      this.inputs.forEach((input) => {
-        if (input.value === this.prefs.theme) {
-          input.checked = true;
-        }
-      });
-    }
-
-    this.page.className = "";
-    this.page.classList.add(this.prefs.theme);
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
   }
 
   init() {
-    this.store();
+    // Set initial mode based on preferences
+    this.page.classList.add(`mode-${this.prefs.mode}`);
 
-    if (this.inputs.length > 0) {
-      this.switch();
+    // Set the range input value based on the stored preferences
+    switch (this.prefs.mode) {
+      case "light":
+        this.element.value = "1";
+        break;
+      case "system":
+        this.element.value = "2";
+        break;
+      case "dark":
+        this.element.value = "3";
+        break;
+      default:
+        this.element.value = "1";
     }
+
+    // Add event listener to the range input field
+    this.element.addEventListener("input", (event) => {
+      let mode;
+      switch (event.target.value) {
+        case "1":
+          mode = "light";
+          break;
+        case "2":
+          mode = "system";
+          break;
+        case "3":
+          mode = "dark";
+          break;
+        default:
+          mode = "light";
+      }
+
+      // Update the settings object
+      this.prefs.mode = mode;
+
+      // Save the updated settings using the store method
+      this.APP.methods.store(this.prefs);
+
+      // Update the page class
+      this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+      this.page.classList.add(`mode-${mode}`);
+    });
   }
 });
 
 
 /***/ }),
-/* 8 */
+/* 12 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
-  document.addEventListener('DOMContentLoaded', () => {
-    APP.methods.components( APP )
-  })
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.page = document.documentElement;
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
+    this.radioButtons = this.element.querySelectorAll(
+      'input[type="radio"][name="theme"]'
+    );
+  }
+
+  init() {
+    // Set the initial theme based on preferences
+    this.setTheme(this.prefs.theme);
+
+    // Check the radio button that matches the current theme
+    this.radioButtons.forEach((radio) => {
+      if (radio.value === this.prefs.theme) {
+        radio.checked = true;
+      }
+
+      // Add event listener to update theme on change
+      radio.addEventListener("change", (event) => {
+        const newTheme = event.target.value;
+        this.setTheme(newTheme);
+
+        // Save the new theme to settings
+        this.prefs.theme = newTheme;
+        this.APP.methods.store(this.prefs);
+      });
+    });
+  }
+
+  setTheme(theme) {
+    // Remove any existing theme classes dynamically
+    this.radioButtons.forEach((radio) => {
+      this.page.classList.remove(`theme-${radio.value}`);
+    });
+
+    // Add the new theme class
+    this.page.classList.add(`theme-${theme}`);
+  }
+});
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.width = this.element.offsetWidth;
+    this.resize = APP.methods.resizestop;
+    this.character = this.element.getAttribute("data-character") || "*";
+    this.characterAdjust = this.element.getAttribute("data-adjust") || 0;
+  }
+
+  updateCharacter() {
+    const characterCount =
+      Math.floor(this.width / this.characterWidth()) - this.characterAdjust;
+    const repeatedCharacters = this.character.repeat(characterCount);
+    this.element.innerHTML = repeatedCharacters;
+  }
+
+  characterWidth() {
+    // Create a temporary element to measure the width in ch units
+    const tempElement = document.createElement("div");
+    tempElement.style.width = "1ch";
+    tempElement.style.position = "absolute";
+    tempElement.style.visibility = "hidden";
+    document.body.appendChild(tempElement);
+
+    const characterWidth = tempElement.offsetWidth;
+    document.body.removeChild(tempElement);
+    return characterWidth;
+  }
+
+  init() {
+    this.updateCharacter();
+
+    this.resize(() => {
+      this.width = this.element.offsetWidth;
+      this.updateCharacter();
+    }, 45);
+  }
+});
+
+
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.scroll = APP.methods.scrollstop;
+  }
+
+  isInViewport() {
+    const rect = this.element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  toggleClass() {
+    if (this.isInViewport()) {
+      this.element.classList.add("is-in-viewport");
+    } else {
+      this.element.classList.remove("is-in-viewport");
+    }
+  }
+
+  init() {
+    this.toggleClass();
+    this.scroll(() => {
+      this.toggleClass();
+    });
+  }
+});
+
+
+/***/ }),
+/* 15 */
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
+
+/***/ }),
+/* 16 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((APP) => {
+  document.addEventListener("DOMContentLoaded", () => {
+    APP.methods.components(APP);
+    APP.methods.settings(APP);
+  });
 });
 
 
@@ -289,7 +540,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
@@ -297,9 +548,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_resizestop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _methods_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _methods_settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
 const FRAMEWORK = {};
 
 
@@ -313,28 +572,46 @@ const FRAMEWORK = {};
 
 
 
-(( window, APP ) => {
 
+
+
+
+
+
+
+
+
+((window, APP) => {
   APP.methods = {
     components: _methods_components__WEBPACK_IMPORTED_MODULE_0__["default"],
     breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_1__["default"],
     resizestop: _methods_resizestop__WEBPACK_IMPORTED_MODULE_2__["default"],
     scrolldirection: _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_3__["default"],
-    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }
+    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"],
+    retrieve: _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__["default"],
+    store: _methods_store__WEBPACK_IMPORTED_MODULE_6__["default"],
+    settings: _methods_settings__WEBPACK_IMPORTED_MODULE_7__["default"],
+  };
 
   APP.components = {
-    size: _components_size__WEBPACK_IMPORTED_MODULE_5__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }
+    size: _components_size__WEBPACK_IMPORTED_MODULE_8__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
+    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
+    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    divider: _components_divider__WEBPACK_IMPORTED_MODULE_12__["default"],
+    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__["default"],
+  };
+
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_14__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }
+    run: _app_run__WEBPACK_IMPORTED_MODULE_15__["default"],
+  };
 
-  APP.start.run( APP );
+  APP.start.run(APP);
+})(window, FRAMEWORK, undefined);
 
-})( window, FRAMEWORK, undefined );
 })();
 
 /******/ })()

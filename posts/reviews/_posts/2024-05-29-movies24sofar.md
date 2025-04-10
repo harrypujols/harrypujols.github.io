@@ -46,7 +46,7 @@ table:
       This movie is evidence the world needs more steampunk sex comedies.
 
   - name: Love Lies Bleeding
-    rating: 4
+    rating: 5
     sub: 2024
     comment: >-
       A lesbian fantasy of sex with a sweaty, veiny, Sendaya look-alike. Roid rage and mullets haven't been this relevant since Con Air.

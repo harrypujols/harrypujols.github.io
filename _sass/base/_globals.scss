@@ -3,22 +3,10 @@ html {
 }
 
 body {
-  background-color: var(--body-background);
-  color: var(--body-color);
+  background-color: var(--background-color);
+  color: var(--foreground-color);
   font-size: var(--base-font-size);
   font-family: var(--base-font);
-
-  .system & {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-navy);
-      color: var(--color-beige);
-    }
-  }
-
-  .dark & {
-    background-color: var(--color-navy);
-    color: var(--color-beige);
-  }
 
   &:before {
     display: none;
@@ -30,12 +18,16 @@ body {
   }
 
   @media print {
+    --base-font-size: 12pt;
+
     background-color: var(--color-white);
+    color: var(--color-black);
     font-family: sans-serif;
 
     &,
     :is(.system, .dark, .light) &,
     :is(.system, .dark, .light) & * {
+      background-color: var(--color-white);
       color: var(--color-black);
     }
   }
@@ -49,10 +41,36 @@ h5,
 h6 {
   font-weight: 400;
   margin-block: 1ex;
+  font-size: inherit;
+  text-wrap: balance;
+
+  &:before {
+    padding-right: 1ch;
+  }
 }
 
 h1 {
-  text-wrap: pretty;
+  &:before {
+    content: "#";
+  }
+}
+
+h2 {
+  &:before {
+    content: "##";
+  }
+}
+
+h3 {
+  &:before {
+    content: "###";
+  }
+}
+
+h4 {
+  &:before {
+    content: "####";
+  }
 }
 
 img {
@@ -70,22 +88,10 @@ figure {
 }
 
 a {
-  color: var(--color-blue);
+  color: var(--link-color, var(--color-accent));
 
-  &:hover,
-  &:focus,
-  &:visited {
-    color: var(--color-purple);
-  }
-
-  .system &:visited {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-pink);
-    }
-  }
-
-  .dark &:visited {
-    color: var(--color-pink);
+  &:hover {
+    color: inherit;
   }
 }
 
@@ -103,12 +109,17 @@ fieldset {
   padding: unset;
 }
 
-blockquote {
-  font-family: var(--gothic-font);
-  font-size: 2rem;
-}
-
 hr {
   border: 0;
-  border-bottom: 1px dashed var(--color-cloud);
+  border-bottom: 1px dashed currentColor;
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  font-size: inherit;
+  color: inherit;
+}
+
+svg {
+  --fill: currentColor;
 }
