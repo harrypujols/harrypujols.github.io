@@ -95,10 +95,9 @@ a {
   }
 }
 
-[target="blank"],
+[target="_blank"],
 [target="\\_blank"] {
   &::after {
-    padding-left: 1ch;
     vertical-align: super;
     font-size: 0.8em;
     content: "\2197";

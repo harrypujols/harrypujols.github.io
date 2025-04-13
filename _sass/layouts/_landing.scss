@@ -1,10 +1,12 @@
 .landing-grid {
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
+  scroll-snap-type: y mandatory;
 }
 
 .landing-section {
   min-height: 100vh;
+  scroll-snap-align: start;
 
   > * {
     max-width: 70ch;
