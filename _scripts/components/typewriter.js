@@ -35,9 +35,12 @@ export default class {
       this.typing = true;
       this.element.textContent += this.text.charAt(this.index);
       this.index++;
-      setTimeout(() => this.type(), 100);
+      this.element.classList.add("is-typing");
+      //harrypujols.com/alchemy-sign/
+      https: setTimeout(() => this.type(), 100);
     } else {
       this.typing = false;
+      this.element.classList.remove("is-typing");
     }
   }
 }

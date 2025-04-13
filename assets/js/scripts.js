@@ -242,9 +242,11 @@ __webpack_require__.r(__webpack_exports__);
       this.typing = true;
       this.element.textContent += this.text.charAt(this.index);
       this.index++;
+      this.element.classList.add("is-typing");
       setTimeout(() => this.type(), 100);
     } else {
       this.typing = false;
+      this.element.classList.remove("is-typing");
     }
   }
 });
