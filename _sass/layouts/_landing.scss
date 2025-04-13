@@ -6,11 +6,37 @@
 
 .landing-section {
   min-height: 100vh;
+  padding: 1rem;
   scroll-snap-align: start;
+}
 
-  > * {
-    max-width: 70ch;
-    margin-inline: auto;
+.landing-container {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: var(--color-light);
+}
+
+.fullscreen-video {
+  position: absolute;
+  inset: 0;
+  max-width: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  video {
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: 100vh;
   }
 }
 

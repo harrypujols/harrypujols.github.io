@@ -125,6 +125,8 @@ svg {
 
 .button {
   display: inline-block;
+  text-decoration: none;
+  border: 2px dotted currentColor;
 }
 
 .center {
