@@ -4,8 +4,7 @@
   <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
     <main class="main-content">
       <div class="landing-grid">
-        <div data-js="divider" data-character="@" data-adjust="3"></div>
-        <section id="intro">
+        <section class="landing-section" id="intro">
           <h1 class="headline">
             You landed at harrypujols.com, home of award-winning Harry Pujols.
           </h1>
@@ -22,8 +21,7 @@
             construction and deconstruction.
           </p>
         </section>
-        <div data-js="divider" data-character="=" data-adjust="3"></div>
-        <section id="projects">
+        <section class="landing-section" id="projects">
           <h2>Projects</h2>
           <p>
             I'm only adding here some fun personal projects. Professional work,
@@ -85,8 +83,7 @@
             </li>
           </ul>
         </section>
-        <div data-js="divider" data-character="=" data-adjust="3"></div>
-        <section id="social">
+        <section class="landing-section" id="social">
           <h2>Social</h2>
           <ul>
             <li>
@@ -106,8 +103,7 @@
             </li>
           </ul>
         </section>
-        <div data-js="divider" data-character="=" data-adjust="3"></div>
-        <section id="contact">
+        <section class="landing-section" id="contact">
           <h2>Contact</h2>
           <p>
             You can reach Harry at
@@ -117,8 +113,7 @@
             >.
           </p>
         </section>
-        <div data-js="divider" data-character="=" data-adjust="3"></div>
-        <section id="settings">
+        <section class="landing-section" id="settings">
           <h2>Settings</h2>
           <h3>Mode</h3>
           {% include modeswitch.html %}
@@ -143,9 +138,7 @@
             </div>
           </fieldset>
         </section>
-        {% include face.html %}
       </div>
-      <div data-js="divider" data-character="@" data-adjust="3"></div>
     </main>
     <script src="/assets/js/scripts.js"></script>
   </body>

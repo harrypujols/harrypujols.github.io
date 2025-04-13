@@ -1,13 +1,14 @@
 .landing-grid {
-  padding: 1rem;
-
-  section {
-    margin-block: 2.5rem;
-  }
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
 }
 
-.main-content {
-  max-width: 70ch;
+.landing-section {
+  min-height: 100vh;
+
+  > * {
+    max-width: 70ch;
+  }
 }
 
 .ascii-art {
