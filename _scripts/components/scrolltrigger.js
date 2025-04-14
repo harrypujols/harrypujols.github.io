@@ -16,6 +16,8 @@ export default class {
   }
 
   init() {
+    this.isInViewport();
+
     this.scroll(() => {
       this.isInViewport();
     });

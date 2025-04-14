@@ -218,8 +218,7 @@ __webpack_require__.r(__webpack_exports__);
     this.element.textContent = "";
     this.scrolltrigger.init();
 
-    // Check if the element is already in the viewport and start typing
-    if (this.scrolltrigger() && !this.typing) {
+    if (this.scrolltrigger.init() && !this.typing) {
       this.type();
     }
   }
@@ -434,6 +433,8 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
+    this.isInViewport();
+
     this.scroll(() => {
       this.isInViewport();
     });
