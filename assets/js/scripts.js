@@ -219,22 +219,9 @@ __webpack_require__.r(__webpack_exports__);
     this.scrolltrigger.init();
 
     // Check if the element is already in the viewport and start typing
-    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+    if (this.scrolltrigger() && !this.typing) {
       this.type();
     }
-
-    // Observe when the element enters the viewport
-    const observer = new MutationObserver(() => {
-      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
-        this.type();
-      }
-    });
-
-    // Start observing the element for class changes
-    observer.observe(this.element, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
   }
 
   type() {
@@ -243,7 +230,7 @@ __webpack_require__.r(__webpack_exports__);
       this.element.textContent += this.text.charAt(this.index);
       this.index++;
       this.element.classList.add("is-typing");
-      //harrypujols.com/alchemy-sign/
+
       https: setTimeout(() => this.type(), 100);
     } else {
       this.typing = false;
@@ -446,18 +433,9 @@ __webpack_require__.r(__webpack_exports__);
     );
   }
 
-  toggleClass() {
-    if (this.isInViewport()) {
-      this.element.classList.add("is-in-viewport");
-    } else {
-      this.element.classList.remove("is-in-viewport");
-    }
-  }
-
   init() {
-    this.toggleClass();
     this.scroll(() => {
-      this.toggleClass();
+      this.isInViewport();
     });
   }
 });

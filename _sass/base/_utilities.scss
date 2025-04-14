@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px dotted currentColor;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

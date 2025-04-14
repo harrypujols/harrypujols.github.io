@@ -15,18 +15,9 @@ export default class {
     );
   }
 
-  toggleClass() {
-    if (this.isInViewport()) {
-      this.element.classList.add("is-in-viewport");
-    } else {
-      this.element.classList.remove("is-in-viewport");
-    }
-  }
-
   init() {
-    this.toggleClass();
     this.scroll(() => {
-      this.toggleClass();
+      this.isInViewport();
     });
   }
 }
