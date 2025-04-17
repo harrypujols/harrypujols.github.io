@@ -1,18 +1,23 @@
 export default class {
   constructor(element, APP) {
     this.element = element;
+    this.entries = this.element.querySelectorAll(".entry");
     this.scroll = APP.methods.scrollstop;
   }
 
   isInViewport() {
-    const rect = this.element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    const observer = new IntersectionObserver((this.entries) => {
+      this.entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in-viewport");
+          // observer.unobserve(entry.target);
+          return true
+        } else {
+          entry.target.classList.remove("is-in-viewport");
+          return false
+        }
+      });
+    }
   }
 
   init() {
