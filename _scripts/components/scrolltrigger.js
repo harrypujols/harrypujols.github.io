@@ -6,18 +6,20 @@ export default class {
   }
 
   isInViewport() {
-    const observer = new IntersectionObserver((this.entries) => {
-      this.entries.forEach((entry) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-in-viewport");
-          // observer.unobserve(entry.target);
-          return true
         } else {
           entry.target.classList.remove("is-in-viewport");
-          return false
         }
       });
-    }
+    });
+
+    // Observe each entry
+    this.entries.forEach((entry) => {
+      observer.observe(entry);
+    });
   }
 
   init() {
