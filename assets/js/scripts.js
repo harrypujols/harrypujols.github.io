@@ -187,7 +187,7 @@ __webpack_require__.r(__webpack_exports__);
   constructor(element, APP) {
     this.element = element;
     this.scroll = APP.methods.scrollstop;
-    this.selector = this.element.dataset.selector || "entry";
+    this.selector = this.element.dataset.selector || "js-isinviewport";
     this.entries = this.element.querySelectorAll(`.${this.selector}`);
   }
 
@@ -462,11 +462,40 @@ __webpack_require__.r(__webpack_exports__);
   constructor(element, APP) {
     this.element = element;
     this.APP = APP;
-    this.page = document.documentElement;
+    this.scroll = APP.methods.scrollstop;
+    this.link = this.element.querySelectorAll(".js-nav-link");
+    this.isinviewport = APP.methods.isinviewport;
+  }
+
+  makeActive() {
+    this.link.forEach((link) => {
+      const target = document.querySelector(link.getAttribute("href"));
+      const isActive = this.isinviewport.isInViewport(target);
+
+      if (isActive) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  isvisible() {
+    const isActive = this.isinviewport.isInViewport(target);
+
+    if (isActive.id != "intro") {
+      this.element.classList.add("is-visible");
+    } else {
+      this.element.classList.remove("is-visible");
+    }
   }
 
   init() {
-    console.log("Navigation component initialized");
+    this.makeActive();
+
+    this.scroll(() => {
+      this.makeActive();
+    }, 45);
   }
 });
 
@@ -604,6 +633,7 @@ const FRAMEWORK = {};
     retrieve: _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__["default"],
     store: _methods_store__WEBPACK_IMPORTED_MODULE_6__["default"],
     settings: _methods_settings__WEBPACK_IMPORTED_MODULE_7__["default"],
+    isinviewport: _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__["default"],
   };
 
   APP.components = {
@@ -613,7 +643,6 @@ const FRAMEWORK = {};
     modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
     themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_12__["default"],
     divider: _components_divider__WEBPACK_IMPORTED_MODULE_13__["default"],
-    isinviewport: _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__["default"],
     navigation: _components_navigation__WEBPACK_IMPORTED_MODULE_14__["default"],
   };
 

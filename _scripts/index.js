@@ -31,6 +31,7 @@ import run from "./app/run";
     retrieve,
     store,
     settings,
+    isinviewport,
   };
 
   APP.components = {
@@ -40,7 +41,6 @@ import run from "./app/run";
     modeswitch,
     themeswitch,
     divider,
-    isinviewport,
     navigation,
   };
 

@@ -2,7 +2,7 @@ export default class {
   constructor(element, APP) {
     this.element = element;
     this.scroll = APP.methods.scrollstop;
-    this.selector = this.element.dataset.selector || "entry";
+    this.selector = this.element.dataset.selector || "js-isinviewport";
     this.entries = this.element.querySelectorAll(`.${this.selector}`);
   }
 

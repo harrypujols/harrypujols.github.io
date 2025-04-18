@@ -1,7 +1,7 @@
 .navigation {
   display: none;
 
-  &:where(.visible) {
+  &:where(.is-visible) {
     display: block;
   }
 }
