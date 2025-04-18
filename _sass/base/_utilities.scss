@@ -1,7 +1,15 @@
 .button {
   display: inline-block;
   text-decoration: none;
-  border: 2px dotted currentColor;
+  border: unset;
+
+  &:before {
+    content: "[";
+  }
+
+  &:after {
+    content: "]";
+  }
 }
 
 .center {
