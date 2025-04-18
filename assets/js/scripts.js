@@ -186,18 +186,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
+    this.scroll = APP.methods.scrollstop;
     this.selector = this.element.dataset.selector || "entry";
     this.entries = this.element.querySelectorAll(`.${this.selector}`);
-    this.scroll = APP.methods.scrollstop;
   }
 
   isInViewport() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-in-viewport");
+          console.log(`${entry.className} is in the viewport: true`);
         } else {
-          entry.target.classList.remove("is-in-viewport");
+          console.log(`${entry.className} is in the viewport: false`);
         }
       });
     });
@@ -213,7 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 
     this.scroll(() => {
       this.isInViewport();
-    });
+    }, 45);
   }
 });
 

@@ -2,7 +2,11 @@
 <html lang="en">
   {% include head.html %}
   <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
-    <main class="main-content">
+    <main
+      class="main-content"
+      data-js="isinviewport"
+      data-selector="landing-section"
+    >
       <nav class="sticky navigation" data-js="navigation">
         <ul class="navigation-list">
           <li><a href="#about">About</a></li>
