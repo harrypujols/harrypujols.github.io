@@ -1,3 +1,11 @@
+.navigation {
+  display: none;
+
+  &:where(.visible) {
+    display: block;
+  }
+}
+
 .navigation-list {
   list-style: none;
   padding: 0;

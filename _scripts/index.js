@@ -15,6 +15,7 @@ import modeswitch from "./components/modeswitch";
 import themeswitch from "./components/themeswitch";
 import divider from "./components/divider";
 import scrolltrigger from "./components/scrolltrigger";
+import navigation from "./components/navigation";
 
 import data from "./data/data.json";
 
@@ -40,6 +41,7 @@ import run from "./app/run";
     themeswitch,
     divider,
     scrolltrigger,
+    navigation,
   };
 
   APP.data = data;

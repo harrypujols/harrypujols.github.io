@@ -451,12 +451,33 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 15 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.APP = APP;
+    this.page = document.documentElement;
+  }
+
+  init() {
+    console.log("Navigation component initialized");
+  }
+});
+
+
+/***/ }),
+/* 16 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -546,9 +567,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
 /* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
 /* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(17);
 const FRAMEWORK = {};
+
 
 
 
@@ -590,12 +613,13 @@ const FRAMEWORK = {};
     themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
     divider: _components_divider__WEBPACK_IMPORTED_MODULE_12__["default"],
     scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__["default"],
+    navigation: _components_navigation__WEBPACK_IMPORTED_MODULE_14__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_14__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_15__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_15__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_16__["default"],
   };
 
   APP.start.run(APP);
