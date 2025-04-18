@@ -184,6 +184,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
+    this.entries = this.element.querySelectorAll(".entry");
+    this.scroll = APP.methods.scrollstop;
+  }
+
+  isInViewport() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in-viewport");
+        } else {
+          entry.target.classList.remove("is-in-viewport");
+        }
+      });
+    });
+
+    // Observe each entry
+    this.entries.forEach((entry) => {
+      observer.observe(entry);
+    });
+  }
+
+  init() {
+    this.isInViewport();
+
+    this.scroll(() => {
+      this.isInViewport();
+    });
+  }
+});
+
+
+/***/ }),
+/* 10 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
     constructor ( element, APP ) {
       this.element = element
       this.breakpoint = APP.methods.breakpoint
@@ -198,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
   });
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -240,7 +282,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -307,7 +349,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -360,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -403,48 +445,6 @@ __webpack_require__.r(__webpack_exports__);
       this.width = this.element.offsetWidth;
       this.updateCharacter();
     }, 45);
-  }
-});
-
-
-/***/ }),
-/* 14 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor(element, APP) {
-    this.element = element;
-    this.entries = this.element.querySelectorAll(".entry");
-    this.scroll = APP.methods.scrollstop;
-  }
-
-  isInViewport() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-in-viewport");
-        } else {
-          entry.target.classList.remove("is-in-viewport");
-        }
-      });
-    });
-
-    // Observe each entry
-    this.entries.forEach((entry) => {
-      observer.observe(entry);
-    });
-  }
-
-  init() {
-    this.isInViewport();
-
-    this.scroll(() => {
-      this.isInViewport();
-    });
   }
 });
 
@@ -561,12 +561,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _methods_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _methods_settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
-/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
-/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
-/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
 /* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
 /* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
 /* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(17);
@@ -606,13 +606,13 @@ const FRAMEWORK = {};
   };
 
   APP.components = {
-    size: _components_size__WEBPACK_IMPORTED_MODULE_8__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
-    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
-    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
-    divider: _components_divider__WEBPACK_IMPORTED_MODULE_12__["default"],
-    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__["default"],
+    size: _components_size__WEBPACK_IMPORTED_MODULE_9__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_10__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_12__["default"],
+    divider: _components_divider__WEBPACK_IMPORTED_MODULE_13__["default"],
+    isinviewport: _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__["default"],
     navigation: _components_navigation__WEBPACK_IMPORTED_MODULE_14__["default"],
   };
 
