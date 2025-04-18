@@ -10,9 +10,9 @@ export default class {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(`${entry.className} is in the viewport: true`);
+          console.log(`${entry.target.id} is in the viewport: true`);
         } else {
-          console.log(`${entry.className} is in the viewport: false`);
+          console.log(`${entry.target.id} is in the viewport: false`);
         }
       });
     });
