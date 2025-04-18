@@ -3,8 +3,8 @@ export default class {
     this.element = element;
     this.width = this.element.offsetWidth;
     this.resize = APP.methods.resizestop;
-    this.character = this.element.getAttribute("data-character") || "*";
-    this.characterAdjust = this.element.getAttribute("data-adjust") || 0;
+    this.character = this.element.dataset.character || "*";
+    this.characterAdjust = this.element.dataset.adjust || 0;
   }
 
   updateCharacter() {

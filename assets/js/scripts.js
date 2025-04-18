@@ -186,7 +186,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
-    this.entries = this.element.querySelectorAll(".entry");
+    this.selector = this.element.dataset.selector || "entry";
+    this.entries = this.element.querySelectorAll(`.${this.selector}`);
     this.scroll = APP.methods.scrollstop;
   }
 
@@ -414,8 +415,8 @@ __webpack_require__.r(__webpack_exports__);
     this.element = element;
     this.width = this.element.offsetWidth;
     this.resize = APP.methods.resizestop;
-    this.character = this.element.getAttribute("data-character") || "*";
-    this.characterAdjust = this.element.getAttribute("data-adjust") || 0;
+    this.character = this.element.dataset.character || "*";
+    this.characterAdjust = this.element.dataset.adjust || 0;
   }
 
   updateCharacter() {

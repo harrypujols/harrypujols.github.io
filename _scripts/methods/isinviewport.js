@@ -1,7 +1,8 @@
 export default class {
   constructor(element, APP) {
     this.element = element;
-    this.entries = this.element.querySelectorAll(".entry");
+    this.selector = this.element.dataset.selector || "entry";
+    this.entries = this.element.querySelectorAll(`.${this.selector}`);
     this.scroll = APP.methods.scrollstop;
   }
 
