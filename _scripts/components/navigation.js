@@ -3,27 +3,28 @@ export default class {
     this.element = element;
     this.APP = APP;
     this.scroll = APP.methods.scrollstop;
-    this.link = this.element.querySelectorAll(".js-nav-link");
-    this.isinviewport = APP.methods.isinviewport;
+    this.links = this.element.querySelectorAll(".js-nav-link");
+    this.isinviewport = new APP.methods.isinviewport(
+      document.querySelector('[data-js="isinviewport"]'),
+      APP
+    ); // Initialize isinviewport
   }
 
   makeActive() {
-    this.link.forEach((link) => {
+    this.links.forEach((link) => {
       const target = document.querySelector(link.getAttribute("href"));
-      const isActive = this.isinviewport.isInViewport(target);
-
-      if (isActive) {
-        link.classList.add("active");
+      if (target && this.isinviewport.isInViewport(target)) {
+        link.classList.add("is-active");
       } else {
-        link.classList.remove("active");
+        link.classList.remove("is-active");
       }
     });
   }
 
-  isvisible() {
-    const isActive = this.isinviewport.isInViewport(target);
+  isVisible() {
+    const targetSelector = document.querySelector("#intro");
 
-    if (isActive.id != "intro") {
+    if (targetSelector && !this.isinviewport.isInViewport(targetSelector)) {
       this.element.classList.add("is-visible");
     } else {
       this.element.classList.remove("is-visible");
@@ -31,10 +32,14 @@ export default class {
   }
 
   init() {
+    // Run makeActive and isVisible on initialization
     this.makeActive();
+    this.isVisible();
 
+    // Run makeActive and isVisible on scroll
     this.scroll(() => {
       this.makeActive();
+      this.isVisible();
     }, 45);
   }
 }

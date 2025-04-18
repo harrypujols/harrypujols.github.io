@@ -20,3 +20,8 @@
   top: 0;
   z-index: 1000;
 }
+
+.is-active {
+  color: var(--foreground-color);
+  text-decoration: none;
+}
