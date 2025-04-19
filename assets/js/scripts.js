@@ -447,10 +447,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
-    this.APP = APP;
     this.scroll = APP.methods.scrollstop;
-    this.links = this.element.querySelectorAll(".js-nav-link");
     this.isInViewport = APP.methods.isInViewport;
+    this.links = this.element.querySelectorAll(".js-nav-link");
     this.intro = document.querySelector("#intro");
   }
 

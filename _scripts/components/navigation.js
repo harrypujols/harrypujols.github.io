@@ -1,10 +1,9 @@
 export default class {
   constructor(element, APP) {
     this.element = element;
-    this.APP = APP;
     this.scroll = APP.methods.scrollstop;
-    this.links = this.element.querySelectorAll(".js-nav-link");
     this.isInViewport = APP.methods.isInViewport;
+    this.links = this.element.querySelectorAll(".js-nav-link");
     this.intro = document.querySelector("#intro");
   }
 
