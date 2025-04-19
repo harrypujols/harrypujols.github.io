@@ -450,38 +450,44 @@ __webpack_require__.r(__webpack_exports__);
     this.APP = APP;
     this.scroll = APP.methods.scrollstop;
     this.links = this.element.querySelectorAll(".js-nav-link");
-    this.isinviewport = new APP.methods.isInViewport(this.links);
+    this.isInViewport = APP.methods.isInViewport; // Use the refactored isInViewport
   }
 
-  makeActive() {
-    this.links.forEach((link) => {
-      const target = document.querySelector(link.getAttribute("href"));
-      if (target && this.isinviewport.isInViewport(target)) {
-        link.classList.add("is-active");
-      } else {
-        link.classList.remove("is-active");
-      }
-    });
-  }
+  // async makeActive() {
+  //   for (const link of this.links) {
+  //     const target = document.querySelector(link.getAttribute("href"));
+  //     if (target) {
+  //       const isVisible = await this.isInViewport(target);
+  //       if (isVisible) {
+  //         link.classList.add("is-active");
+  //       } else {
+  //         link.classList.remove("is-active");
+  //       }
+  //     }
+  //   }
+  // }
 
-  isVisible() {
+  async isVisible() {
     const targetSelector = document.querySelector("#intro");
 
-    if (targetSelector && !this.isinviewport.isInViewport(targetSelector)) {
-      this.element.classList.add("is-visible");
-    } else {
-      this.element.classList.remove("is-visible");
+    if (targetSelector) {
+      const isVisible = await this.isInViewport(targetSelector);
+      if (!isVisible) {
+        this.element.classList.add("is-visible");
+      } else {
+        this.element.classList.remove("is-visible");
+      }
     }
   }
 
   init() {
     // Run makeActive and isVisible on initialization
-    this.makeActive();
+    // this.makeActive();
     this.isVisible();
 
     // Run makeActive and isVisible on scroll
     this.scroll(() => {
-      this.makeActive();
+      // this.makeActive();
       this.isVisible();
     }, 45);
   }
@@ -621,7 +627,7 @@ const FRAMEWORK = {};
     retrieve: _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__["default"],
     store: _methods_store__WEBPACK_IMPORTED_MODULE_6__["default"],
     settings: _methods_settings__WEBPACK_IMPORTED_MODULE_7__["default"],
-    isinviewport: _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__["default"],
+    isInViewport: _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__["default"],
   };
 
   APP.components = {

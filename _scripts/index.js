@@ -8,7 +8,7 @@ import scrollstop from "./methods/scrollstop";
 import retrieve from "./methods/retrieve";
 import store from "./methods/store";
 import settings from "./methods/settings";
-import isinviewport from "./methods/isinviewport";
+import isInViewport from "./methods/isinviewport";
 
 import size from "./components/size";
 import typewriter from "./components/typewriter";
@@ -31,7 +31,7 @@ import run from "./app/run";
     retrieve,
     store,
     settings,
-    isinviewport,
+    isInViewport,
   };
 
   APP.components = {
