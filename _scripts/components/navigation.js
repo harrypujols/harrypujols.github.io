@@ -33,7 +33,7 @@ export default class {
   }
 
   init() {
-    // this.makeActive();
+    this.makeActive();
     this.isVisible();
 
     this.scroll(() => {

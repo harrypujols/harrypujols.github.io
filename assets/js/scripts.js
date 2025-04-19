@@ -479,7 +479,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
-    // this.makeActive();
+    this.makeActive();
     this.isVisible();
 
     this.scroll(() => {
