@@ -4,10 +4,7 @@ export default class {
     this.APP = APP;
     this.scroll = APP.methods.scrollstop;
     this.links = this.element.querySelectorAll(".js-nav-link");
-    this.isinviewport = new APP.methods.isinviewport(
-      document.querySelector('[data-js="isinviewport"]'),
-      APP
-    ); // Initialize isinviewport
+    this.isinviewport = new APP.methods.isInViewport(this.links);
   }
 
   makeActive() {

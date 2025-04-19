@@ -1,33 +1,19 @@
-export default class {
-  constructor(element, APP) {
-    this.element = element;
-    this.scroll = APP.methods.scrollstop;
-    this.selector = this.element.dataset.selector || "js-isinviewport";
-    this.entries = this.element.querySelectorAll(`.${this.selector}`);
-  }
-
-  isInViewport() {
-    const observer = new IntersectionObserver((entries) => {
+export default (element) => {
+  return new Promise((resolve) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log(`${entry.target.id} is in the viewport: true`);
-        } else {
-          console.log(`${entry.target.id} is in the viewport: false`);
+        if (entry.target === element) {
+          if (entry.isIntersecting) {
+            resolve(true); // Element is in the viewport
+          } else {
+            resolve(false); // Element is not in the viewport
+          }
+          observer.disconnect(); // Stop observing once the result is determined
         }
       });
     });
 
-    // Observe each entry
-    this.entries.forEach((entry) => {
-      observer.observe(entry);
-    });
-  }
-
-  init() {
-    this.isInViewport();
-
-    this.scroll(() => {
-      this.isInViewport();
-    }, 45);
-  }
-}
+    // Start observing the element
+    observer.observe(element);
+  });
+};

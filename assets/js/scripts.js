@@ -183,38 +183,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor(element, APP) {
-    this.element = element;
-    this.scroll = APP.methods.scrollstop;
-    this.selector = this.element.dataset.selector || "js-isinviewport";
-    this.entries = this.element.querySelectorAll(`.${this.selector}`);
-  }
-
-  isInViewport() {
-    const observer = new IntersectionObserver((entries) => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((element) => {
+  return new Promise((resolve) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log(`${entry.target.id} is in the viewport: true`);
-        } else {
-          console.log(`${entry.target.id} is in the viewport: false`);
+        if (entry.target === element) {
+          if (entry.isIntersecting) {
+            resolve(true); // Element is in the viewport
+          } else {
+            resolve(false); // Element is not in the viewport
+          }
+          observer.disconnect(); // Stop observing once the result is determined
         }
       });
     });
 
-    // Observe each entry
-    this.entries.forEach((entry) => {
-      observer.observe(entry);
-    });
-  }
-
-  init() {
-    this.isInViewport();
-
-    this.scroll(() => {
-      this.isInViewport();
-    }, 45);
-  }
+    // Start observing the element
+    observer.observe(element);
+  });
 });
 
 
@@ -464,10 +450,7 @@ __webpack_require__.r(__webpack_exports__);
     this.APP = APP;
     this.scroll = APP.methods.scrollstop;
     this.links = this.element.querySelectorAll(".js-nav-link");
-    this.isinviewport = new APP.methods.isinviewport(
-      document.querySelector('[data-js="isinviewport"]'),
-      APP
-    ); // Initialize isinviewport
+    this.isinviewport = new APP.methods.isInViewport(this.links);
   }
 
   makeActive() {
