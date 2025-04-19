@@ -450,28 +450,27 @@ __webpack_require__.r(__webpack_exports__);
     this.APP = APP;
     this.scroll = APP.methods.scrollstop;
     this.links = this.element.querySelectorAll(".js-nav-link");
-    this.isInViewport = APP.methods.isInViewport; // Use the refactored isInViewport
+    this.isInViewport = APP.methods.isInViewport;
+    this.intro = document.querySelector("#intro");
   }
 
-  // async makeActive() {
-  //   for (const link of this.links) {
-  //     const target = document.querySelector(link.getAttribute("href"));
-  //     if (target) {
-  //       const isVisible = await this.isInViewport(target);
-  //       if (isVisible) {
-  //         link.classList.add("is-active");
-  //       } else {
-  //         link.classList.remove("is-active");
-  //       }
-  //     }
-  //   }
-  // }
+  async makeActive() {
+    for (const link of this.links) {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        const isVisible = await this.isInViewport(target);
+        if (isVisible) {
+          link.classList.add("is-active");
+        } else {
+          link.classList.remove("is-active");
+        }
+      }
+    }
+  }
 
   async isVisible() {
-    const targetSelector = document.querySelector("#intro");
-
-    if (targetSelector) {
-      const isVisible = await this.isInViewport(targetSelector);
+    if (this.intro) {
+      const isVisible = await this.isInViewport(this.intro);
       if (!isVisible) {
         this.element.classList.add("is-visible");
       } else {
@@ -481,15 +480,13 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
-    // Run makeActive and isVisible on initialization
     // this.makeActive();
     this.isVisible();
 
-    // Run makeActive and isVisible on scroll
     this.scroll(() => {
-      // this.makeActive();
+      this.makeActive();
       this.isVisible();
-    }, 45);
+    }, 15);
   }
 });
 
