@@ -33,6 +33,32 @@ body {
       color: var(--color-black);
     }
   }
+
+  :where(.mode-system) & {
+    @media (prefers-color-scheme: light) {
+      --background-color: var(--lightmode-background-color);
+      --foreground-color: var(--lightmode-foreground-color);
+      --color-accent: var(--lightmode-accent-color);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --background-color: var(--darkmnode-background-color);
+      --foreground-color: var(--darkmode-foreground-color);
+      --color-accent: var(--darkmode-accent-color);
+    }
+  }
+
+  :where(.mode-light) & {
+    --background-color: var(--lightmode-background-color);
+    --foreground-color: var(--lightmode-foreground-color);
+    --color-accent: var(--lightmode-accent-color);
+  }
+
+  :where(.mode-dark) & {
+    --background-color: var(--darkmnode-background-color);
+    --foreground-color: var(--darkmode-foreground-color);
+    --color-accent: var(--darkmode-accent-color);
+  }
 }
 
 h1,

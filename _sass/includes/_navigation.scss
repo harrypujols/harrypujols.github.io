@@ -1,8 +1,14 @@
 .navigation {
   display: none;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  background-color: var(--background-color);
+  padding-block: 0.5rem 1rem;
+  border-bottom: 1px dashed currentColor;
 
   &:where(.is-visible) {
     display: block;
+    transform: translateY(0);
   }
 }
 

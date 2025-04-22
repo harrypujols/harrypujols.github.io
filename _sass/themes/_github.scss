@@ -11,29 +11,10 @@
   --color-github-pink: #d5006d;
   --color-github-gray: #24292f;
 
-  --color-light: var(--color-github-light);
-  --color-dark: var(--color-github-dark);
-  --color-accent: var(--color-github-blue);
-
-  &:where(.mode-system) {
-    @media (prefers-color-scheme: light) {
-      --background-color: var(--color-light);
-      --foreground-color: var(--color-dark);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      --background-color: var(--color-dark);
-      --foreground-color: var(--color-light);
-    }
-  }
-
-  &:where(.mode-light) {
-    --background-color: var(--color-light);
-    --foreground-color: var(--color-dark);
-  }
-
-  &:where(.mode-dark) {
-    --background-color: var(--color-dark);
-    --foreground-color: var(--color-light);
-  }
+  --lightmode-background-color: var(--color-github-light);
+  --lightmode-foreground-color: var(--color-github-dark);
+  --lightmode-accent-color: var(--color-github-blue);
+  --darkmnode-background-color: var(--color-github-dark);
+  --darkmode-foreground-color: var(--color-github-light);
+  --darkmode-accent-color: var(--color-github-green);
 }
