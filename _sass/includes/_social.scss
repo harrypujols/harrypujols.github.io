@@ -10,8 +10,19 @@
     width: 3rem;
     height: 3rem;
   }
+}
 
-  a {
-    text-decoration: none;
+.social-list-item-link {
+  --svg-fill-color: var(--color-accent);
+
+  text-decoration: none;
+
+  &:hover {
+    --svg-fill-color: inherit;
+  }
+
+  &[target="_blank"]::after,
+  &[target="\\_blank"]::after {
+    display: none;
   }
 }
