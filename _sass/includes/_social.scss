@@ -12,7 +12,7 @@
 }
 
 .social-list-item-link {
-  --svg-fill-color: var(--color-accent);
+  --svg-fill-color: var(--link-color, var(--color-accent));
 
   text-decoration: none;
 
