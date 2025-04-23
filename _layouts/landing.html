@@ -7,7 +7,6 @@
         <ul class="navigation-list">
           <li><a href="#about" class="js-nav-link">About</a></li>
           <li><a href="#projects" class="js-nav-link">Projects</a></li>
-          <li><a href="#social" class="js-nav-link">Social</a></li>
           <li><a href="#contact" class="js-nav-link">Contact</a></li>
           <li><a href="#settings" class="js-nav-link">Settings</a></li>
         </ul>
@@ -20,6 +19,7 @@
           <div class="landing-container">
             <h1 class="headline">You landed at harrypujols.com</h1>
             <p>Home of award-winning Harry Pujols</p>
+            {% include social.html %}
             <a class="button cta" href="#about">OK</a>
           </div>
         </section>
@@ -109,12 +109,7 @@
             </ul>
           </div>
         </section>
-        <section class="landing-section" id="social">
-          <div class="landing-container">
-            <h2>Social</h2>
-            {% include social.html %}
-          </div>
-        </section>
+
         <section class="landing-section" id="contact">
           <div class="landing-container">
             <h2>Contact</h2>

@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   gap: 1rem;
 
   svg {
@@ -18,7 +17,7 @@
   text-decoration: none;
 
   &:hover {
-    --svg-fill-color: inherit;
+    --svg-fill-color: currentColor;
   }
 
   &[target="_blank"]::after,
