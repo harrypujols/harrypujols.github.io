@@ -1,22 +1,10 @@
 <ul class="social-list">
+  {% for item in site.data.social %}
   <li class="social-list-item">
-    <a href="https://www.linkedin.com/in/harrypujols/" target="_blank"
-      >{% include svg/linkedin.svg %} LinkedIn</a
-    >
+    <a href="{{ item.url }}" target="_blank">
+      {% include svg/{{ item.icon }}.svg %}
+      <span class="social-list-item-name">{{ item.name }}</span>
+    </a>
   </li>
-  <li class="social-list-item">
-    <a href="https://github.com/harrypujols" target="_blank"
-      >{% include svg/github.svg %} Github</a
-    >
-  </li>
-  <li class="social-list-item">
-    <a href="https://bsky.app/profile/harrypujols.com" target="_blank"
-      >{% include svg/bluesky.svg %} Bluesky</a
-    >
-  </li>
-  <li class="social-list-item">
-    <a href=" https://discordapp.com/users/harrymfa"
-      >{% include svg/discord.svg %} Discord</a
-    >
-  </li>
+  {% endfor %}
 </ul>
