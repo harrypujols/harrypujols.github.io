@@ -1,7 +1,18 @@
 <ul class="social-list">
   {% for item in site.data.social %}
   <li class="social-list-item">
-    <a href="{{ item.url }}" target="_blank" class="social-list-item-link">
+    <a
+      href="{{ item.url }}"
+      {%
+      if
+      item.external
+      %}
+      target="_blank"
+      {%
+      endif
+      %}
+      class="social-list-item-link"
+    >
       {% include svg/{{ item.icon }}.svg %}
       <span class="social-list-item-name visually-hidden">{{ item.name }}</span>
     </a>
