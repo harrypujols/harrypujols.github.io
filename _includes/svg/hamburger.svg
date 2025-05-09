@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" id="hamburguer" width="16"
-  height="16" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" rendering="crispEdges">
+<svg xmlns="http://www.w3.org/2000/svg" id="hamburguer" width="16" height="16" viewBox="0 0 16 16"
+  preserveAspectRatio="xMidYMid meet" rendering="crispEdges">
   <rect id="6-2" x="5" y="1" width="1" height="1" shape-rendering="crispEdges"
     style="fill:var(--svg-fill-color);opacity:255;"></rect>
   <rect id="7-2" x="6" y="1" width="1" height="1" shape-rendering="crispEdges"

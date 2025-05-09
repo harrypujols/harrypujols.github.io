@@ -3,14 +3,7 @@
   {% include head.html %}
   <body class="landing-page {% if page.theme %}{{ page.theme }}{% endif %}">
     <main class="main-content">
-      <nav class="sticky navigation" data-js="navigation">
-        <ul class="navigation-list">
-          <li><a href="#about" class="js-nav-link">About</a></li>
-          <li><a href="#projects" class="js-nav-link">Projects</a></li>
-          <li><a href="#contact" class="js-nav-link">Contact</a></li>
-          <li><a href="#settings" class="js-nav-link">Settings</a></li>
-        </ul>
-      </nav>
+      {% include navigation.html %}
       <div class="landing-grid">
         <section class="landing-section intro hero" id="intro">
           <div class="fullscreen-video">
