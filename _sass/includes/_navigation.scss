@@ -6,11 +6,11 @@
   background-color: var(--background-color);
   padding: var(--hamburger-size) 1rem;
 
-  [aria-expanded="false"] {
+  &[aria-expanded="false"] {
     transform: translateX(-100%);
   }
 
-  [aria-expanded="true"] {
+  &[aria-expanded="true"] {
     transform: translateX(0);
   }
 }
@@ -23,7 +23,9 @@
   box-shadow: none;
   border: 0;
   cursor: pointer;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: var(--hamburger-index);
   padding: 1rem;
 
@@ -34,6 +36,7 @@
 }
 
 .navigation-list {
+  font-size: clamp(1.5rem, 4vw, 32rem);
   list-style: none;
   padding: var(--hamburger-size) 0 0 0;
   margin: 0;
