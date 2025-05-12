@@ -447,6 +447,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
+    this.openButton = this.element.querySelector("js-hamburger-button");
+    this.menu = this.element.querySelector("js-navigation-menu");
   }
 
   init() {

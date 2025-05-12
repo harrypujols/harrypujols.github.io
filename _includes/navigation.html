@@ -1,11 +1,14 @@
-<button class="hamburger" aria-label="Menu">
-  {% include svg/hamburger.svg %}
-</button>
-<nav class="navigation" data-js="navigation" aria-expanded="false">
-  <ul class="navigation-list">
-    <li><a href="#about" class="js-nav-link">About</a></li>
-    <li><a href="#projects" class="js-nav-link">Projects</a></li>
-    <li><a href="#contact" class="js-nav-link">Contact</a></li>
-    <li><a href="#settings" class="js-nav-link">Settings</a></li>
+<nav class="navigation" data-js="navigation" role="navigation">
+  <button class="hamburger js-hamburger-button" aria-label="Menu">
+    {% include svg/hamburger.svg %}
+  </button>
+  <ul
+    class="navigation-list js-navigation-menu"
+    aria-expanded="false"
+    role="menu"
+  >
+    <li><a href="#about" class="navigation-link">About</a></li>
+    <li><a href="#projects" class="navigation-link">Projects</a></li>
+    <li><a href="#contact" class="navigation-link">Settings</a></li>
   </ul>
 </nav>
