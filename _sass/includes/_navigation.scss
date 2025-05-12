@@ -1,5 +1,5 @@
 .hamburger {
-  --svg-fill-color: var(--color-foreground);
+  --svg-fill-color: var(--foreground-color);
 
   appearance: none;
   background-color: transparent;
@@ -17,7 +17,7 @@
     height: var(--hamburger-size);
   }
 
-  &.is-in-reverse {
+  body:not(.nav-open) &.is-in-reverse {
     --svg-fill-color: var(--darkmode-foreground-color);
   }
 }
@@ -54,4 +54,9 @@
 .is-active {
   color: var(--foreground-color);
   text-decoration: none;
+}
+
+.nav-open {
+  overflow: hidden;
+  width: 100%;
 }

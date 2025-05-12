@@ -4,6 +4,8 @@ export default class {
     this.openButton = this.element.querySelector(".js-hamburger-button");
     this.menu = this.element.querySelector(".js-navigation-menu");
     this.isinViewport = APP.methods.isInViewport;
+    this.scrollstop = APP.methods.scrollstop;
+    this.resizestop = APP.methods.resizestop;
   }
 
   toggle() {
@@ -11,12 +13,22 @@ export default class {
       console.log(event.target);
       if (event.target.closest(".js-hamburger-button")) {
         event.preventDefault();
-        console.log("Hamburger button clicked");
         this.element.classList.toggle("is-open");
+        this.menu.classList.toggle("is-open");
         this.menu.setAttribute(
           "aria-expanded",
-          !this.element.classList.contains("is-open")
+          this.menu.classList.contains("is-open")
         );
+        // Prevent background scroll when menu is open, but preserve scroll position
+        if (this.menu.classList.contains("is-open")) {
+          this._scrollY = window.scrollY;
+          document.body.classList.add("nav-open");
+          document.body.style.top = `-${this._scrollY}px`;
+        } else {
+          document.body.classList.remove("nav-open");
+          document.body.style.top = "";
+          window.scrollTo(0, this._scrollY || 0);
+        }
       }
     });
   }
@@ -26,20 +38,26 @@ export default class {
     if (!intro || !this.openButton) return;
     this.isinViewport(intro).then((inView) => {
       if (inView) {
-        this.openButton.classList.add("is-in-viewport");
+        this.openButton.classList.add("is-in-reverse");
       } else {
-        this.openButton.classList.remove("is-in-viewport");
+        this.openButton.classList.remove("is-in-reverse");
       }
     });
   }
 
   init() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => this._initInternal());
+    } else {
+      this._initInternal();
+    }
+  }
+
+  _initInternal() {
     console.log("Navigation component initialized");
     this.toggle();
-    // Toggle class on load
     this.toggleOpenButtonClass();
-    // Listen for scroll and resize to update class
-    window.addEventListener("scroll", () => this.toggleOpenButtonClass());
-    window.addEventListener("resize", () => this.toggleOpenButtonClass());
+    this.scrollstop(() => this.toggleOpenButtonClass());
+    this.resizestop(() => this.toggleOpenButtonClass());
   }
 }
