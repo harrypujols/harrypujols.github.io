@@ -1,5 +1,5 @@
 .hamburger {
-  --svg-fill-color: currentColor;
+  --svg-fill-color: var(--color-foreground);
 
   appearance: none;
   background-color: transparent;
@@ -15,6 +15,10 @@
   svg {
     width: var(--hamburger-size);
     height: var(--hamburger-size);
+  }
+
+  &.is-in-reverse {
+    --svg-fill-color: var(--darkmode-foreground-color);
   }
 }
 
