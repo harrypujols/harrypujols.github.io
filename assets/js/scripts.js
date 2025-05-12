@@ -456,7 +456,6 @@ __webpack_require__.r(__webpack_exports__);
 
   toggle() {
     this.element.addEventListener("click", (event) => {
-      console.log(event.target);
       if (event.target.closest(".js-hamburger-button")) {
         event.preventDefault();
         this.element.classList.toggle("is-open");
@@ -475,6 +474,15 @@ __webpack_require__.r(__webpack_exports__);
           document.body.style.top = "";
           window.scrollTo(0, this._scrollY || 0);
         }
+      }
+
+      if (event.target.closest(".js-navigation-menu a")) {
+        this.element.classList.remove("is-open");
+        this.menu.classList.remove("is-open");
+        this.menu.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+        document.body.style.top = "";
+        window.scrollTo(0, this._scrollY || 0);
       }
     });
   }
