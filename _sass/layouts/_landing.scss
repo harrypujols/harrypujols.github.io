@@ -76,3 +76,7 @@
 .moon {
   font-size: 1.4rem;
 }
+
+.face {
+  font-size: clamp(0.625rem, 2vw, 1.2rem);
+}
