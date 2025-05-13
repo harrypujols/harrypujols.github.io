@@ -4,37 +4,30 @@ export default class {
     this.page = document.documentElement;
     this.prefs = APP.methods.retrieve(APP, APP.data.settings);
     this.APP = APP;
-    this.radioButtons = this.element.querySelectorAll(
-      'input[type="radio"][name="theme"]'
-    );
   }
 
   init() {
     // Set the initial theme based on preferences
     this.setTheme(this.prefs.theme);
 
-    // Check the radio button that matches the current theme
-    this.radioButtons.forEach((radio) => {
-      if (radio.value === this.prefs.theme) {
-        radio.checked = true;
-      }
+    // Set the select value to the current theme
+    this.element.value = this.prefs.theme;
 
-      // Add event listener to update theme on change
-      radio.addEventListener("change", (event) => {
-        const newTheme = event.target.value;
-        this.setTheme(newTheme);
+    // Add event listener to update theme on change
+    this.element.addEventListener("change", (event) => {
+      const newTheme = event.target.value;
+      this.setTheme(newTheme);
 
-        // Save the new theme to settings
-        this.prefs.theme = newTheme;
-        this.APP.methods.store(this.prefs);
-      });
+      // Save the new theme to settings
+      this.prefs.theme = newTheme;
+      this.APP.methods.store(this.prefs);
     });
   }
 
   setTheme(theme) {
     // Remove any existing theme classes dynamically
-    this.radioButtons.forEach((radio) => {
-      this.page.classList.remove(`theme-${radio.value}`);
+    Array.from(this.element.options).forEach((option) => {
+      this.page.classList.remove(`theme-${option.value}`);
     });
 
     // Add the new theme class
