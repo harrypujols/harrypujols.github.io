@@ -54,6 +54,8 @@
 }
 
 .settings {
+  --svg-fill-color: var(--foreground-color);
+
   display: inline-block;
   max-width: 15.625rem;
   border: 0;
@@ -63,18 +65,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 [name="modeswitch"] {
   width: 100%;
-}
-
-.sun {
-  font-size: 2rem;
-}
-
-.moon {
-  font-size: 1.4rem;
 }
 
 .face {
