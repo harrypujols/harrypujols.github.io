@@ -1,17 +1,4 @@
 <fieldset class="settings" data-js="modeswitch">
-  <label for="light" class="modeswitch-label">
-    <input
-      type="radio"
-      name="mode"
-      id="light"
-      value="light"
-      class="modeswitch"
-    />
-    <div class="modeswitch-indicator">{% include svg/pointer.svg %}</div>
-    <span class="modeswitch-icon"> {% include svg/lights-on.svg %} </span>
-    <span class="modeswitch-text visually-hidden">Light</span>
-  </label>
-
   <label for="system" class="modeswitch-label">
     <input
       type="radio"
@@ -24,7 +11,18 @@
     <span class="modeswitch-icon"> {% include svg/unplugged.svg %} </span>
     <span class="modeswitch-text visually-hidden">System</span>
   </label>
-
+  <label for="light" class="modeswitch-label">
+    <input
+      type="radio"
+      name="mode"
+      id="light"
+      value="light"
+      class="modeswitch"
+    />
+    <div class="modeswitch-indicator">{% include svg/pointer.svg %}</div>
+    <span class="modeswitch-icon"> {% include svg/lights-on.svg %} </span>
+    <span class="modeswitch-text visually-hidden">Light</span>
+  </label>
   <label for="dark" class="modeswitch-label">
     <input type="radio" name="mode" id="dark" value="dark" class="modeswitch" />
     <div class="modeswitch-indicator">{% include svg/pointer.svg %}</div>
