@@ -1,0 +1,13 @@
+<div class="landing-container">
+  <h2>Projects</h2>
+  <ul class="project-list">
+    {% for item in site.data.projects %}
+    <li class="project-list-item">
+      <a href="{{ item.url }}" target="_blank" class="project-list-link"
+        >{{item.name}}</a
+      >
+      {{ item.description }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
