@@ -1,0 +1,5 @@
+.mode-switch {
+  &:checked + .mode-switch-label {
+    --svg-fill-color: var(--color-accent);
+  }
+}

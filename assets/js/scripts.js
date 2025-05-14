@@ -336,13 +336,10 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
-    // Remove all theme-* classes before setting
-    Array.from(this.element.options).forEach((option) => {
-      this.page.classList.remove(`theme-${option.value}`);
-    });
-    this.page.classList.add(`theme-${this.prefs.theme}`);
+    // Set the initial theme based on preferences
+    this.setTheme(this.prefs.theme);
 
-    // Set the select value to the current theme from settings
+    // Set the select value to the current theme
     this.element.value = this.prefs.theme;
 
     // Add event listener to update theme on change
