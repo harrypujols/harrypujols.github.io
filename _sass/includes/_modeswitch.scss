@@ -19,6 +19,8 @@
 }
 
 .modeswitch-indicator {
+  --svg-fill-color: var(--color-accent);
+
   text-align: center;
   visibility: hidden;
 
