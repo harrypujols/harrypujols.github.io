@@ -54,15 +54,6 @@ export default class {
   }
 
   init() {
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", () => this._initInternal());
-    } else {
-      this._initInternal();
-    }
-  }
-
-  _initInternal() {
-    console.log("Navigation component initialized");
     this.toggle();
     this.toggleOpenButtonClass();
     this.scrollstop(() => this.toggleOpenButtonClass());
