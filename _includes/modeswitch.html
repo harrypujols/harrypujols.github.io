@@ -1,29 +1,34 @@
 <fieldset class="settings" data-js="modeswitch">
-  <input
-    type="radio"
-    name="mode"
-    id="light"
-    value="light"
-    class="mode-switch"
-  />
-  <label for="light" class="mode-switch-label">
-    <span class="mode-switch-icon"> {% include svg/lights-on.svg %} </span>
-    <span class="mode-switch-text visually-hidden">Light</span>
+  <label for="light" class="modeswitch-label">
+    <input
+      type="radio"
+      name="mode"
+      id="light"
+      value="light"
+      class="modeswitch"
+    />
+    <div class="modeswitch-indicator">{% include svg/pointer.svg %}</div>
+    <span class="modeswitch-icon"> {% include svg/lights-on.svg %} </span>
+    <span class="modeswitch-text visually-hidden">Light</span>
   </label>
-  <input
-    type="radio"
-    name="mode"
-    id="system"
-    value="system"
-    class="mode-switch"
-  />
-  <label for="system" class="mode-switch-label">
-    <span class="mode-switch-icon"> {% include svg/unplugged.svg %} </span>
-    <span class="mode-switch-text visually-hidden">System</span>
+
+  <label for="system" class="modeswitch-label">
+    <input
+      type="radio"
+      name="mode"
+      id="system"
+      value="system"
+      class="modeswitch"
+    />
+    <div class="modeswitch-indicator">{% include svg/pointer.svg %}</div>
+    <span class="modeswitch-icon"> {% include svg/unplugged.svg %} </span>
+    <span class="modeswitch-text visually-hidden">System</span>
   </label>
-  <input type="radio" name="mode" id="dark" value="dark" class="mode-switch" />
-  <label for="dark" class="mode-switch-label">
-    <span class="mode-switch-icon"> {% include svg/lights-off.svg %} </span>
-    <span class="mode-switch-text visually-hidden">Dark</span>
+
+  <label for="dark" class="modeswitch-label">
+    <input type="radio" name="mode" id="dark" value="dark" class="modeswitch" />
+    <div class="modeswitch-indicator">{% include svg/pointer.svg %}</div>
+    <span class="modeswitch-icon"> {% include svg/lights-off.svg %} </span>
+    <span class="modeswitch-text visually-hidden">Dark</span>
   </label>
 </fieldset>
