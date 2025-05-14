@@ -280,56 +280,40 @@ __webpack_require__.r(__webpack_exports__);
   constructor(element, APP) {
     this.element = element;
     this.page = document.documentElement;
-    this.inputs = document.getElementsByName("mode-switch");
+    this.inputs = this.element.querySelectorAll(
+      'input[type="radio"][name="mode"]'
+    );
     this.prefs = APP.methods.retrieve(APP, APP.data.settings);
     this.APP = APP;
   }
 
   init() {
-    // Set initial mode based on preferences
+    // Remove all mode-* classes before setting
+    this.page.classList.remove("mode-light", "mode-system", "mode-dark");
     this.page.classList.add(`mode-${this.prefs.mode}`);
 
-    // Set the range input value based on the stored preferences
-    switch (this.prefs.mode) {
-      case "light":
-        this.element.value = "1";
-        break;
-      case "system":
-        this.element.value = "2";
-        break;
-      case "dark":
-        this.element.value = "3";
-        break;
-      default:
-        this.element.value = "1";
-    }
+    // Set the checked radio based on the stored preferences
+    this.inputs.forEach((input) => {
+      input.checked = input.value === this.prefs.mode;
+    });
 
-    // Add event listener to the range input field
-    this.element.addEventListener("input", (event) => {
-      let mode;
-      switch (event.target.value) {
-        case "1":
-          mode = "light";
-          break;
-        case "2":
-          mode = "system";
-          break;
-        case "3":
-          mode = "dark";
-          break;
-        default:
-          mode = "light";
-      }
+    // Add event listener to each radio button
+    this.inputs.forEach((input) => {
+      input.addEventListener("change", (event) => {
+        if (event.target.checked) {
+          const mode = event.target.value;
 
-      // Update the settings object
-      this.prefs.mode = mode;
+          // Update the settings object
+          this.prefs.mode = mode;
 
-      // Save the updated settings using the store method
-      this.APP.methods.store(this.prefs);
+          // Save the updated settings using the store method
+          this.APP.methods.store(this.prefs);
 
-      // Update the page class
-      this.page.classList.remove("mode-light", "mode-system", "mode-dark");
-      this.page.classList.add(`mode-${mode}`);
+          // Update the page class
+          this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+          this.page.classList.add(`mode-${mode}`);
+        }
+      });
     });
   }
 });
@@ -352,10 +336,13 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
-    // Set the initial theme based on preferences
-    this.setTheme(this.prefs.theme);
+    // Remove all theme-* classes before setting
+    Array.from(this.element.options).forEach((option) => {
+      this.page.classList.remove(`theme-${option.value}`);
+    });
+    this.page.classList.add(`theme-${this.prefs.theme}`);
 
-    // Set the select value to the current theme
+    // Set the select value to the current theme from settings
     this.element.value = this.prefs.theme;
 
     // Add event listener to update theme on change
