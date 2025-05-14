@@ -17,29 +17,10 @@
   --color-solarized-cyan: #2aa198;
   --color-solarized-green: #859900;
 
-  --color-accent: var(--color-solarized-orange);
-
-  &:where(.mode-system) {
-    @media (prefers-color-scheme: light) {
-      --background-color: var(--color-solarized-base3);
-      --foreground-color: var(--color-solarized-base00);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      --background-color: var(--color-solarized-base03);
-      --foreground-color: var(--color-solarized-base0);
-      --color-accent: var(--color-solarized-blue);
-    }
-  }
-
-  &:where(.mode-light) {
-    --background-color: var(--color-solarized-base3);
-    --foreground-color: var(--color-solarized-base00);
-  }
-
-  &:where(.mode-dark) {
-    --background-color: var(--color-solarized-base03);
-    --foreground-color: var(--color-solarized-base0);
-    --color-accent: var(--color-solarized-blue);
-  }
+  --lightmode-background-color: var(--color-solarized-base3);
+  --lightmode-foreground-color: var(--color-solarized-base00);
+  --lightmode-accent-color: var(--color-solarized-blue);
+  --darkmnode-background-color: var(--color-solarized-base03);
+  --darkmode-foreground-color: var(--color-solarized-base1);
+  --darkmode-accent-color: var(--color-solarized-orange);
 }

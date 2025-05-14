@@ -11,23 +11,9 @@ export default class {
     this.element.textContent = "";
     this.scrolltrigger.init();
 
-    // Check if the element is already in the viewport and start typing
-    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+    if (this.scrolltrigger.init() && !this.typing) {
       this.type();
     }
-
-    // Observe when the element enters the viewport
-    const observer = new MutationObserver(() => {
-      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
-        this.type();
-      }
-    });
-
-    // Start observing the element for class changes
-    observer.observe(this.element, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
   }
 
   type() {
@@ -35,9 +21,12 @@ export default class {
       this.typing = true;
       this.element.textContent += this.text.charAt(this.index);
       this.index++;
-      setTimeout(() => this.type(), 100);
+      this.element.classList.add("is-typing");
+
+      https: setTimeout(() => this.type(), 100);
     } else {
       this.typing = false;
+      this.element.classList.remove("is-typing");
     }
   }
 }

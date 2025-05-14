@@ -1,0 +1,29 @@
+.select-field {
+  appearance: none;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  border: 1px solid currentColor;
+  border-radius: 0;
+  padding: 0.25rem 1.5rem 0.25rem 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.faux-select {
+  --svg-fill-color: var(--background-color);
+
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    pointer-events: none;
+  }
+}

@@ -183,6 +183,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((element) => {
+  return new Promise((resolve) => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.target === element) {
+          if (entry.isIntersecting) {
+            resolve(true); // Element is in the viewport
+          } else {
+            resolve(false); // Element is not in the viewport
+          }
+          observer.disconnect(); // Stop observing once the result is determined
+        }
+      });
+    });
+
+    // Start observing the element
+    observer.observe(element);
+  });
+});
+
+
+/***/ }),
+/* 10 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
     constructor ( element, APP ) {
       this.element = element
@@ -198,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
   });
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -218,23 +247,9 @@ __webpack_require__.r(__webpack_exports__);
     this.element.textContent = "";
     this.scrolltrigger.init();
 
-    // Check if the element is already in the viewport and start typing
-    if (this.element.classList.contains("is-in-viewport") && !this.typing) {
+    if (this.scrolltrigger.init() && !this.typing) {
       this.type();
     }
-
-    // Observe when the element enters the viewport
-    const observer = new MutationObserver(() => {
-      if (this.element.classList.contains("is-in-viewport") && !this.typing) {
-        this.type();
-      }
-    });
-
-    // Start observing the element for class changes
-    observer.observe(this.element, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
   }
 
   type() {
@@ -242,77 +257,13 @@ __webpack_require__.r(__webpack_exports__);
       this.typing = true;
       this.element.textContent += this.text.charAt(this.index);
       this.index++;
-      setTimeout(() => this.type(), 100);
+      this.element.classList.add("is-typing");
+
+      https: setTimeout(() => this.type(), 100);
     } else {
       this.typing = false;
+      this.element.classList.remove("is-typing");
     }
-  }
-});
-
-
-/***/ }),
-/* 11 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor(element, APP) {
-    this.element = element;
-    this.page = document.documentElement;
-    this.inputs = document.getElementsByName("mode-switch");
-    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
-    this.APP = APP;
-  }
-
-  init() {
-    // Set initial mode based on preferences
-    this.page.classList.add(`mode-${this.prefs.mode}`);
-
-    // Set the range input value based on the stored preferences
-    switch (this.prefs.mode) {
-      case "light":
-        this.element.value = "1";
-        break;
-      case "system":
-        this.element.value = "2";
-        break;
-      case "dark":
-        this.element.value = "3";
-        break;
-      default:
-        this.element.value = "1";
-    }
-
-    // Add event listener to the range input field
-    this.element.addEventListener("input", (event) => {
-      let mode;
-      switch (event.target.value) {
-        case "1":
-          mode = "light";
-          break;
-        case "2":
-          mode = "system";
-          break;
-        case "3":
-          mode = "dark";
-          break;
-        default:
-          mode = "light";
-      }
-
-      // Update the settings object
-      this.prefs.mode = mode;
-
-      // Save the updated settings using the store method
-      this.APP.methods.store(this.prefs);
-
-      // Update the page class
-      this.page.classList.remove("mode-light", "mode-system", "mode-dark");
-      this.page.classList.add(`mode-${mode}`);
-    });
   }
 });
 
@@ -329,43 +280,33 @@ __webpack_require__.r(__webpack_exports__);
   constructor(element, APP) {
     this.element = element;
     this.page = document.documentElement;
+    this.inputs = this.element.querySelectorAll(
+      'input[type="radio"][name="mode"]'
+    );
     this.prefs = APP.methods.retrieve(APP, APP.data.settings);
     this.APP = APP;
-    this.radioButtons = this.element.querySelectorAll(
-      'input[type="radio"][name="theme"]'
-    );
   }
 
   init() {
-    // Set the initial theme based on preferences
-    this.setTheme(this.prefs.theme);
+    this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+    this.page.classList.add(`mode-${this.prefs.mode}`);
 
-    // Check the radio button that matches the current theme
-    this.radioButtons.forEach((radio) => {
-      if (radio.value === this.prefs.theme) {
-        radio.checked = true;
-      }
+    // Set the checked radio based on the stored preferences
+    this.inputs.forEach((input) => {
+      input.checked = input.value === this.prefs.mode;
+    });
 
-      // Add event listener to update theme on change
-      radio.addEventListener("change", (event) => {
-        const newTheme = event.target.value;
-        this.setTheme(newTheme);
-
-        // Save the new theme to settings
-        this.prefs.theme = newTheme;
-        this.APP.methods.store(this.prefs);
+    this.inputs.forEach((input) => {
+      input.addEventListener("change", (event) => {
+        if (event.target.checked) {
+          const mode = event.target.value;
+          this.prefs.mode = mode;
+          this.APP.methods.store(this.prefs);
+          this.page.classList.remove("mode-light", "mode-system", "mode-dark");
+          this.page.classList.add(`mode-${mode}`);
+        }
       });
     });
-  }
-
-  setTheme(theme) {
-    // Remove any existing theme classes dynamically
-    this.radioButtons.forEach((radio) => {
-      this.page.classList.remove(`theme-${radio.value}`);
-    });
-
-    // Add the new theme class
-    this.page.classList.add(`theme-${theme}`);
   }
 });
 
@@ -381,10 +322,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
+    this.page = document.documentElement;
+    this.prefs = APP.methods.retrieve(APP, APP.data.settings);
+    this.APP = APP;
+  }
+
+  init() {
+    // Set the initial theme based on preferences
+    this.setTheme(this.prefs.theme);
+
+    // Set the select value to the current theme
+    this.element.value = this.prefs.theme;
+
+    // Add event listener to update theme on change
+    this.element.addEventListener("change", (event) => {
+      const newTheme = event.target.value;
+      this.setTheme(newTheme);
+
+      // Save the new theme to settings
+      this.prefs.theme = newTheme;
+      this.APP.methods.store(this.prefs);
+    });
+  }
+
+  setTheme(theme) {
+    // Remove any existing theme classes dynamically
+    Array.from(this.element.options).forEach((option) => {
+      this.page.classList.remove(`theme-${option.value}`);
+    });
+
+    // Add the new theme class
+    this.page.classList.add(`theme-${theme}`);
+  }
+});
+
+
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element, APP) {
+    this.element = element;
     this.width = this.element.offsetWidth;
     this.resize = APP.methods.resizestop;
-    this.character = this.element.getAttribute("data-character") || "*";
-    this.characterAdjust = this.element.getAttribute("data-adjust") || 0;
+    this.character = this.element.dataset.character || "*";
+    this.characterAdjust = this.element.dataset.adjust || 0;
   }
 
   updateCharacter() {
@@ -419,7 +406,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -429,45 +416,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
-    this.scroll = APP.methods.scrollstop;
+    this.openButton = this.element.querySelector(".js-hamburger-button");
+    this.menu = this.element.querySelector(".js-navigation-menu");
+    this.isinViewport = APP.methods.isInViewport;
+    this.scrollstop = APP.methods.scrollstop;
+    this.resizestop = APP.methods.resizestop;
   }
 
-  isInViewport() {
-    const rect = this.element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+  toggle() {
+    this.element.addEventListener("click", (event) => {
+      if (event.target.closest(".js-hamburger-button")) {
+        event.preventDefault();
+        this.element.classList.toggle("is-open");
+        this.menu.classList.toggle("is-open");
+        this.menu.setAttribute(
+          "aria-expanded",
+          this.menu.classList.contains("is-open")
+        );
+        // Prevent background scroll when menu is open, but preserve scroll position
+        if (this.menu.classList.contains("is-open")) {
+          this._scrollY = window.scrollY;
+          document.body.classList.add("nav-open");
+          document.body.style.top = `-${this._scrollY}px`;
+        } else {
+          document.body.classList.remove("nav-open");
+          document.body.style.top = "";
+          window.scrollTo(0, this._scrollY || 0);
+        }
+      }
+
+      if (event.target.closest(".js-navigation-menu a")) {
+        this.element.classList.remove("is-open");
+        this.menu.classList.remove("is-open");
+        this.menu.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+        document.body.style.top = "";
+        window.scrollTo(0, this._scrollY || 0);
+      }
+    });
   }
 
-  toggleClass() {
-    if (this.isInViewport()) {
-      this.element.classList.add("is-in-viewport");
-    } else {
-      this.element.classList.remove("is-in-viewport");
-    }
+  toggleOpenButtonClass() {
+    const intro = document.getElementById("intro");
+    if (!intro || !this.openButton) return;
+    this.isinViewport(intro).then((inView) => {
+      if (inView) {
+        this.openButton.classList.add("is-in-reverse");
+      } else {
+        this.openButton.classList.remove("is-in-reverse");
+      }
+    });
   }
 
   init() {
-    this.toggleClass();
-    this.scroll(() => {
-      this.toggleClass();
-    });
+    this.toggle();
+    this.toggleOpenButtonClass();
+    this.scrollstop(() => this.toggleOpenButtonClass());
+    this.resizestop(() => this.toggleOpenButtonClass());
   }
 });
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"harrypujols.com"},"settings":{"version":"1.0.0","mode":"system","language":"en","theme":"default"}}');
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -551,15 +568,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _methods_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _methods_settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
-/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
-/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
-/* harmony import */ var _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
+/* harmony import */ var _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _components_typewriter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _components_themeswitch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _components_divider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(15);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(16);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(17);
 const FRAMEWORK = {};
+
 
 
 
@@ -591,22 +610,23 @@ const FRAMEWORK = {};
     retrieve: _methods_retrieve__WEBPACK_IMPORTED_MODULE_5__["default"],
     store: _methods_store__WEBPACK_IMPORTED_MODULE_6__["default"],
     settings: _methods_settings__WEBPACK_IMPORTED_MODULE_7__["default"],
+    isInViewport: _methods_isinviewport__WEBPACK_IMPORTED_MODULE_8__["default"],
   };
 
   APP.components = {
-    size: _components_size__WEBPACK_IMPORTED_MODULE_8__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
-    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_9__["default"],
-    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_10__["default"],
-    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
-    divider: _components_divider__WEBPACK_IMPORTED_MODULE_12__["default"],
-    scrolltrigger: _components_scrolltrigger__WEBPACK_IMPORTED_MODULE_13__["default"],
+    size: _components_size__WEBPACK_IMPORTED_MODULE_9__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    typewriter: _components_typewriter__WEBPACK_IMPORTED_MODULE_10__["default"],
+    modeswitch: _components_modeswitch__WEBPACK_IMPORTED_MODULE_11__["default"],
+    themeswitch: _components_themeswitch__WEBPACK_IMPORTED_MODULE_12__["default"],
+    divider: _components_divider__WEBPACK_IMPORTED_MODULE_13__["default"],
+    navigation: _components_navigation__WEBPACK_IMPORTED_MODULE_14__["default"],
   };
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_14__;
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_15__;
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_15__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_16__["default"],
   };
 
   APP.start.run(APP);

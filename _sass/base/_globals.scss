@@ -7,6 +7,8 @@ body {
   color: var(--foreground-color);
   font-size: var(--base-font-size);
   font-family: var(--base-font);
+  margin: unset;
+  padding: unset;
 
   &:before {
     display: none;
@@ -30,6 +32,32 @@ body {
       background-color: var(--color-white);
       color: var(--color-black);
     }
+  }
+
+  :where(.mode-system) & {
+    @media (prefers-color-scheme: light) {
+      --background-color: var(--lightmode-background-color);
+      --foreground-color: var(--lightmode-foreground-color);
+      --color-accent: var(--lightmode-accent-color);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --background-color: var(--darkmnode-background-color);
+      --foreground-color: var(--darkmode-foreground-color);
+      --color-accent: var(--darkmode-accent-color);
+    }
+  }
+
+  :where(.mode-light) & {
+    --background-color: var(--lightmode-background-color);
+    --foreground-color: var(--lightmode-foreground-color);
+    --color-accent: var(--lightmode-accent-color);
+  }
+
+  :where(.mode-dark) & {
+    --background-color: var(--darkmnode-background-color);
+    --foreground-color: var(--darkmode-foreground-color);
+    --color-accent: var(--darkmode-accent-color);
   }
 }
 
@@ -82,6 +110,10 @@ p {
   margin-bottom: 1ex;
 }
 
+ul {
+  padding: unset;
+}
+
 figure {
   padding: 0;
   margin: 0;
@@ -95,10 +127,9 @@ a {
   }
 }
 
-[target="blank"],
+[target="_blank"],
 [target="\\_blank"] {
   &::after {
-    padding-left: 1ch;
     vertical-align: super;
     font-size: 0.8em;
     content: "\2197";
@@ -118,8 +149,4 @@ pre {
   font-family: var(--font-family-mono);
   font-size: inherit;
   color: inherit;
-}
-
-svg {
-  --fill: currentColor;
 }

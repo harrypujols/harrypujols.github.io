@@ -8,13 +8,14 @@ import scrollstop from "./methods/scrollstop";
 import retrieve from "./methods/retrieve";
 import store from "./methods/store";
 import settings from "./methods/settings";
+import isInViewport from "./methods/isinviewport";
 
 import size from "./components/size";
 import typewriter from "./components/typewriter";
 import modeswitch from "./components/modeswitch";
 import themeswitch from "./components/themeswitch";
 import divider from "./components/divider";
-import scrolltrigger from "./components/scrolltrigger";
+import navigation from "./components/navigation";
 
 import data from "./data/data.json";
 
@@ -30,6 +31,7 @@ import run from "./app/run";
     retrieve,
     store,
     settings,
+    isInViewport,
   };
 
   APP.components = {
@@ -39,7 +41,7 @@ import run from "./app/run";
     modeswitch,
     themeswitch,
     divider,
-    scrolltrigger,
+    navigation,
   };
 
   APP.data = data;

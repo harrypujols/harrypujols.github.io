@@ -1,0 +1,29 @@
+.social-list {
+  --social-icon-size: 2rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+  }
+}
+
+.social-list-item-link {
+  --svg-fill-color: var(--link-color, var(--color-accent));
+
+  text-decoration: none;
+
+  &:hover {
+    --svg-fill-color: currentColor;
+  }
+
+  &[target="_blank"]::after,
+  &[target="\\_blank"]::after {
+    display: none;
+  }
+}
