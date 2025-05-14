@@ -288,7 +288,6 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   init() {
-    // Remove all mode-* classes before setting
     this.page.classList.remove("mode-light", "mode-system", "mode-dark");
     this.page.classList.add(`mode-${this.prefs.mode}`);
 
@@ -297,19 +296,12 @@ __webpack_require__.r(__webpack_exports__);
       input.checked = input.value === this.prefs.mode;
     });
 
-    // Add event listener to each radio button
     this.inputs.forEach((input) => {
       input.addEventListener("change", (event) => {
         if (event.target.checked) {
           const mode = event.target.value;
-
-          // Update the settings object
           this.prefs.mode = mode;
-
-          // Save the updated settings using the store method
           this.APP.methods.store(this.prefs);
-
-          // Update the page class
           this.page.classList.remove("mode-light", "mode-system", "mode-dark");
           this.page.classList.add(`mode-${mode}`);
         }
