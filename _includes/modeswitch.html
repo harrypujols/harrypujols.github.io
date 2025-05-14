@@ -1,16 +1,23 @@
-<fieldset class="settings">
-  <label for="modeswitch" role="presentation" aria-label="Toggle Dark Mode">
-    <span class="lights-on"> {% include svg/lights-on.svg %} </span>
-    <span class="unplugged"> {% include svg/unplugged.svg %} </span>
-    <span class="lights-off"> {% include svg/lights-off.svg %} </span>
-  </label>
+<fieldset class="settings" data-js="modeswitch">
   <input
-    type="range"
-    name="modeswitch"
-    id="modeswitch"
-    min="1"
-    max="3"
-    step="1"
-    data-js="modeswitch"
+    type="radio"
+    name="mode"
+    id="light"
+    value="light"
+    class="mode-switch"
   />
+  <label for="light" class="mode-switch-label">
+    <span class="mode-switch-icon"> {% include svg/lights-on.svg %} </span>
+    <span class="mode-switch-text">Light</span>
+  </label>
+  <input type="radio" name="mode" id="auto" value="auto" class="mode-switch" />
+  <label for="auto" class="mode-switch-label">
+    <span class="mode-switch-icon"> {% include svg/unplugged.svg %} </span>
+    <span class="mode-switch-text">Auto</span>
+  </label>
+  <input type="radio" name="mode" id="dark" value="dark" class="mode-switch" />
+  <label for="dark" class="mode-switch-label">
+    <span class="mode-switch-icon"> {% include svg/lights-off.svg %} </span>
+    <span class="mode-switch-text">Dark</span>
+  </label>
 </fieldset>
