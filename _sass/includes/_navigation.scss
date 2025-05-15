@@ -12,10 +12,6 @@
   z-index: var(--hamburger-index);
   padding: 1rem;
 
-  @media (min-width: map-get($breakpoints, "phone-portrait")) {
-    background-color: transparent;
-  }
-
   svg {
     width: var(--hamburger-size);
     height: var(--hamburger-size);
