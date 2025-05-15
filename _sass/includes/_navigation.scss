@@ -2,7 +2,7 @@
   --svg-fill-color: var(--foreground-color);
 
   appearance: none;
-  background-color: transparent;
+  background-color: var(--background-color);
   box-shadow: none;
   border: 0;
   cursor: pointer;
@@ -19,6 +19,8 @@
 
   body:not(.nav-open) &.is-in-reverse {
     --svg-fill-color: var(--darkmode-foreground-color);
+
+    background-color: transparent;
   }
 }
 

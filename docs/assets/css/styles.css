@@ -443,7 +443,7 @@ a:hover .icon {
 
 .landing-section {
   min-height: 100vh;
-  padding: 1rem 4rem;
+  padding: 1rem;
   scroll-snap-align: start;
 }
 
@@ -884,7 +884,7 @@ pre {
 .hamburger {
   --svg-fill-color: var(--foreground-color);
   appearance: none;
-  background-color: transparent;
+  background-color: var(--background-color);
   box-shadow: none;
   border: 0;
   cursor: pointer;
@@ -900,6 +900,7 @@ pre {
 }
 body:not(.nav-open) .hamburger.is-in-reverse {
   --svg-fill-color: var(--darkmode-foreground-color);
+  background-color: transparent;
 }
 
 .navigation-list {
