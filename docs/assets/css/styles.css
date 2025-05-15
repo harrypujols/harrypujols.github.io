@@ -451,7 +451,7 @@ a:hover .icon {
   max-width: 100%;
   margin-inline: auto;
 }
-@media (max-width: 20rem) {
+@media (min-width: 20rem) {
   .landing-container {
     max-width: 70ch;
   }
@@ -898,11 +898,6 @@ pre {
   left: 0;
   z-index: var(--hamburger-index);
   padding: 1rem;
-}
-@media (min-width: 20rem) {
-  .hamburger {
-    background-color: transparent;
-  }
 }
 .hamburger svg {
   width: var(--hamburger-size);
