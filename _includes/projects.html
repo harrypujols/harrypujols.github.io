@@ -3,8 +3,8 @@
   <ul class="project-list">
     {% for item in site.data.projects %}
     <li class="project-list-item">
-      <a href="{{ item.url }}" target="_blank" class="project-list-link"
-        >{{item.name}}
+      <a href="{{ item.url }}" target="_blank" class="project-list-link">
+        <h3 class="project-list-title">{{item.name}}</h3>
         <figure class="project-list-image">
           <img src="{{ item.image }}" alt="{{ item.name }}" />
         </figure>

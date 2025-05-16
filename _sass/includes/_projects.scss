@@ -1,11 +1,26 @@
 .project-list {
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
+}
+
+.project-list-link {
+  display: block;
+  margin-bottom: 1rem;
+
+  &:after {
+    display: none;
+  }
+}
+
+.project-link-title {
+  margin-bottom: 1ex;
 }
 
 .project-list-image {
   display: inline-block;
+  text-align: center;
+  padding: 0;
 
   img {
     max-width: 100%;
