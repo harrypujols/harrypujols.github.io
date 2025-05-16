@@ -9,6 +9,8 @@ body {
   font-family: var(--base-font);
   margin: unset;
   padding: unset;
+  max-width: 100%;
+  overflow-x: hidden;
 
   &:before {
     display: none;

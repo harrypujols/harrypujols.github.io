@@ -21,9 +21,13 @@
   display: inline-block;
   text-align: center;
   padding: 0;
+  width: 25%;
+  max-width: 100%;
 
   img {
     max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   :where(.mode-system) & {
