@@ -1,0 +1,42 @@
+.project-list {
+  li {
+    margin-bottom: 2rem;
+  }
+}
+
+.project-list-link {
+  display: block;
+  margin-bottom: 1rem;
+
+  &:after {
+    display: none;
+  }
+}
+
+.project-link-title {
+  margin-bottom: 1ex;
+}
+
+.project-list-image {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  width: 25%;
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  :where(.mode-system) & {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--foreground-color);
+    }
+  }
+
+  :where(.mode-dark) & {
+    background-color: var(--foreground-color);
+  }
+}
