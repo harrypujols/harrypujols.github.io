@@ -1009,7 +1009,7 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 
 .project-list-link {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1ex;
 }
 .project-list-link:after {
   display: none;
@@ -1022,14 +1022,13 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 .project-list-image {
   display: inline-block;
   text-align: center;
-  padding: 0;
   width: 25%;
   max-width: 100%;
+  line-height: 0;
 }
 .project-list-image img {
   max-width: 100%;
-  margin: 0;
-  padding: 0;
+  line-height: 1;
 }
 @media (prefers-color-scheme: dark) {
   :where(.mode-system) .project-list-image {
@@ -1071,7 +1070,7 @@ body:not(.nav-open) .hamburger.is-in-reverse {
   --color-solarized-cyan: #2aa198;
   --color-solarized-green: #859900;
   --lightmode-background-color: var(--color-solarized-base3);
-  --lightmode-foreground-color: var(--color-solarized-base00);
+  --lightmode-foreground-color: var(--color-solarized-base01);
   --lightmode-accent-color: var(--color-solarized-blue);
   --darkmnode-background-color: var(--color-solarized-base03);
   --darkmode-foreground-color: var(--color-solarized-base1);
