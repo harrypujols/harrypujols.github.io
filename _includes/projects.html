@@ -4,8 +4,11 @@
     {% for item in site.data.projects %}
     <li class="project-list-item">
       <a href="{{ item.url }}" target="_blank" class="project-list-link"
-        >{{item.name}}</a
-      >
+        >{{item.name}}
+        <figure class="project-list-image">
+          <img src="{{ item.image }}" alt="{{ item.name }}" />
+        </figure>
+      </a>
       {{ item.description }}
     </li>
     {% endfor %}
