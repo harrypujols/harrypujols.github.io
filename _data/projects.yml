@@ -1,41 +1,35 @@
 - name: Terminal
   url: https://harrypujols.com/terminal
+  image: /assets/images/projects/terminal.png
   description: >
-    This was harrypujols.com from 2014-2024, meant to be only a temporary
-    solution until I had time between projects to set up a different site. It
-    lasted 10 years (at least one CTO liked it enough to give me the job).
+    This was harrypujols.com from 2014-2024. Harry meant it to be just a temporary solution until he had time to build something else, but it stuck around for 10 years. At least one CTO liked it enough to hire him on the spot.
 
 - name: Desktop
   url: https://harrypujols.com/desktop
+  image: /assets/images/projects/desktop.png
   description: >
-    This was harrypujols.com from 2009-2014 (and the first repo I saved in
-    Github). It was originally hosted in some Mac service for static sites, I
-    think it was called iTools. My purpose was to make something "future
-    proof", and guess what? The Flash version of the same idea has been lost
-    in time.
+    Harry's site from 2009-2014 (and the first repo he saved on Github). It was originally hosted on some old Mac service for static sites he thinks it was called iTools. He wanted to make something "future proof," but the Flash version of this idea is now lost to time.
 
 - name: Alchemy Sign Calculator
   url: https://harrypujols.com/alchemy-sign
+  image: /assets/images/projects/alchemy.png
   description: >
-    There are some sites that give you the formula to find your alchemy zodiac
-    sign, but this is the only calculator in the Web (at the time of this
-    writing). Originally launched in 2018 and relaunched in 2021.
+    There are a few sites that tell you how to find your alchemy zodiac sign, but Harry's is the only calculator on the web (at least when he wrote this). He first launched it in 2018 and relaunched it in 2021.
 
 - name: Urinal Checkmate
   url: https://harrypujols.com/urinal-checkmate
+  image: /assets/images/projects/urinal-checkmate.png
   description: >
-    The number one game about taking a number one. Originally launched in 2014 using the first version of Vue.js
+    The number one game about taking a number one. Harry launched this in 2014 using the very first version of Vue.js.
 
 - name: The JSless pattern library
   url: https://harrypujols.com/jsless
+  image: /assets/images/projects/jsless.png
   description: >
-    Originally created to work for a proprietary CMS where I couldn't add any
-    scripts to the templates. Funny that now HTML and CSS can do most of these
-    tricks without this library.
+    Harry originally made this for a proprietary CMS where he couldn't add any scripts to the templates. It's funny—nowadays, HTML and CSS can pull off most of these tricks without needing a library like this.
 
 - name: Rock | Paper | Scissors
   url: https://harrypujols.com/rock-paper-scissors
+  image: /assets/images/projects/rps.png
   description: >
-    Everybody's videogame career has to start somewhere. Originally launched
-    in 2012, relaunched in 2014. The stack I used is so old, I may not revisit
-    this again.
+    Everyone's videogame journey has to start somewhere. Harry first launched this in 2012, then relaunched it in 2014. The stack is so old now, he probably won't revisit it again.
