@@ -488,10 +488,6 @@ a:hover .icon {
   overflow-x: hidden;
 }
 
-.project-list li {
-  margin-bottom: 1rem;
-}
-
 .settings {
   --svg-fill-color: var(--foreground-color);
   display: inline-block;
@@ -542,6 +538,8 @@ body {
   font-family: var(--base-font);
   margin: unset;
   padding: unset;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body:before {
   display: none;
@@ -1003,6 +1001,43 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 .modeswitch-icon svg {
   width: 3rem;
   height: 3rem;
+}
+
+.project-list li {
+  margin-bottom: 2rem;
+}
+
+.project-list-link {
+  display: block;
+  margin-bottom: 1rem;
+}
+.project-list-link:after {
+  display: none;
+}
+
+.project-link-title {
+  margin-bottom: 1ex;
+}
+
+.project-list-image {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  width: 25%;
+  max-width: 100%;
+}
+.project-list-image img {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media (prefers-color-scheme: dark) {
+  :where(.mode-system) .project-list-image {
+    background-color: var(--foreground-color);
+  }
+}
+:where(.mode-dark) .project-list-image {
+  background-color: var(--foreground-color);
 }
 
 .theme-default {
