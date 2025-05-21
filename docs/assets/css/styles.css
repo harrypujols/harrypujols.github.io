@@ -1003,8 +1003,22 @@ body:not(.nav-open) .hamburger.is-in-reverse {
   height: 3rem;
 }
 
-.project-list li {
+.project-list {
+  list-style: none;
+}
+
+.project-list-item {
   margin-bottom: 2rem;
+}
+
+.project-list-content {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 48rem) {
+  .project-list-content {
+    grid-template-columns: 25% 1fr;
+  }
 }
 
 .project-list-link {
@@ -1022,7 +1036,6 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 .project-list-image {
   display: inline-block;
   text-align: center;
-  width: 25%;
   max-width: 100%;
   line-height: 0;
 }

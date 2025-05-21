@@ -1,6 +1,17 @@
 .project-list {
-  li {
-    margin-bottom: 2rem;
+  list-style: none;
+}
+
+.project-list-item {
+  margin-bottom: 2rem;
+}
+
+.project-list-content {
+  display: grid;
+  gap: 1.25rem;
+
+  @media (min-width: map-get($breakpoints, tablet-portrait)) {
+    grid-template-columns: 25% 1fr;
   }
 }
 
@@ -20,7 +31,6 @@
 .project-list-image {
   display: inline-block;
   text-align: center;
-  width: 25%;
   max-width: 100%;
   line-height: 0;
 
