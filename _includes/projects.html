@@ -5,11 +5,13 @@
     <li class="project-list-item">
       <a href="{{ item.url }}" target="_blank" class="project-list-link">
         <h3 class="project-list-title">{{item.name}}</h3>
+      </a>
+      <div class="project-list-content">
         <figure class="project-list-image">
           <img src="{{ item.image }}" alt="{{ item.name }}" />
         </figure>
-      </a>
-      <p class="project-list-description">{{ item.description }}</p>
+        <p class="project-list-description">{{ item.description }}</p>
+      </div>
     </li>
     {% endfor %}
   </ul>
