@@ -1015,7 +1015,8 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 }
 @media (min-width: 48rem) {
   .project-list-item {
-    grid-template-rows: 1.25rem 1fr;
+    gap: 0 1.25rem;
+    grid-template-rows: min-content 1fr;
     grid-template-areas: "picture title" "picture description";
   }
 }
@@ -1028,20 +1029,15 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 .project-list-link {
   grid-area: title;
   display: block;
-  margin-bottom: 1ex;
 }
 .project-list-link:after {
   display: none;
 }
 
-.project-link-title {
-  margin-bottom: 1ex;
-}
-
 .project-list-image {
   grid-area: picture;
   display: inline-block;
-  text-align: center;
+  align-self: start;
   max-width: 100%;
   line-height: 0;
 }

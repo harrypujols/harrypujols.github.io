@@ -9,7 +9,8 @@
   grid-template-areas: "title" "picture" "description";
 
   @media (min-width: map-get($breakpoints, tablet-portrait)) {
-    grid-template-rows: 1.25rem 1fr;
+    gap: 0 1.25rem;
+    grid-template-rows: min-content 1fr;
     grid-template-areas: "picture title" "picture description";
   }
 
@@ -23,21 +24,16 @@
 .project-list-link {
   grid-area: title;
   display: block;
-  margin-bottom: 1ex;
 
   &:after {
     display: none;
   }
 }
 
-.project-link-title {
-  margin-bottom: 1ex;
-}
-
 .project-list-image {
   grid-area: picture;
   display: inline-block;
-  text-align: center;
+  align-self: start;
   max-width: 100%;
   line-height: 0;
 
