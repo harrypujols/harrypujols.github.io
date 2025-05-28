@@ -1009,19 +1009,24 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 
 .project-list-item {
   margin-bottom: 2rem;
-}
-
-.project-list-content {
   display: grid;
   gap: 1.25rem;
+  grid-template-areas: "title" "picture" "description";
 }
 @media (min-width: 48rem) {
-  .project-list-content {
-    grid-template-columns: 25% 1fr;
+  .project-list-item {
+    grid-template-rows: 1.25rem 1fr;
+    grid-template-areas: "picture title" "picture description";
+  }
+}
+@media (min-width: 48rem) {
+  .project-list-item:nth-child(odd) {
+    grid-template-areas: "title picture" "description picture";
   }
 }
 
 .project-list-link {
+  grid-area: title;
   display: block;
   margin-bottom: 1ex;
 }
@@ -1034,6 +1039,7 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 }
 
 .project-list-image {
+  grid-area: picture;
   display: inline-block;
   text-align: center;
   max-width: 100%;
@@ -1050,6 +1056,10 @@ body:not(.nav-open) .hamburger.is-in-reverse {
 }
 :where(.mode-dark) .project-list-image {
   background-color: var(--foreground-color);
+}
+
+.project-list-description {
+  grid-area: description;
 }
 
 .theme-default {
