@@ -4,18 +4,24 @@
 
 .project-list-item {
   margin-bottom: 2rem;
-}
-
-.project-list-content {
   display: grid;
   gap: 1.25rem;
+  grid-template-areas: "title" "picture" "description";
 
   @media (min-width: map-get($breakpoints, tablet-portrait)) {
-    grid-template-columns: 25% 1fr;
+    grid-template-rows: 1.25rem 1fr;
+    grid-template-areas: "picture title" "picture description";
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: map-get($breakpoints, tablet-portrait)) {
+      grid-template-areas: "title picture" "description picture";
+    }
   }
 }
 
 .project-list-link {
+  grid-area: title;
   display: block;
   margin-bottom: 1ex;
 
@@ -29,6 +35,7 @@
 }
 
 .project-list-image {
+  grid-area: picture;
   display: inline-block;
   text-align: center;
   max-width: 100%;
@@ -48,4 +55,8 @@
   :where(.mode-dark) & {
     background-color: var(--foreground-color);
   }
+}
+
+.project-list-description {
+  grid-area: description;
 }
