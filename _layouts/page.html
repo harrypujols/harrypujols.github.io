@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include base/head.html %}
-  <body {% if page.theme %} class="{{ page.theme }}" {% endif %}>
-    <main class="page" data-js="modeswitch">{{ content }}</main>
+  <body {% if page.style %} class="{{ page.style }}" {% endif %}>
+    <main class="main">{{ content }}</main>
     <script src="/assets/js/scripts.js"></script>
   </body>
 </html>
