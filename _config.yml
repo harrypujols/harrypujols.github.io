@@ -53,3 +53,4 @@ exclude:
   - Dockerfile
   - README.md
   - docs/
+  - start.sh
