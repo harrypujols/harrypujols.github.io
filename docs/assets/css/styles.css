@@ -321,17 +321,6 @@
 
 .not-found {
   text-align: center;
-  background-color: var(--color-blue);
-}
-.not-found .page {
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
-  grid-template-rows: auto auto 1fr;
-}
-.not-found .page-picture {
-  grid-area: footer;
-  margin-top: auto;
 }
 
 html {

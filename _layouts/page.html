@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include base/head.html %}
-  <body {% if page.style %} class="{{ page.style }}" {% endif %}>
+  <body class="page {% if page.theme %}{{ page.theme }}{% endif %}">
     <main class="main">{{ content }}</main>
     <script src="/assets/js/scripts.js"></script>
   </body>
