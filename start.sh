@@ -6,7 +6,7 @@ npm run server:boot
 trap 'echo "Stopping containers..."; npm run server:stop; exit' SIGINT
 
 # Start Jekyll server (foreground)
-npm run server
+npm-run-all --parallel server js watch:*
 
 # Cleanup after server exits
 npm run server:stop
