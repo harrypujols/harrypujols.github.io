@@ -5,7 +5,7 @@
 		<link>/</link>
 		<description></description>
 		<language>en-us</language>
-		<lastBuildDate>Mon, 01 Jun 2026 13:30:39 -0400</lastBuildDate>
+		<lastBuildDate>Mon, 01 Jun 2026 14:01:49 -0400</lastBuildDate>
 		<generator>11ty</generator>
 
 		
@@ -13,7 +13,7 @@
 			<title>Hello World</title>
 			<link>/posts/hello-world/</link>
 			<guid>/posts/hello-world/</guid>
-			<pubDate>Mon, 01 Jun 2026 13:30:39 -0400</pubDate>
+			<pubDate>Mon, 01 Jun 2026 13:31:29 -0400</pubDate>
 			<description>Social media is poison, tech is enshittified, DEI is a slur, there&#39;s no place left for me in this world. So what am I to do? Go back to the Web I feel comfortable with. The Web that is still out there, if you look hard enough.
 This is the first site in a long time I&#39;m using simply vanilla CSS and JavaScript. Since the Web just gave up on HTML templating after a botched attempt in the 90s, I am using the Liquid Templating language with a static site generator.
 The last time I kept a blog was 20 years ago, it gradually died on the early days of social media. Let&#39;s see how long this one will last.
@@ -25,7 +25,7 @@ The last time I kept a blog was 20 years ago, it gradually died on the early day
 			<title>Urinal Checkmate</title>
 			<link>/posts/urinal-checkmate/</link>
 			<guid>/posts/urinal-checkmate/</guid>
-			<pubDate>Mon, 01 Jun 2026 13:30:39 -0400</pubDate>
+			<pubDate>Mon, 01 Jun 2026 13:31:29 -0400</pubDate>
 			<description>In the Summer of 2015, some new Frameworks were popping out, and I was spending some time off work trying to learn them. First, I tried was Angular, which unbeknownst to me was going to be the one I was going to use most. Then I tried React, which I considered a dumspter fire and discarded right away.
 React is the most popular JavaScript framework in the universe today, and sucked all my joy out of Web development.
 My favorite of those frameworks became Vue. I didn&#39;t have to &amp;quot;learn&amp;quot; it, it already worked the way I used vanilla JavaScript.
