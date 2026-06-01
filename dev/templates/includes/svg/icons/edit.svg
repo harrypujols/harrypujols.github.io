@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <rect id="_13-2" serif:id="13-2" x="12" y="1" width="2" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_15-3" serif:id="15-3" x="14" y="2" width="1" height="2" style="fill:var(--svg-fill-color);" />
+        <rect id="_10-5" serif:id="10-5" x="9" y="4" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_9-6" serif:id="9-6" x="8" y="5" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_8-7" serif:id="8-7" x="7" y="6" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_7-8" serif:id="7-8" x="6" y="7" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_6-9" serif:id="6-9" x="5" y="8" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_5-10" serif:id="5-10" x="4" y="9" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_4-11" serif:id="4-11" x="3" y="10" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_3-12" serif:id="3-12" x="2" y="11" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_12-3" serif:id="12-3"
+            d="M8,8L7,8L7,9L6,9L6,10L5,10L5,11L4,11L4,12L3,12L3,13L4,13L4,14L5,14L5,13L6,13L6,12L7,12L7,11L8,11L8,10L9,10L9,9L10,9L10,8L11,8L11,7L12,7L12,6L13,6L13,5L14,5L14,4L13,4L13,3L12,3L12,2L11,2L11,3L10,3L10,4L11,4L11,5L10,5L10,6L9,6L9,7L8,7L8,8Z"
+            style="fill:var(--svg-fill-color);" />
+        <path id="_2-13" serif:id="2-13" d="M1,12L1,15L4,15L4,14L2,14L2,12L1,12Z" style="fill:var(--svg-fill-color);" />
+    </g>
+</svg>

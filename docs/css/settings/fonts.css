@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperator-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperator-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperator-bold-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperator-bold-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator 8";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperator8-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperator8-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator 8";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperator8-bold-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperator8-bold-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator Mono 8";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperatormono8-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperatormono8-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator Mono 8";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperatormono8-bold-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperatormono8-bold-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator Mono";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperatormono-bold-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperatormono-bold-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator Mono";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperatormono-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperatormono-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator HB 8";
+  src:
+    url("../../assets/fonts/pixel-operator/pixeloperatorhb8-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/pixel-operator/pixeloperatorhb8-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Karmatic Arcade";
+  src:
+    url("../../assets/fonts/karmatic-arcade/ka1-webfont.woff2") format("woff2"),
+    url("../../assets/fonts/karmatic-arcade/ka1-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

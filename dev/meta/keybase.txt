@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/harrypujols
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://harrypujols.com
+  * I am harrypujols (https://keybase.io/harrypujols) on keybase.
+  * I have a public key ASCrZAUsbO3kSutYvm-0wNK_SXSTnljoniO2gWfM5hTtjQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120ab64052c6cede44aeb58be6fb4c0d2bf4974939e58e89e23b68167cce614ed8d0a",
+            "host": "keybase.io",
+            "kid": "0120ab64052c6cede44aeb58be6fb4c0d2bf4974939e58e89e23b68167cce614ed8d0a",
+            "uid": "8827c6959ab23c315424dcbe60c16c19",
+            "username": "harrypujols"
+        },
+        "service": {
+            "hostname": "harrypujols.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1491482679,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1491482617,
+        "hash": "c0e9952b08b5d2e1e7a0e2c1d97f211be8f8d544955858710f3a2e967d93529eefc2eda63025eb881a77e29108225cd62278c676f92baa2acb3510dd34334649",
+        "seqno": 1002718
+    },
+    "prev": "021dde33d972376b0d628bd0e780154be6965d139361e1014aa59da8717a3aef",
+    "seqno": 15,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgq2QFLGzt5ErrWL5vtMDSv0l0k55Y6J4jtoFnzOYU7Y0Kp3BheWxvYWTFAvt7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYWI2NDA1MmM2Y2VkZTQ0YWViNThiZTZmYjRjMGQyYmY0OTc0OTM5ZTU4ZTg5ZTIzYjY4MTY3Y2NlNjE0ZWQ4ZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYWI2NDA1MmM2Y2VkZTQ0YWViNThiZTZmYjRjMGQyYmY0OTc0OTM5ZTU4ZTg5ZTIzYjY4MTY3Y2NlNjE0ZWQ4ZDBhIiwidWlkIjoiODgyN2M2OTU5YWIyM2MzMTU0MjRkY2JlNjBjMTZjMTkiLCJ1c2VybmFtZSI6ImhhcnJ5cHVqb2xzIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJoYXJyeXB1am9scy5jb20iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIwIn0sImN0aW1lIjoxNDkxNDgyNjc5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTE0ODI2MTcsImhhc2giOiJjMGU5OTUyYjA4YjVkMmUxZTdhMGUyYzFkOTdmMjExYmU4ZjhkNTQ0OTU1ODU4NzEwZjNhMmU5NjdkOTM1MjllZWZjMmVkYTYzMDI1ZWI4ODFhNzdlMjkxMDgyMjVjZDYyMjc4YzY3NmY5MmJhYTJhY2IzNTEwZGQzNDMzNDY0OSIsInNlcW5vIjoxMDAyNzE4fSwicHJldiI6IjAyMWRkZTMzZDk3MjM3NmIwZDYyOGJkMGU3ODAxNTRiZTY5NjVkMTM5MzYxZTEwMTRhYTU5ZGE4NzE3YTNhZWYiLCJzZXFubyI6MTUsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAF2Uq2PCNL/m1Z5yP64YP0PjPadXVthhTXaJLcB68wsI+CTIILQI66urwGncCaRkNkTQVu6yTgHXKoq3LYiKMB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGz/b8yDHQadiYjhUmquqph+I18JLYS5n1AdV6o1unAso3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/harrypujols
+
+==================================================================

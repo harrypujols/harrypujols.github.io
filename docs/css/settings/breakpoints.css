@@ -1,0 +1,39 @@
+:root {
+  /* to be used for variable media queries, example
+  @container style(--breakpoint: "phone-portrait") {...} */
+  @media (width >= 20rem) {
+    & {
+      --breakpoint: "phone-portrait";
+    }
+  }
+
+  @media (width >= 35.5rem) {
+    & {
+      --breakpoint: "phone-landscape";
+    }
+  }
+
+  @media (width >= 48rem) {
+    & {
+      --breakpoint: "tablet-portrait";
+    }
+  }
+
+  @media (width >= 64rem) {
+    & {
+      --breakpoint: "tablet-landscape";
+    }
+  }
+
+  @media (width >= 80rem) {
+    & {
+      --breakpoint: "desktop";
+    }
+  }
+
+  @media (width >= 105rem) {
+    & {
+      --breakpoint: "desktop-large";
+    }
+  }
+}

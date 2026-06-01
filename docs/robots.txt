@@ -1,0 +1,83 @@
+# ── AI training & crawling opt-out ──────────────────────────────────
+# This file signals that content may not be used for AI model training.
+# Coverage: OpenAI, Google, Meta, Anthropic, Common Crawl, and others.
+# Note: compliance depends on each operator's willingness to honour it.
+
+# OpenAI — GPTBot (GPT training) + ChatGPT-User (live browsing)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Google — AI training crawler + Gemini live-browsing agent
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Googlebot-Extended
+Disallow: /
+
+# Anthropic — Claude training crawler
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Meta — Llama training crawler
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Apple — AI training crawler
+User-agent: Applebot-Extended
+Disallow: /
+
+# Common Crawl — large open dataset widely used for AI training
+User-agent: CCBot
+Disallow: /
+
+# Cohere — AI training crawler
+User-agent: cohere-ai
+Disallow: /
+
+# Bytedance / TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Diffbot — extracts structured data for training datasets
+User-agent: Diffbot
+Disallow: /
+
+# ImagesiftBot, OmigiliBot — dataset/AI crawlers
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+# Timpibot, PerplexityBot — AI-powered search engines
+User-agent: Timpibot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# YouBot — You.com AI search
+User-agent: YouBot
+Disallow: /
+
+# ── Standard search engines (allow normal indexing) ──────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /

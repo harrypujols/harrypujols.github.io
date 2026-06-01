@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <rect id="_7-2" serif:id="7-2" x="6" y="1" width="1" height="2" style="fill:var(--svg-fill-color);" />
+        <rect id="_6-4" serif:id="6-4" x="5" y="3" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_5-5" serif:id="5-5" x="4" y="4" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_4-6" serif:id="4-6" x="3" y="5" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_8-1" serif:id="8-1" d="M9,1L9,6L14,6L14,5L10,5L10,0L7,0L7,1L9,1Z"
+            style="fill:var(--svg-fill-color);" />
+        <rect id="_15-7" serif:id="15-7" x="14" y="6" width="1" height="3" style="fill:var(--svg-fill-color);" />
+        <rect id="_14-10" serif:id="14-10" x="13" y="9" width="1" height="4" style="fill:var(--svg-fill-color);" />
+        <rect id="_1-8" serif:id="1-8" x="0" y="7" width="1" height="7" style="fill:var(--svg-fill-color);" />
+        <path id="_2-7" serif:id="2-7" d="M2,14L1,14L1,15L13,15L13,13L12,13L12,14L3,14L3,6L1,6L1,7L2,7L2,14Z"
+            style="fill:var(--svg-fill-color);" />
+    </g>
+</svg>

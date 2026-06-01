@@ -1,0 +1,11 @@
+{
+  "site": {
+    "name": "Super Default Boilerplate"
+  },
+  "settings": {
+    "version": "1.0.0",
+    "mode": "system",
+    "language": "en",
+    "theme": "default"
+  }
+}

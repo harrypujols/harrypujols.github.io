@@ -1,0 +1,29 @@
+{
+  "name": "harrypujols",
+  "version": "1.0.0",
+  "description": "A boilerplate for creating new projects with default settings.",
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrypujols/super-default-boilerplate.git"
+  },
+  "license": "ISC",
+  "author": "Harry Pujols",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf public",
+    "build": "npm run clean && eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

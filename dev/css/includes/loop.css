@@ -1,0 +1,59 @@
+.postlist {
+  padding: unset;
+}
+
+.postlist-item {
+  list-style: none;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid currentColor;
+  max-width: max-content;
+}
+
+.postlist-article {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "thumbnail excerpt"
+    "thumbnail date";
+  gap: 1rem;
+}
+
+.postlist-link {
+  text-decoration: none;
+}
+
+.postlist-title {
+  grid-area: header;
+  font-size: 2rem;
+}
+
+.postlist-thumbnail {
+  grid-area: thumbnail;
+  border: 1px solid currentColor;
+  margin-top: 0.5ch;
+  max-width: 10.125rem;
+}
+
+.postlist-excerpt {
+  grid-area: excerpt;
+  margin: unset;
+}
+
+.postlist-date {
+  grid-area: date;
+  letter-spacing: 0.1ch;
+}
+
+.readmore {
+  display: inline-block;
+  text-wrap: nowrap;
+}
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  padding: unset;
+  margin-block: 1em;
+  gap: 1rem;
+}

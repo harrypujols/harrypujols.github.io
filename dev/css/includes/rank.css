@@ -1,0 +1,43 @@
+.ranking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4ch, 1fr));
+  margin-block: 2rem;
+  padding-left: 1ch;
+}
+
+.selected {
+  display: none;
+}
+
+.unselected {
+  display: block;
+}
+
+:has(.rank:checked) {
+  .selected {
+    display: block;
+  }
+  .unselected {
+    display: none;
+  }
+
+  & ~ .ranking-label {
+    .selected {
+      display: none;
+    }
+    .unselected {
+      display: block;
+    }
+  }
+}
+
+.ranking-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.rank {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}

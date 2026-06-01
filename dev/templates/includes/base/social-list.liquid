@@ -1,0 +1,14 @@
+<ul class="social-list">
+  {% for item in social %}
+    <li class="social-list-item">
+      <a
+        href="{{ item.url }}"
+        class="social-list-item-link {{  item.name | downcase }}"
+        tabindex="0"
+        target="_blank">
+        {% include item.icon %}
+        <span class="social-list-item-name visually-hidden">{{ item.name }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

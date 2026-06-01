@@ -1,0 +1,19 @@
+---
+layout: page
+title: Hello, it's Harry.
+design: frontpage
+---
+<h1 class="page-title">
+  {{ title | default: global.title }}
+</h1>
+{% if thumbnail %}
+  <figure class="page-thumbnail-container">
+    <img
+      src="{{ thumbnail }}"
+      alt="{{ title }}"
+      class="page-thumbnail" />
+  </figure>
+{% endif %}
+<article class="page-content">
+  {{ content }}
+</article>

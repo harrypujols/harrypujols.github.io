@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-xxthin/neuehaasdisplay-xxthin.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-xxthin/neuehaasdisplay-xxthin.woff")
+      format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-xthin/neuehaasdisplay-xthin.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-xthin/neuehaasdisplay-xthin.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-thin/neuehaasdisplay-thin.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-thin/neuehaasdisplay-thin.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-light/neuehaasdisplay-light.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-light/neuehaasdisplay-light.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-roman/neuehaasdisplay-roman.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-roman/neuehaasdisplay-roman.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-medium/neuehaasdisplay-medium.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-medium/neuehaasdisplay-medium.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-bold/neuehaasdisplay-bold.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-bold/neuehaasdisplay-bold.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-black/neuehaasdisplay-black.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-black/neuehaasdisplay-black.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-romanitalic/neuehaasdisplay-romanitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-romanitalic/neuehaasdisplay-romanitalic.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-bolditalic/neuehaasdisplay-bolditalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehaasdisplay-bolditalic/neuehaasdisplay-bolditalic.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xxthin.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xxthin.woff")
+      format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xthin.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xthin.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-thin.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-thin.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-light.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-light.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-roman.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-roman.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-medium.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-medium.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-bold.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-bold.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-black.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-black.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xxthinitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xxthinitalic.woff")
+      format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xthinitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-xthinitalic.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-thinitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-thinitalic.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-lightitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-lightitalic.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-romanitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-romanitalic.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-mediummitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-mediummitalic.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-bolditalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-bolditalic.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src:
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-blackitalic.woff2")
+      format("woff2"),
+    url("../../assets/fonts/neuehaasdisplay/neuehassdisplay-blackitalic.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
