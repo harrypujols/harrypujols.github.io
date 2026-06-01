@@ -16,8 +16,8 @@
 	"type": "commonjs",
 	"main": "index.js",
 	"scripts": {
-		"clean": "rm -rf public",
-		"build": "rm -rf docs && eleventy",
+		"clean": "rm -rf public && rm -rf docs",
+		"build": "npm run clean && eleventy",
 		"start": "ELEVENTY_ENV=local eleventy --serve"
 	},
 	"dependencies": {
