@@ -1,4 +1,5 @@
 const yaml = require("js-yaml");
+const isLocal = process.env.ELEVENTY_ENV === "local";
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
@@ -16,7 +17,7 @@ module.exports = function (eleventyConfig) {
 	return {
 		dir: {
 			input: "dev",
-			output: "docs",
+			output: isLocal ? "public" : "docs",
 			includes: "templates/includes",
 			layouts: "templates/layouts",
 			data: "data",
