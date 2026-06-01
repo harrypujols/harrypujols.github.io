@@ -1,0 +1,37 @@
+@media print {
+	:root {
+		--font-size-base: 12pt;
+	}
+
+	body {
+		max-width: 8.5in;
+		overflow-wrap: break-word;
+		hyphens: auto;
+	}
+
+	h1 {
+		page-break-before: always;
+	}
+
+	section {
+		page-break-after: always;
+	}
+
+	:is(a) {
+		color: inherit;
+	}
+
+	a::after {
+		content: " (" attr(href) ") ";
+	}
+
+	* {
+		background-color: #fff;
+		color: #000;
+		border-color: currentColor;
+	}
+
+	svg {
+		--svg-fill-color: currentColor;
+	}
+}

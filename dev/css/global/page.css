@@ -1,0 +1,29 @@
+.page-title {
+	font-size: clamp(2rem, 5vw, 20rem);
+	margin-block: 2rem 1rem;
+	line-height: 1em;
+}
+
+.page-thumbnail-container {
+	margin-block: 1rem;
+}
+
+.page-thumbnail {
+	display: block;
+	max-height: 20rem;
+}
+
+.frontpage-hero-video {
+	background-color: var(--foreground-color);
+
+	video {
+		display: block;
+		max-height: 18rem;
+		width: auto;
+		margin-inline: auto;
+	}
+}
+
+.ascii-art {
+	font-size: clamp(0.5rem, 1.6vw, 1rem);
+}

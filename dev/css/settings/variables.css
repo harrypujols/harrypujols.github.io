@@ -1,0 +1,55 @@
+:root {
+	--font-family-base: "Pixel Operator", sans-serif;
+	--font-family-heading: "Silkscreen", sans-serif;
+	--font-family-mono: "Inconsolata", monospace;
+	--font-size-base: 1rem;
+	--font-weight-xxthin: 100;
+	--font-weight-xthin: 200;
+	--font-weight-thin: 300;
+	--font-weight-light: 400;
+	--font-weight-roman: 500;
+	--font-weight-medium: 600;
+	--font-weight-bold: 700;
+	--font-weight-black: 900;
+	--color-light: #ffffff;
+	--color-dark: #000000;
+	--background-color: var(--color-light);
+	--foreground-color: var(--color-dark);
+	--theme-css-color-light: #fce4a8;
+	--theme-css-color-dark: #01334e;
+	--theme-css-color-accent: #d71a21;
+	--theme-alchemy-color-light: #fcfbf9;
+	--theme-alchemy-color-dark: #332a63;
+	--theme-pongscroller-color-light: #c6baac;
+	--theme-pongscroller-color-dark: #312f28;
+
+	/* PICO-8 colors */
+	--theme-pico8-beige: #fef4e7;
+	--theme-pico8-navy: #1c3a59;
+	--theme-pico8-blue: #0099ff;
+	--theme-pico8-green: #009933;
+	--theme-pico8-lime: #33cc66;
+	--theme-pico8-gray: #57534e;
+	--theme-pico8-cloud: #c4c4c4;
+	--theme-pico8-neutral: #8a7b8a;
+	--theme-pico8-purple: #8a2c5a;
+	--theme-pico8-red: #ff0033;
+	--theme-pico8-orange: #ffaa00;
+	--theme-pico8-yellow: #ffcc00;
+	--theme-pico8-flesh: #fcd9b2;
+	--theme-pico8-pink: #ffb3cc;
+	--theme-pico8-brown: #8c5a38;
+
+	/* Computer Chip Y palette */
+	--theme-computerchipy-white: #eae8db;
+	--theme-computerchipy-grey: #797b7a;
+	--theme-computerchipy-dark-grey: #2c2f38;
+	--theme-computerchipy-black: #151b26;
+
+	/* Social colors */
+	--bluesky-blue: #1185fe;
+	--linkedin-blue: #0072b1;
+	--discord-purple: #7289da;
+	--itch-red: #ff2449;
+	--github-black: #101411;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <path id="_11-3" serif:id="11-3" d="M10,3L12,3L12,2L10,2L10,3Z" style="fill:var(--svg-fill-color);" />
+        <path id="_9-4" serif:id="9-4" d="M8,4L10,4L10,3L8,3L8,4Z" style="fill:var(--svg-fill-color);" />
+        <rect id="_13-4" serif:id="13-4" x="12" y="3" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_7-5" serif:id="7-5" d="M6,5L8,5L8,4L6,4L6,5Z" style="fill:var(--svg-fill-color);" />
+        <path id="_5-6" serif:id="5-6" d="M4,6L6,6L6,5L4,5L4,6Z" style="fill:var(--svg-fill-color);" />
+        <rect id="_10-6" serif:id="10-6" x="9" y="5" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_11-5" serif:id="11-5" d="M10,5L11,5L11,6L12,6L12,4L10,4L10,5Z" style="fill:var(--svg-fill-color);" />
+        <path id="_3-7" serif:id="3-7" d="M2,7L4,7L4,6L2,6L2,7Z" style="fill:var(--svg-fill-color);" />
+        <rect id="_9-7" serif:id="9-7" x="8" y="6" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_11-7" serif:id="11-7" x="10" y="6" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_2-8" serif:id="2-8" x="1" y="7" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_8-8" serif:id="8-8" x="7" y="7" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_10-8" serif:id="10-8" x="9" y="7" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_3-9" serif:id="3-9" d="M2,9L4,9L4,8L2,8L2,9Z" style="fill:var(--svg-fill-color);" />
+        <rect id="_9-9" serif:id="9-9" x="8" y="8" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_10-10" serif:id="10-10" x="9" y="9" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_11-11" serif:id="11-11" x="10" y="10" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <rect id="_12-12" serif:id="12-12" x="11" y="11" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_10-13" serif:id="10-13" d="M9,13L11,13L11,12L9,12L9,13Z" style="fill:var(--svg-fill-color);" />
+        <rect id="_13-13" serif:id="13-13" x="12" y="12" width="1" height="1" style="fill:var(--svg-fill-color);" />
+        <path id="_5-10" serif:id="5-10" d="M6,14L9,14L9,13L7,13L7,8L6,8L6,9L4,9L4,10L6,10L6,14Z"
+            style="fill:var(--svg-fill-color);" />
+        <path id="_13-2" serif:id="13-2" d="M15,1L12,1L12,2L14,2L14,13L13,13L13,14L15,14L15,1Z"
+            style="fill:var(--svg-fill-color);" />
+    </g>
+</svg>

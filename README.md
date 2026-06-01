@@ -1,27 +1,29 @@
-# blog-site
-
-a project yet to be defined
+# HARRYPUJOLS.COM
 
 ## Installation
 
-- Install Docker
-- Install Node
-- run `npm install`
-- run `npm run server:build`
-- run `npm run server:boot`
+1. Clone the repository:
 
-## Development
+   ```sh
+   git clone https://github.com/harrypujols/super-default-boilerplate.git
+   cd super-default-boilerplate
+   ```
 
-- run `npm start`
-- site will run in http://localhost:4000
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-## Deployment
+## Updating
 
-- run `npm run deploy`
-- site will deploy to docs directory
+To update dependencies to their latest versions, run:
 
-## Posts
+```sh
+npm update
+```
 
-Check [Jekyll's documentation][jekyll-posts]
+To update the boilerplate itself, pull the latest changes:
 
-[jekyll-posts]: https://jekyllrb.com/docs/posts
+```sh
+git pull
+```

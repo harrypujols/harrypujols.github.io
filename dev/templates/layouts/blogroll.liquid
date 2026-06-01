@@ -1,0 +1,13 @@
+---
+layout: page
+title: Hello, it's Harry.
+design: frontpage
+pagination:
+  data: collections.post
+  size: 5
+  alias: posts
+---
+{{ content }}
+{% include 'home/face.html' %}
+{% include 'blog/loop.liquid' %}
+{% include 'blog/pagination.liquid' %}

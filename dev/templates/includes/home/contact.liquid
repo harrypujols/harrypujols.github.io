@@ -1,0 +1,67 @@
+<div class="section contact" id="contact">
+  <h2 class="font-heading">Contact</h2>
+  <form
+    action="//formbold.com/s/3LWzX"
+    method="POST"
+    class="contact-form">
+    <fieldset class="contact-form-fieldset">
+      <label for="name" class="contact-form-label">
+       Name
+      </label>
+      <input
+        type="text"
+        name="name"
+        class="contact-form-field"
+        required />
+    </fieldset>
+    <fieldset class="contact-form-fieldset">
+      <label for="email" class="contact-form-label">
+        Email
+      </label>
+      <input
+        type="email"
+        name="email"
+        class="contact-form-field"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        required />
+    </fieldset>
+
+    <fieldset class="contact-form-fieldset">
+      <label for="message" class="contact-form-label">
+        Message
+      </label>
+      <textarea
+        name="message"
+        placeholder="Dear Harry,"
+        class="contact-form-field"
+        required
+        minlength="20"></textarea>
+    </fieldset>
+    <fieldset class="contact-form-fieldset ranking">
+      <legend class="visually-hidden">
+        Ranks this page out of 5
+      </legend>
+      <!--rank component-->
+      {% for i in (1..5) %}
+        <label for="rank-{{ i }}" class="ranking-label">
+          <input
+            type="radio"
+            name="rank"
+            id="rank-{{ i }}"
+            value="{{ i }}"
+            class="rank">
+          <span class="rank-icon icon selected">
+            {% include 'svg/icons/star-fill.svg' %}
+          </span>
+          <span class="rank-icon icon unselected">
+            {% include 'svg/icons/star-outline.svg' %}
+          </span>
+        </label>
+      {% endfor %}
+      <!--rank component-->
+    </fieldset>
+    <fieldset class="contact-form-fieldset">
+      <button type="submit" tabindex="0" class="button">Send</button>
+    </fieldset>
+  </form>
+</div>

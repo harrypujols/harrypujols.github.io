@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <rect id="_13-2" serif:id="13-2" x="12" y="1" width="9" height="1"/>
+        <rect id="_12-3" serif:id="12-3" x="11" y="2" width="1" height="1"/>
+        <rect id="_22-3" serif:id="22-3" x="21" y="2" width="1" height="1"/>
+        <rect id="_23-4" serif:id="23-4" x="22" y="3" width="1" height="1"/>
+        <rect id="_11-4" serif:id="11-4" x="10" y="3" width="1" height="2"/>
+        <rect id="_11-8" serif:id="11-8" x="10" y="7" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-8" serif:id="23-8" x="22" y="7" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_11-10" serif:id="11-10" x="10" y="9" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-10" serif:id="23-10" x="22" y="9" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_11-11" serif:id="11-11" x="10" y="10" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_23-11" serif:id="23-11" x="22" y="10" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_11-12" serif:id="11-12" x="10" y="11" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-12" serif:id="23-12" x="22" y="11" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <path id="_13-10" serif:id="13-10" d="M11,11L13,11L13,13L14,13L14,11L16,11L16,10L15,10L15,9L12,9L12,10L11,10L11,11Z"/>
+        <path id="_19-10" serif:id="19-10" d="M18,10L17,10L17,11L19,11L19,13L20,13L20,11L22,11L22,10L21,10L21,9L18,9L18,10Z"/>
+        <rect id="_11-14" serif:id="11-14" x="10" y="13" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-14" serif:id="23-14" x="22" y="13" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_8-13" serif:id="8-13" x="7" y="12" width="1" height="4"/>
+        <rect id="_9-13" serif:id="9-13" x="8" y="12" width="1" height="4" style="fill:rgb(255,202,168);"/>
+        <rect id="_11-16" serif:id="11-16" x="10" y="15" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-16" serif:id="23-16" x="22" y="15" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_25-13" serif:id="25-13" x="24" y="12" width="1" height="4" style="fill:rgb(255,202,168);"/>
+        <rect id="_26-13" serif:id="26-13" x="25" y="12" width="1" height="4"/>
+        <rect id="_11-18" serif:id="11-18" x="10" y="17" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <path id="_15-15" serif:id="15-15" d="M14,14L14,18L15,18L15,15L16,15L16,13L15,13L15,14L14,14Z" style="fill:rgb(169,82,56);"/>
+        <rect id="_19-18" serif:id="19-18" x="18" y="17" width="1" height="1" style="fill:rgb(169,82,56);"/>
+        <rect id="_23-18" serif:id="23-18" x="22" y="17" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_11-19" serif:id="11-19" x="10" y="18" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_12-19" serif:id="12-19" x="11" y="18" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_15-19" serif:id="15-19" x="14" y="18" width="5" height="1"/>
+        <rect id="_22-19" serif:id="22-19" x="21" y="18" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-19" serif:id="23-19" x="22" y="18" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_11-20" serif:id="11-20" x="10" y="19" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_12-20" serif:id="12-20" x="11" y="19" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_13-20" serif:id="13-20" x="12" y="19" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_17-20" serif:id="17-20" x="16" y="19" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_21-20" serif:id="21-20" x="20" y="19" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_22-20" serif:id="22-20" x="21" y="19" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_23-20" serif:id="23-20" x="22" y="19" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_11-21" serif:id="11-21" x="10" y="20" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_12-21" serif:id="12-21" x="11" y="20" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_13-21" serif:id="13-21" x="12" y="20" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_14-21" serif:id="14-21" x="13" y="20" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_16-21" serif:id="16-21" x="15" y="20" width="1" height="1"/>
+        <rect id="_17-21" serif:id="17-21" x="16" y="20" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_18-21" serif:id="18-21" x="17" y="20" width="1" height="1"/>
+        <path id="_15-21" serif:id="15-21" d="M13,20L14,20L14,21L15,21L15,20L16,20L16,19L14,19L14,14L15,14L15,13L16,13L16,15L15,15L15,18L18,18L18,17L19,17L19,19L17,19L17,20L18,20L18,21L19,21L19,20L20,20L20,19L21,19L21,18L22,18L22,17L23,17L23,16L22,16L22,15L23,15L23,14L22,14L22,13L23,13L23,12L22,12L22,11L20,11L20,13L19,13L19,11L17,11L17,10L18,10L18,9L21,9L21,10L22,10L22,9L23,9L23,8L22,8L22,7L23,7L23,4L22,4L22,3L21,3L21,2L12,2L12,3L11,3L11,5L10,5L10,7L11,7L11,8L10,8L10,9L11,9L11,10L12,10L12,9L15,9L15,10L16,10L16,11L14,11L14,13L13,13L13,11L11,11L11,12L10,12L10,13L11,13L11,14L10,14L10,15L11,15L11,16L10,16L10,17L11,17L11,18L12,18L12,19L13,19L13,20Z" style="fill:rgb(255,202,168);"/>
+        <rect id="_20-21" serif:id="20-21" x="19" y="20" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_21-21" serif:id="21-21" x="20" y="20" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_22-21" serif:id="22-21" x="21" y="20" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-21" serif:id="23-21" x="22" y="20" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_11-22" serif:id="11-22" x="10" y="21" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_12-22" serif:id="12-22" x="11" y="21" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_13-22" serif:id="13-22" x="12" y="21" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_17-22" serif:id="17-22" x="16" y="21" width="1" height="1"/>
+        <rect id="_22-22" serif:id="22-22" x="21" y="21" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_23-22" serif:id="23-22" x="22" y="21" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <path id="_9-17" serif:id="9-17" d="M9,12L9,16L8,16L8,17L9,17L9,23L10,23L10,5L9,5L9,11L8,11L8,12L9,12Z"/>
+        <rect id="_11-23" serif:id="11-23" x="10" y="22" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_12-23" serif:id="12-23" x="11" y="22" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_13-23" serif:id="13-23" x="12" y="22" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_14-23" serif:id="14-23" x="13" y="22" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <path id="_14-22" serif:id="14-22" d="M13,22L14,22L14,23L15,23L15,21L13,21L13,22Z"/>
+        <path id="_16-22" serif:id="16-22" d="M15,21L15,23L19,23L19,22L18,22L18,21L17,21L17,22L16,22L16,21L15,21Z" style="fill:rgb(255,7,78);"/>
+        <path id="_19-22" serif:id="19-22" d="M18,22L19,22L19,23L20,23L20,22L21,22L21,21L18,21L18,22Z"/>
+        <rect id="_21-23" serif:id="21-23" x="20" y="22" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_22-23" serif:id="22-23" x="21" y="22" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_23-23" serif:id="23-23" x="22" y="22" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <path id="_24-5" serif:id="24-5" d="M23,4L23,23L24,23L24,17L25,17L25,16L24,16L24,12L25,12L25,11L24,11L24,4L23,4Z"/>
+        <rect id="_11-24" serif:id="11-24" x="10" y="23" width="1" height="1"/>
+        <rect id="_12-24" serif:id="12-24" x="11" y="23" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_13-24" serif:id="13-24" x="12" y="23" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_14-24" serif:id="14-24" x="13" y="23" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_15-24" serif:id="15-24" x="14" y="23" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_20-24" serif:id="20-24" x="19" y="23" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_21-24" serif:id="21-24" x="20" y="23" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_22-24" serif:id="22-24" x="21" y="23" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_23-24" serif:id="23-24" x="22" y="23" width="1" height="1"/>
+        <rect id="_13-25" serif:id="13-25" x="12" y="24" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_14-25" serif:id="14-25" x="13" y="24" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_15-25" serif:id="15-25" x="14" y="24" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_16-25" serif:id="16-25" x="15" y="24" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <path id="_16-24" serif:id="16-24" d="M15,24L16,24L16,25L17,25L17,24L19,24L19,23L15,23L15,24Z"/>
+        <rect id="_18-25" serif:id="18-25" x="17" y="24" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_19-25" serif:id="19-25" x="18" y="24" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_20-25" serif:id="20-25" x="19" y="24" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_21-25" serif:id="21-25" x="20" y="24" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_14-26" serif:id="14-26" x="13" y="25" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_15-26" serif:id="15-26" x="14" y="25" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_16-26" serif:id="16-26" x="15" y="25" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_17-26" serif:id="17-26" x="16" y="25" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_18-26" serif:id="18-26" x="17" y="25" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_19-26" serif:id="19-26" x="18" y="25" width="1" height="1" style="fill:rgb(95,87,80);"/>
+        <rect id="_20-26" serif:id="20-26" x="19" y="25" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_13-27" serif:id="13-27" x="12" y="26" width="1" height="1" style="fill:rgb(169,82,56);"/>
+        <rect id="_14-27" serif:id="14-27" x="13" y="26" width="7" height="1"/>
+        <rect id="_21-27" serif:id="21-27" x="20" y="26" width="1" height="1" style="fill:rgb(169,82,56);"/>
+        <rect id="_13-28" serif:id="13-28" x="12" y="27" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_14-28" serif:id="14-28" x="13" y="27" width="7" height="1" style="fill:rgb(169,82,56);"/>
+        <rect id="_21-28" serif:id="21-28" x="20" y="27" width="1" height="1" style="fill:rgb(255,202,168);"/>
+        <rect id="_14-29" serif:id="14-29" x="13" y="28" width="7" height="1" style="fill:rgb(255,202,168);"/>
+        <path id="_1-31" serif:id="1-31" d="M0,30L0,32L32,32L32,29L29,29L29,28L26,28L26,27L22,27L22,24L21,24L21,25L20,25L20,26L21,26L21,28L20,28L20,29L13,29L13,28L12,28L12,26L13,26L13,25L12,25L12,24L11,24L11,27L8,27L8,28L5,28L5,29L1,29L1,30L0,30Z"/>
+    </g>
+</svg>

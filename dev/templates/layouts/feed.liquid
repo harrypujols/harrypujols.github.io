@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>{{ site.title | escape }}</title>
+		<link>{{ site.url }}/</link>
+		<description>{{ site.description | escape }}</description>
+		<language>en-us</language>
+		<lastBuildDate>{{ "now" | date_to_rfc822 }}</lastBuildDate>
+		<generator>11ty</generator>
+
+		{% for post in collections.post %}
+		<item>
+			<title>{{ post.data.title | escape }}</title>
+			<link>{{ site.url }}{{ post.url }}</link>
+			<guid>{{ site.url }}{{ post.url }}</guid>
+			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+			<description>{{ post.templateContent | strip_html | escape }}</description>
+			<enclosure url="{{ post.data.thumbnail | default: global.post_thumbnail }}"	type="{{ post.data.thumbnail | default: global.post_thumbnail | split: '.' | last | prepend: 'image/' }}"/>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>
