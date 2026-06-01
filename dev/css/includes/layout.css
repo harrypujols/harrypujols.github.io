@@ -52,34 +52,47 @@
 	--svg-fill-color: currentColor;
 
 	color: inherit;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:focus svg * {
+		transition: unset;
+	}
 }
 
 .linkedin {
-	&:hover {
+	&:hover,
+	&:focus {
 		--svg-fill-color: var(--linkedin-blue);
 	}
 }
 
 .github {
-	&:hover {
+	&:hover,
+	&:focus {
 		--svg-fill-color: var(--github-black);
 	}
 }
 
 .bluesky {
-	&:hover {
+	&:hover,
+	&:focus {
 		--svg-fill-color: var(--bluesky-blue);
 	}
 }
 
 .discord {
-	&:hover {
+	&:hover,
+	&:focus {
 		--svg-fill-color: var(--discord-purple);
 	}
 }
 
 .itch {
-	&:hover {
+	&:hover,
+	&:focus {
 		--svg-fill-color: var(--itch-red);
 	}
 }

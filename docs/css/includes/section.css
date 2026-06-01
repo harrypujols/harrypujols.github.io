@@ -167,3 +167,9 @@ html:has(.smooth-scroll) {
 	text-align: left;
 	font-weight: var(--font-weight-bold);
 }
+
+.contact-form-field {
+	&:focus {
+		box-shadow: 0 0 0 1px currentColor;
+	}
+}
