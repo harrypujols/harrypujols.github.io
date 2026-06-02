@@ -1,76 +1,76 @@
 .button {
-	appearance: none;
-	display: inline-block;
-	text-decoration: none;
-	color: var(--button-color, currentColor);
-	background-color: var(--button-background-color, transparent);
-	border: 2px solid var(--button-color, currentColor);
-	padding: 0.5rem 1rem;
-	border-radius: 0.25rem;
-	box-shadow: 0 0.25rem 0 0 var(--button-color, currentColor);
-	font-family: var(--button-font-family, var(--font-family-base));
-	font-size: var(--button-font-size, 1.5rem);
-	font-weight: var(--font-weight-bold);
+  appearance: none;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--button-color, currentColor);
+  background-color: var(--button-background-color, transparent);
+  border: 2px solid var(--button-color, currentColor);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0 0 var(--button-color, currentColor);
+  font-family: var(--button-font-family, var(--font-family-base));
+  font-size: var(--button-font-size, 1.5rem);
+  font-weight: var(--font-weight-bold);
 
-	&:active {
-		transform: translateY(1px);
-	}
+  &:active {
+    transform: translateY(1px);
+  }
 
-	&:focus {
-		border-width: 3px;
-		outline: 0;
-	}
+  &:focus {
+    box-shadow: 0 0.25rem 0 2px var(--button-color, currentColor);
+    outline: 0;
+  }
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .icon,
 .icon-mini {
-	--svg-fill-color: var(--foreground-color);
+  --svg-fill-color: var(--foreground-color);
 
-	display: inline-block;
-	vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 
-	svg {
-		width: 2rem;
-		height: 2rem;
-	}
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .icon-mini {
-	svg {
-		width: 0.75rem;
-		height: 0.75rem;
-	}
+  svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
 }
 
 .font-heading {
-	grid-area: header;
-	font-family: var(--font-family-heading);
+  grid-area: header;
+  font-family: var(--font-family-heading);
 }
 
 .fullscreen-video {
-	position: absolute;
-	inset: 0;
-	max-width: auto;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
+  position: absolute;
+  inset: 0;
+  max-width: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 
-	video {
-		object-fit: cover;
-		object-position: center;
-		width: 100vw;
-		height: 100vh;
-	}
+  video {
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
 }
