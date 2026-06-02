@@ -1,8 +1,21 @@
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
 .ranking {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(4ch, 1fr));
   margin-block: 2rem;
   padding-left: 1ch;
+
+  &:has(.rank:focus) {
+    animation: flash 0.5s;
+  }
 }
 
 .selected {
