@@ -18,7 +18,6 @@
 
   &:focus {
     border-width: 3px;
-    /*box-shadow: 0 0.25rem 0 2px var(--button-color, currentColor);*/
     outline: 0;
   }
 }

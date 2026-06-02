@@ -14,7 +14,7 @@
   padding-left: 1ch;
 
   &:has(.rank:focus) {
-    animation: flash 0.5s;
+    animation: flash 1s;
   }
 }
 
