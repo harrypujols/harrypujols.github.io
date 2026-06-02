@@ -51,10 +51,6 @@ html:has(.smooth-scroll) {
 
 .cta {
   grid-area: footer;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
 }
 
 .hero {
