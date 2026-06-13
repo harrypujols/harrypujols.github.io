@@ -13,6 +13,10 @@
 	max-height: 20rem;
 }
 
+.page-content {
+	grid-area: content;
+}
+
 .frontpage-hero-video {
 	background-color: var(--foreground-color);
 
