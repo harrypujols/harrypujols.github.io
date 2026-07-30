@@ -3,7 +3,8 @@
   <form
     action="//formbold.com/s/3LWzX"
     method="POST"
-    class="contact-form">
+    class="contact-form"
+    id="contact-form">
     <fieldset class="contact-form-fieldset">
       <label for="name" class="contact-form-label">
        Name
@@ -65,3 +66,10 @@
     </fieldset>
   </form>
 </div>
+<!--captcha:-->
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc1U20tAAAAAIo8j6Pm3mCi2ZJ2kJN_vnvyydb6"></script>
+<script>
+   function onSubmit(token) {
+     document.getElementById("contact-form").submit();
+   }
+</script>
