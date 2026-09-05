@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'base/head.liquid' %}
+    <body class="page {% if tags %}{{ tags }}{% endif %}">
+
+    <main class="main">
+    <div
+      class="slideshow-stage page-grid"
+      data-js="slideshow"
+      data-pages="{{ pages }}"
+      data-description="{{ description }}">
+      <div class="slideshow content" id="slideshow"></div>
+      <nav class="pagination content">
+        <menu class="pagination-menu" id="pagination"></menu>
+      </nav>
+    </div>
+     </main>
+    {% comment %} data in {= =} brackets is parsed by client-side script {% endcomment %}
+    <template id="slideshow-template">
+      <nav class="slideshow-buttons">
+        <a
+          href="{{ permalink }}?page={= data.prev =}"
+          class="slideshow-button slideshow-prev {= data.current == data.prev ? 'is-current' : '' =}"
+          tabindex="0">Previous</a>
+        <a
+          href="{{ permalink }}?page={= data.next =}"
+          class="slideshow-button slideshow-next {= data.current == data.next ? 'is-current' : '' =}"
+          tabindex="0">Next</a>
+      </nav>
+      <img
+        src="{{ assets }}/{= data.current =}.jpg"
+        alt="{= data.description =} page {= data.current =}"
+        class="slideshow-image">
+    </template>
+    <template id="pagination-template">
+      <li class="pagination-item {= data.current == data.page ? 'is-current' : '' =}">
+        <a
+          href="{{ permalink }}?page={= data.page =}"
+          class="pagination-link"
+          target="_self"
+          tabindex="0">
+          {= data.page =}</a>
+      </li>
+    </template>
+  </body>
+</html>
