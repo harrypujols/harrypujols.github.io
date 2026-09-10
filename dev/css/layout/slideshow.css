@@ -1,0 +1,9 @@
+.slideshow {
+  & .main {
+    display: block;
+  }
+}
+
+.page-grid {
+
+}
