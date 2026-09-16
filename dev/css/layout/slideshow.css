@@ -12,3 +12,27 @@
 .content {
 	grid-column: content;
 }
+
+.slideshow-buttons {
+	display: flex;
+	justify-content: space-between;
+	padding-block: 1ex;
+}
+
+.pagination-menu {
+	padding: unset;
+	list-style: none;
+}
+
+.pagination-item {
+	display: inline-block;
+}
+
+.is-current {
+	text-decoration: none;
+	pointer-events: none;
+
+	.pagination-link {
+			text-decoration: none;
+	}
+}
