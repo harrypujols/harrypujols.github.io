@@ -17,6 +17,10 @@
 	grid-column: content;
 }
 
+.slideshow-header {
+	padding-top: 1rem;
+}
+
 .slideshow-buttons {
 	display: flex;
 	justify-content: space-between;

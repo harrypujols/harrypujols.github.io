@@ -149,6 +149,16 @@ html:has(.smooth-scroll) {
   }
 }
 
+.the-digital-canvas {
+	--section-color: var(--color-dark);
+  --section-background: var(--color-light);
+
+  @media (prefers-color-scheme: dark) {
+    --section-color: var(--color-light);
+    --section-background: var(--color-dark);
+  }
+}
+
 .contact-form {
   grid-area: body;
   width: calc(100vw - 2rem);

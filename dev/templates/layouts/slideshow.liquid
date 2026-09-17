@@ -2,13 +2,20 @@
 <html lang="en">
   {% include 'base/head.liquid' %}
     <body class="page {% if tags %}{{ tags }}{% endif %}">
-
     <main class="main">
     <div
       class="slideshow-stage page-grid"
       data-js="slideshow"
       data-pages="{{ pages }}"
       data-description="{{ description }}">
+      <header class="slideshow-header content">
+      	{% if logo %}
+	     <div class="slideshow-logo">
+	     	{% include logo %}
+	     </div>
+       	{% endif %}
+        {{content}}
+      </header>
       <div class="slideshow content" id="slideshow"></div>
       <nav class="pagination content">
         <menu class="pagination-menu" id="pagination"></menu>
