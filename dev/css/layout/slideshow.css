@@ -6,7 +6,11 @@
 
 .page-grid {
 	display: grid;
-	grid-template-columns: [full-width-start] 1fr [content-start] 1fr [content-end] 1fr [full-width-end];
+	grid-template-columns: [full-width-start] 1rem [content-start] 1fr [content-end] 1rem [full-width-end];
+
+	@container style(--breakpoint: "tablet-portrait") or style(--breakpoint: "tablet-landscape") or style(--breakpoint: "desktop") {
+		grid-template-columns: [full-width-start] 1fr [content-start] 1fr [content-end] 1fr [full-width-end];
+	}
 }
 
 .content {
