@@ -10,6 +10,6 @@
 @import url("./includes/layout.css") layer(main);
 @import url("./includes/section.css") layer(main);
 @import url("./includes/loop.css") layer(main);
-@import url("./layout/social-list.css") layer(main);
+@import url("./includes/social-list.css") layer(main);
 @import url("./includes/rank.css") layer(main);
 @import url("./settings/print.css") layer(overrides);
