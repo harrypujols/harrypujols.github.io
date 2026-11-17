@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>The Digital Canvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digital art made at the dawn of the smartphone era">
+  <meta name="robots" content="noai, noimageai">
+  <link rel="manifest" href="/js/json/manifest.json" crossorigin="use-credentials" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/assets/img/favicon.ico">
+  <link rel="stylesheet" href="/css/styles.css?r=1794943518">
+  <script
+    type="module"
+    src="/js/scripts.js?r=1794943518"
+    defer></script>
+</head>
+
+    <body class="page slideshow">
+
+    <main class="main">
+    <div
+      class="slideshow-stage page-grid"
+      data-js="slideshow"
+      data-pages="55"
+      data-description="Digital art made at the dawn of the smartphone era">
+      <div class="slideshow content" id="slideshow"></div>
+      <nav class="pagination content">
+        <menu class="pagination-menu" id="pagination"></menu>
+      </nav>
+    </div>
+     </main>
+    
+    <template id="slideshow-template">
+      <nav class="slideshow-buttons">
+        <a
+          href="/the-digital-canvas/index.html?page={= data.prev =}"
+          class="slideshow-button slideshow-prev {= data.current == data.prev ? 'is-current' : '' =}"
+          tabindex="0">Previous</a>
+        <a
+          href="/the-digital-canvas/index.html?page={= data.next =}"
+          class="slideshow-button slideshow-next {= data.current == data.next ? 'is-current' : '' =}"
+          tabindex="0">Next</a>
+      </nav>
+      <img
+        src="/assets/img/digitalcanvas/{= data.current =}.jpg"
+        alt="{= data.description =} page {= data.current =}"
+        class="slideshow-image">
+    </template>
+    <template id="pagination-template">
+      <li class="pagination-item {= data.current == data.page ? 'is-current' : '' =}">
+        <a
+          href="/the-digital-canvas/index.html?page={= data.page =}"
+          class="pagination-link"
+          target="_self"
+          tabindex="0">
+          {= data.page =}</a>
+      </li>
+    </template>
+  </body>
+</html>
